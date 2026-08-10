@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "OdishaDentalImplants.com — Powered by i-Smile" },
+      { title: "OdishaDentalImplants.com | Free Dental Implant Consultation" },
       {
         name: "description",
         content:

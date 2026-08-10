@@ -20,9 +20,9 @@ import heroClinic from "@/assets/hero-clinic.jpg";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
 
-const TITLE = "Dental Implants in Odisha | Free Online Consultation — i-Smile";
+const TITLE = "Dental Implants in Odisha | Free Dental Implant Consultation";
 const DESCRIPTION =
-  "OdishaDentalImplants.com, powered by i-Smile, connects patients across Odisha with experienced implantologists. Book a free online dental implant consultation today.";
+  "Free online dental implant consultations for patients across Odisha, powered by i-Smile.";
 
 export const Route = createFileRoute("/")({
   component: Home,
