@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/site";
 
 const NAV = [
   { label: "Home", href: "#home" },
   { label: "Implant Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Cities We Serve", href: "#cities" },
+  { label: "Implant Team", href: "#team" },
+  { label: "Treatment Location", href: "#location" },
   { label: "FAQs", href: "#faqs" },
   { label: "Contact", href: "#contact" },
 ];
@@ -42,7 +44,7 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -53,10 +55,24 @@ export function Header() {
             </a>
           ))}
           <a
+            href={`tel:${PHONE_TEL}`}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary"
+          >
+            <Phone className="h-4 w-4 text-primary" /> {PHONE_DISPLAY}
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+          </a>
+          <a
             href="#contact"
             className="gradient-brand shadow-soft rounded-full px-5 py-2.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
           >
-            Book Online Consultation
+            Book FREE Online Consultation
           </a>
         </nav>
 
@@ -89,13 +105,21 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="gradient-brand mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-brand-foreground"
             >
-              Book Online Consultation
+              Book FREE Online Consultation
             </a>
             <a
-              href="tel:+919937000000"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground"
             >
-              <Phone className="h-4 w-4" /> Talk to a coordinator
+              <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+            </a>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold text-foreground"
+            >
+              <Phone className="h-4 w-4 text-primary" /> {PHONE_DISPLAY}
             </a>
           </nav>
         </div>

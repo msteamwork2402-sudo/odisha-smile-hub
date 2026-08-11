@@ -1,8 +1,15 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import {
+  EMAIL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  TREATMENT_LOCATION,
+  WHATSAPP_URL,
+} from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-surface">
+    <footer className="border-t bg-surface pb-20 lg:pb-0">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
@@ -17,8 +24,9 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            A dental implant consultation platform connecting patients across Odisha with
-            experienced implantologists and accredited clinical partners.
+            Dental implant care for patients across Odisha. Begin with a free online consultation
+            and receive a preliminary treatment roadmap, with implant treatment carried out at{" "}
+            {TREATMENT_LOCATION}.
           </p>
         </div>
 
@@ -28,9 +36,10 @@ export function Footer() {
             {[
               ["Implant Services", "#services"],
               ["How It Works", "#how-it-works"],
-              ["Cities We Serve", "#cities"],
+              ["Implant Team", "#team"],
+              ["Treatment Location", "#location"],
               ["FAQs", "#faqs"],
-              ["Book Consultation", "#contact"],
+              ["Book FREE Online Consultation", "#contact"],
             ].map(([label, href]) => (
               <li key={href}>
                 <a href={href} className="transition-colors hover:text-primary">
@@ -46,19 +55,33 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <a href="tel:+919937000000" className="hover:text-primary">
-                +91 99370 00000
+              <a href={`tel:${PHONE_TEL}`} className="hover:text-primary">
+                {PHONE_DISPLAY}
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                WhatsApp Us — {PHONE_DISPLAY}
               </a>
             </li>
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <a href="mailto:care@odishadentalimplants.com" className="hover:text-primary">
-                care@odishadentalimplants.com
+              <a href={`mailto:${EMAIL}`} className="hover:text-primary">
+                {EMAIL}
               </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              Bhubaneswar, Odisha — serving patients statewide
+              <span>
+                Treatment location: {TREATMENT_LOCATION} — online consultations for patients
+                anywhere in Odisha
+              </span>
             </li>
           </ul>
         </div>
