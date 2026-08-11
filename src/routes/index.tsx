@@ -33,7 +33,7 @@ import {
 import heroClinic from "@/assets/hero-clinic.jpg";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
-import teamSauvik from "@/assets/team-sauvik.jpg";
+import teamSauvik from "@/assets/team-sauvik-real.jpg";
 import teamNeha from "@/assets/team-neha.jpg";
 import teamSubham from "@/assets/team-subham.jpg";
 import teamMonika from "@/assets/team-monika.jpg";
