@@ -12,13 +12,33 @@ import {
   CheckCircle2,
   ChevronDown,
   Star,
+  MessageCircle,
+  Phone,
+  MapPin,
+  Building2,
+  HeartPulse,
+  ScanLine,
 } from "lucide-react";
 
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { MobileCtaBar } from "@/components/site/MobileCtaBar";
+import {
+  EMAIL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  TREATMENT_LOCATION,
+  WHATSAPP_URL,
+} from "@/lib/site";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
+import teamSauvik from "@/assets/team-sauvik.jpg";
+import teamNeha from "@/assets/team-neha.jpg";
+import teamSubham from "@/assets/team-subham.jpg";
+import teamMonika from "@/assets/team-monika.jpg";
+import teamAnu from "@/assets/team-anu.jpg";
+import teamBarsha from "@/assets/team-barsha.jpg";
 
 const TITLE = "Dental Implants in Odisha | Free Dental Implant Consultation";
 const DESCRIPTION =
@@ -47,10 +67,11 @@ export const Route = createFileRoute("/")({
           description: DESCRIPTION,
           medicalSpecialty: "Dentistry",
           areaServed: "Odisha, India",
-          telephone: "+91-99370-00000",
-          email: "care@odishadentalimplants.com",
+          telephone: PHONE_TEL,
+          email: EMAIL,
           address: {
             "@type": "PostalAddress",
+            streetAddress: "CARE Hospital",
             addressLocality: "Bhubaneswar",
             addressRegion: "Odisha",
             addressCountry: "IN",
@@ -75,7 +96,7 @@ const SERVICES = [
   {
     icon: Smile,
     title: "Full Mouth Rehabilitation",
-    text: "All-on-4 and All-on-6 protocols for a fixed, permanent set of teeth — often in a single surgical visit.",
+    text: "All-on-4 and All-on-6 protocols for a fixed, permanent set of teeth — planned case by case after clinical assessment.",
   },
   {
     icon: Activity,
@@ -90,56 +111,80 @@ const SERVICES = [
   {
     icon: ShieldCheck,
     title: "Second Opinion Review",
-    text: "Already have a treatment plan or quote? Our panel reviews your X-ray and explains your options clearly.",
+    text: "Already have a treatment plan or quote? Our team reviews your X-ray and explains your options clearly.",
   },
 ];
 
-const STEPS = [
+const JOURNEY = [
   {
     icon: ClipboardList,
-    title: "Share your case",
-    text: "Fill the consultation form with your concern and upload an OPG or dental X-ray if you have one.",
+    title: "FREE online consultation",
+    text: "Patients anywhere in Odisha share their concern and upload an OPG or dental X-ray if available.",
+  },
+  {
+    icon: ScanLine,
+    title: "Preliminary Treatment Roadmap",
+    text: "Our specialists prepare an indicative roadmap of possible options, stages and approximate costing.",
   },
   {
     icon: Stethoscope,
-    title: "Speak to an implantologist",
-    text: "A specialist reviews your case on a scheduled video or phone call — no obligation, no pressure.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Get a written plan",
-    text: "You receive a staged treatment plan with implant brand options, timeline and transparent costing.",
+    title: "Physical clinical assessment",
+    text: "You visit us for clinical examination and diagnostic imaging — the step that confirms what is possible.",
   },
   {
     icon: CheckCircle2,
-    title: "Treat near you",
-    text: "We coordinate your appointment at a partner clinic in your city and follow up after every stage.",
+    title: "Final treatment plan",
+    text: "The final treatment plan is confirmed only after appropriate clinical examination and diagnostic assessment.",
+  },
+  {
+    icon: Building2,
+    title: `Implant treatment at CARE Hospital`,
+    text: "Your implant procedure is carried out at CARE Hospital, Bhubaneswar, Odisha in a controlled hospital setting.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Follow-up care",
+    text: "Scheduled reviews after every stage, with your coordinator reachable on call and WhatsApp.",
   },
 ];
 
-const CITIES = [
-  "Bhubaneswar",
-  "Cuttack",
-  "Puri",
-  "Rourkela",
-  "Sambalpur",
-  "Berhampur",
-  "Balasore",
-  "Angul",
-  "Jharsuguda",
-  "Bhadrak",
-  "Baripada",
-  "Jeypore",
+const TEAM = [
+  {
+    name: "Dr. Sauvik Singha, MDS",
+    role: "Maxillofacial Surgeon & Implant Specialist",
+    img: teamSauvik,
+  },
+  {
+    name: "Dr. Neha Mohanty, MDS",
+    role: "Prosthodontist & Implant Specialist",
+    img: teamNeha,
+  },
+  {
+    name: "Dr. Subham Kumar Swain, BDS",
+    role: "Chief Dental Surgeon",
+    img: teamSubham,
+  },
+  {
+    name: "Dr. Monika Salesh, BDS",
+    role: "Chief Dental Surgeon",
+    img: teamMonika,
+  },
+  { name: "Ms. Anu", role: "Clinical Coordinator", img: teamAnu },
+  { name: "Ms. Barsha", role: "Clinic Coordinator", img: teamBarsha },
 ];
 
 const FAQS = [
   {
     q: "Is the online consultation really free?",
-    a: "Yes. The first consultation — case review, specialist call and a written opinion — is free. You only pay a clinic once you decide to begin treatment.",
+    a: "Yes. The first online consultation — case review, specialist call and a preliminary treatment roadmap — is free. You only pay once you decide to begin treatment.",
+  },
+  {
+    q: "What is a Preliminary Treatment Roadmap?",
+    a: "It is an indicative outline of the likely options, stages and approximate costing based on the information and X-rays you share online. It is not a final treatment plan — the final plan is confirmed after appropriate clinical examination and diagnostic assessment.",
   },
   {
     q: "How much does a dental implant cost in Odisha?",
-    a: "Costs depend on the implant system, bone condition and the type of crown. Most single implants with a crown fall in a defined range that your specialist will confirm in writing after reviewing your X-ray. We never quote a price before seeing your case.",
+    a: "Costs depend on the implant system, bone condition and the type of crown. Your roadmap gives an indicative range, and exact costing is confirmed after clinical examination. We never quote a final price before seeing your case in person.",
   },
   {
     q: "Is implant surgery painful?",
@@ -151,11 +196,11 @@ const FAQS = [
   },
   {
     q: "I was told I don't have enough bone. Can I still get implants?",
-    a: "Very often, yes. Bone grafting, ridge splitting and sinus lift procedures make implants possible for most patients who were previously refused treatment. This is one of the most common second opinions we handle.",
+    a: "Very often, yes. Bone grafting, ridge splitting and sinus lift procedures make implants possible for many patients who were previously refused treatment. This is one of the most common second opinions we handle.",
   },
   {
-    q: "Do you treat patients outside Bhubaneswar?",
-    a: "Yes. Consultations are online, and treatment is coordinated at accredited partner clinics across Odisha, including Cuttack, Rourkela, Sambalpur, Berhampur and Balasore.",
+    q: "I live outside Bhubaneswar. Can I still be treated?",
+    a: "Yes. Patients from any part of Odisha can begin with a free online consultation and are then guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar.",
   },
 ];
 
@@ -167,13 +212,16 @@ function Home() {
         <Hero />
         <TrustBar />
         <Services />
-        <HowItWorks />
+        <Journey />
+        <Team />
+        <Location />
         <WhyUs />
-        <Cities />
+        <AcrossOdisha />
         <Faqs />
         <Contact />
       </main>
       <Footer />
+      <MobileCtaBar />
     </div>
   );
 }
@@ -187,31 +235,34 @@ function Hero() {
             <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile
           </span>
           <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
-            Dental implants in Odisha, planned by{" "}
-            <span className="text-gradient-brand">specialists you can trust</span>
+            Dental Implant Care for{" "}
+            <span className="text-gradient-brand">Patients Across Odisha</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Get a free online consultation with an experienced implantologist, a written treatment
-            plan and transparent costing — before you ever sit in a dental chair.
+            Start with a free online consultation with an experienced implantologist and receive a
+            preliminary treatment roadmap. Your final treatment plan is confirmed after clinical
+            examination, with implant treatment at {TREATMENT_LOCATION}.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#contact"
               className="gradient-brand shadow-lift rounded-full px-7 py-3.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
             >
-              Book Online Consultation
+              Book FREE Online Consultation
             </a>
             <a
-              href="#how-it-works"
-              className="rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              How it works
+              <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
             </a>
           </div>
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
             {[
               ["2,500+", "Cases reviewed"],
-              ["12+", "Cities covered"],
+              ["Statewide", "Patients across Odisha"],
               ["20+ yrs", "Combined experience"],
             ].map(([value, label]) => (
               <div key={label}>
@@ -249,9 +300,9 @@ function Hero() {
 
 function TrustBar() {
   const items = [
-    "Sterilisation-audited partner clinics",
+    "Hospital-based implant treatment at CARE Hospital, Bhubaneswar",
     "Global implant systems only",
-    "Written plans and transparent pricing",
+    "Preliminary roadmap online, final plan after clinical assessment",
     "Post-treatment follow-up included",
   ];
   return (
@@ -295,7 +346,7 @@ function Services() {
         <SectionHeading
           eyebrow="Implant Services"
           title="Complete implant care, from one tooth to a full arch"
-          text="Every plan is prepared by a qualified implantologist and delivered at an accredited partner clinic near you."
+          text="Every case is reviewed by a qualified implantologist and treated at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
@@ -313,20 +364,19 @@ function Services() {
   );
 }
 
-function HowItWorks() {
+function Journey() {
   return (
     <section id="how-it-works" className="gradient-soft py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="How It Works"
-          title="Four calm steps from question to confident smile"
+          title="Your care pathway, step by step"
+          text="Patients anywhere in Odisha → FREE online consultation → Preliminary Treatment Roadmap → physical clinical assessment → final treatment plan → implant treatment at CARE Hospital, Bhubaneswar → follow-up care."
         />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((s, i) => (
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {JOURNEY.map((s, i) => (
             <article key={s.title} className="card-premium relative p-7">
-              <span className="text-sm font-bold text-primary/40">
-                0{i + 1}
-              </span>
+              <span className="text-sm font-bold text-primary/40">0{i + 1}</span>
               <span className="mt-4 grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
                 <s.icon className="h-6 w-6" />
               </span>
@@ -334,6 +384,113 @@ function HowItWorks() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
             </article>
           ))}
+        </div>
+        <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">
+          The online stage provides a Preliminary Treatment Roadmap only. The final treatment plan is
+          confirmed after appropriate clinical examination and diagnostic assessment.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function Team() {
+  return (
+    <section id="team" className="bg-background py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow="Implant Team"
+          title="The specialists and coordinators behind your care"
+          text="A surgical, prosthetic and coordination team that stays with you from your first online consultation through follow-up."
+        />
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {TEAM.map((m) => (
+            <article key={m.name} className="card-premium overflow-hidden p-0">
+              <img
+                src={m.img}
+                alt={`Portrait of ${m.name}, ${m.role}`}
+                width={768}
+                height={960}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-lg font-semibold">{m.name}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Location() {
+  return (
+    <section id="location" className="gradient-soft py-20 lg:py-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+        <div>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Treatment Location
+          </span>
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">{TREATMENT_LOCATION}</h2>
+          <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
+            All implant surgery, clinical examination and diagnostic imaging are carried out at CARE
+            Hospital, Bhubaneswar — a full hospital environment with operating-theatre standards of
+            sterilisation and medical support.
+          </p>
+          <ul className="mt-8 space-y-4 text-sm">
+            {[
+              "Hospital-grade sterilisation and surgical protocols",
+              "On-site diagnostic imaging for accurate planning",
+              "Medical support available for patients with health conditions",
+              "Travel and appointment scheduling arranged by your coordinator",
+            ].map((p) => (
+              <li key={p} className="flex items-start gap-3">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <span className="text-muted-foreground">{p}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#contact"
+              className="gradient-brand shadow-soft rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+            >
+              Book FREE Online Consultation
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <div className="card-premium p-8">
+          <span className="gradient-brand grid h-12 w-12 place-items-center rounded-2xl text-brand-foreground">
+            <MapPin className="h-6 w-6" />
+          </span>
+          <h3 className="mt-5 text-lg font-semibold">Where you are treated</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            CARE Hospital
+            <br />
+            Bhubaneswar, Odisha
+          </p>
+          <div className="mt-6 space-y-3 text-sm">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="flex items-center gap-3 font-medium hover:text-primary"
+            >
+              <Phone className="h-4 w-4 text-primary" /> {PHONE_DISPLAY}
+            </a>
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 hover:text-primary">
+              <Sparkles className="h-4 w-4 text-primary" /> {EMAIL}
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -353,7 +510,7 @@ function WhyUs() {
         <div className="grid gap-5 sm:grid-cols-2">
           <img
             src={dentistConsult}
-            alt="Implantologist reviewing a treatment plan with a patient at a partner clinic"
+            alt="Implantologist reviewing a treatment plan with a patient"
             width={1200}
             height={912}
             loading="lazy"
@@ -378,7 +535,7 @@ function WhyUs() {
           <p className="mt-4 leading-relaxed text-muted-foreground">
             OdishaDentalImplants.com exists so that patients across the state can get an honest,
             specialist opinion before committing to implant surgery — and then have that treatment
-            delivered close to home.
+            delivered at {TREATMENT_LOCATION}.
           </p>
           <ul className="mt-8 space-y-4">
             {points.map((p) => (
@@ -394,28 +551,42 @@ function WhyUs() {
   );
 }
 
-function Cities() {
+function AcrossOdisha() {
   return (
-    <section id="cities" className="gradient-soft py-20 lg:py-28">
+    <section id="odisha" className="gradient-soft py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Cities We Serve"
-          title="Consultation online, treatment close to home"
-          text="Our partner network covers major districts across Odisha, with new clinics added as demand grows."
+          eyebrow="Across Odisha"
+          title="Dental Implant Care for Patients Across Odisha"
+          text="Patients from any part of Odisha can begin with a free online consultation and are subsequently guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar."
         />
-        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {CITIES.map((city) => (
-            <div
-              key={city}
-              className="rounded-2xl border border-border bg-card px-5 py-4 text-sm font-semibold shadow-soft"
-            >
-              {city}
-            </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              icon: MessageCircle,
+              title: "Start from anywhere",
+              text: "Share your concern and X-rays online from any district in Odisha — no travel needed to begin.",
+            },
+            {
+              icon: ClipboardList,
+              title: "Get your roadmap",
+              text: "Receive a Preliminary Treatment Roadmap explaining likely options, stages and indicative costs.",
+            },
+            {
+              icon: Building2,
+              title: "Come in for assessment",
+              text: "We guide you to CARE Hospital, Bhubaneswar for clinical examination, final planning and treatment.",
+            },
+          ].map((c) => (
+            <article key={c.title} className="card-premium p-7">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
+                <c.icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-5 text-lg font-semibold">{c.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+            </article>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          Don't see your town? Book a consultation anyway — we will arrange the nearest option.
-        </p>
       </div>
     </section>
   );
@@ -466,16 +637,20 @@ function Contact() {
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             Contact
           </span>
-          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Book your free online consultation</h2>
+          <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
+            Book your FREE online consultation
+          </h2>
           <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
-            Share a few details and a coordinator will call you within one working day to schedule
-            your specialist review. Your information stays confidential.
+            Share a few details and a coordinator will call you within one working day. You will
+            receive a Preliminary Treatment Roadmap — your final treatment plan is confirmed after
+            clinical examination and diagnostic assessment.
           </p>
           <ul className="mt-8 space-y-4 text-sm">
             {[
               "No cost, no obligation to proceed",
               "Upload an OPG or X-ray if you already have one",
               "Available in Odia, Hindi and English",
+              `Treatment location: ${TREATMENT_LOCATION}`,
             ].map((p) => (
               <li key={p} className="flex items-start gap-3">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -483,6 +658,22 @@ function Contact() {
               </li>
             ))}
           </ul>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              <Phone className="h-4 w-4 text-primary" /> {PHONE_DISPLAY}
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+            </a>
+          </div>
         </div>
 
         <form
@@ -497,7 +688,8 @@ function Contact() {
               <CheckCircle2 className="mx-auto h-12 w-12 text-primary" />
               <h3 className="mt-4 text-xl font-semibold">Request received</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Thank you. A patient coordinator will contact you within one working day.
+                Thank you. A patient coordinator will contact you within one working day on{" "}
+                {PHONE_DISPLAY}.
               </p>
             </div>
           ) : (
@@ -521,23 +713,13 @@ function Contact() {
                   placeholder="+91"
                 />
               </Field>
-              <Field label="City" id="city">
-                <select
+              <Field label="Your city or district in Odisha" id="city">
+                <input
                   id="city"
                   name="city"
                   className="w-full rounded-2xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-ring focus:ring-2 focus:ring-ring/25"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Select your city
-                  </option>
-                  {CITIES.map((c) => (
-                    <option key={c} value={c}>
-                      {c}
-                    </option>
-                  ))}
-                  <option value="other">Other</option>
-                </select>
+                  placeholder="e.g. Sambalpur"
+                />
               </Field>
               <Field label="What would you like help with?" id="message">
                 <textarea
@@ -552,8 +734,16 @@ function Contact() {
                 type="submit"
                 className="gradient-brand shadow-soft w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
               >
-                Book Online Consultation
+                Book FREE Online Consultation
               </button>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
+                <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+              </a>
               <p className="text-center text-xs text-muted-foreground">
                 By submitting you agree to be contacted about your enquiry.
               </p>
