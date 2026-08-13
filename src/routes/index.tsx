@@ -40,6 +40,8 @@ import teamMonika from "@/assets/team-monika-real.jpg";
 import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
+import { Reveal, CountUp } from "@/components/site/Reveal";
+
 
 
 const TITLE = "Dental Implants in Odisha | Free Dental Implant Consultation";
@@ -233,49 +235,65 @@ function Hero() {
     <section id="home" className="gradient-soft relative overflow-hidden">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
-            <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile
-          </span>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
-            Dental Implant Care for{" "}
-            <span className="text-gradient-brand">Patients Across Odisha</span>
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Start with a free online consultation with an experienced implantologist and receive a
-            preliminary treatment roadmap. Your final treatment plan is confirmed after clinical
-            examination, with implant treatment at {TREATMENT_LOCATION}.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#contact"
-              className="gradient-brand shadow-lift rounded-full px-7 py-3.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
-            >
-              Book FREE Online Consultation
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-            >
-              <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
-            </a>
-          </div>
-          <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
-            {[
-              ["2,500+", "Cases reviewed"],
-              ["Statewide", "Patients across Odisha"],
-              ["20+ yrs", "Combined experience"],
-            ].map(([value, label]) => (
-              <div key={label}>
-                <dt className="font-display text-2xl font-bold text-primary">{value}</dt>
-                <dd className="mt-1 text-xs text-muted-foreground">{label}</dd>
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+              <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile
+            </span>
+          </Reveal>
+          <Reveal delay={90}>
+            <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
+              Dental Implant Care for{" "}
+              <span className="text-gradient-brand">Patients Across Odisha</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Start with a free online consultation with an experienced implantologist and receive a
+              preliminary treatment roadmap. Your final treatment plan is confirmed after clinical
+              examination, with implant treatment at {TREATMENT_LOCATION}.
+            </p>
+          </Reveal>
+          <Reveal delay={270}>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="cta-gradient shadow-lift rounded-full px-7 py-3.5 text-sm font-semibold text-brand-foreground"
+              >
+                Book FREE Online Consultation
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pulse-ring inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
+                <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={360}>
+            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
+              <div>
+                <dt className="font-display text-2xl font-bold text-primary">
+                  <CountUp to={2500} suffix="+" />
+                </dt>
+                <dd className="mt-1 text-xs text-muted-foreground">Cases reviewed</dd>
               </div>
-            ))}
-          </dl>
+              <div>
+                <dt className="font-display text-2xl font-bold text-primary">Statewide</dt>
+                <dd className="mt-1 text-xs text-muted-foreground">Patients across Odisha</dd>
+              </div>
+              <div>
+                <dt className="font-display text-2xl font-bold text-primary">
+                  <CountUp to={20} suffix="+ yrs" />
+                </dt>
+                <dd className="mt-1 text-xs text-muted-foreground">Combined experience</dd>
+              </div>
+            </dl>
+          </Reveal>
         </div>
 
-        <div className="relative">
+        <Reveal delay={150} className="relative">
           <img
             src={heroClinic}
             alt="Modern dental implant treatment room at an i-Smile partner clinic in Odisha"
@@ -294,7 +312,8 @@ function Hero() {
             </p>
             <p className="mt-1 text-xs text-muted-foreground">Patient, Cuttack</p>
           </div>
-        </div>
+        </Reveal>
+
       </div>
     </section>
   );
@@ -310,12 +329,15 @@ function TrustBar() {
   return (
     <section className="border-y bg-background">
       <div className="mx-auto grid max-w-7xl gap-4 px-4 py-8 sm:px-6 md:grid-cols-4">
-        {items.map((item) => (
-          <div key={item} className="flex items-start gap-3">
-            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-            <p className="text-sm font-medium text-muted-foreground">{item}</p>
-          </div>
+        {items.map((item, i) => (
+          <Reveal key={item} delay={i * 80}>
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p className="text-sm font-medium text-muted-foreground">{item}</p>
+            </div>
+          </Reveal>
         ))}
+
       </div>
     </section>
   );
@@ -351,15 +373,18 @@ function Services() {
           text="Every case is reviewed by a qualified implantologist and treated at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <article key={s.title} className="card-premium p-7">
-              <span className="gradient-brand grid h-12 w-12 place-items-center rounded-2xl text-brand-foreground">
-                <s.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-            </article>
+          {SERVICES.map((s, i) => (
+            <Reveal key={s.title} delay={(i % 3) * 100}>
+              <article className="card-premium h-full p-7">
+                <span className="gradient-brand grid h-12 w-12 place-items-center rounded-2xl text-brand-foreground">
+                  <s.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              </article>
+            </Reveal>
           ))}
+
         </div>
       </div>
     </section>
@@ -377,15 +402,18 @@ function Journey() {
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {JOURNEY.map((s, i) => (
-            <article key={s.title} className="card-premium relative p-7">
-              <span className="text-sm font-bold text-primary/40">0{i + 1}</span>
-              <span className="mt-4 grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
-                <s.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-            </article>
+            <Reveal key={s.title} delay={(i % 3) * 110}>
+              <article className="card-premium relative h-full p-7">
+                <span className="text-sm font-bold text-primary/40">0{i + 1}</span>
+                <span className="mt-4 grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
+                  <s.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              </article>
+            </Reveal>
           ))}
+
         </div>
         <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">
           The online stage provides a Preliminary Treatment Roadmap only. The final treatment plan is
@@ -406,22 +434,25 @@ function Team() {
           text="A surgical, prosthetic and coordination team that stays with you from your first online consultation through follow-up."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM.map((m) => (
-            <article key={m.name} className="card-premium overflow-hidden p-0">
-              <img
-                src={m.img}
-                alt={`Portrait of ${m.name}, ${m.role}`}
-                width={768}
-                height={960}
-                loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold">{m.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
-              </div>
-            </article>
+          {TEAM.map((m, i) => (
+            <Reveal key={m.name} delay={(i % 3) * 100}>
+              <article className="card-premium zoom-frame h-full overflow-hidden p-0">
+                <img
+                  src={m.img}
+                  alt={`Portrait of ${m.name}, ${m.role}`}
+                  width={768}
+                  height={960}
+                  loading="lazy"
+                  className="aspect-[4/5] w-full object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">{m.name}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
+                </div>
+              </article>
+            </Reveal>
           ))}
+
         </div>
       </div>
     </section>
@@ -458,7 +489,7 @@ function Location() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#contact"
-              className="gradient-brand shadow-soft rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+              className="cta-gradient shadow-soft rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground"
             >
               Book FREE Online Consultation
             </a>
@@ -516,25 +547,29 @@ function WhyUs() {
   return (
     <section className="bg-background py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
-        <div className="grid gap-5 sm:grid-cols-2">
-          <img
-            src={dentistConsult}
-            alt="Implantologist reviewing a treatment plan with a patient"
-            width={1200}
-            height={912}
-            loading="lazy"
-            className="shadow-soft h-full w-full rounded-3xl object-cover"
-          />
-          <img
-            src={implantDetail}
-            alt="Titanium dental implant model showing the implant fixture and ceramic crown"
-            width={1200}
-            height={800}
-            loading="lazy"
-            className="shadow-soft mt-0 h-full w-full rounded-3xl object-cover sm:mt-10"
-          />
-        </div>
-        <div>
+        <Reveal className="grid gap-5 sm:grid-cols-2">
+          <div className="zoom-frame shadow-soft rounded-3xl">
+            <img
+              src={dentistConsult}
+              alt="Implantologist reviewing a treatment plan with a patient"
+              width={1200}
+              height={912}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="zoom-frame shadow-soft mt-0 rounded-3xl sm:mt-10">
+            <img
+              src={implantDetail}
+              alt="Titanium dental implant model showing the implant fixture and ceramic crown"
+              width={1200}
+              height={800}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             Why Patients Choose Us
           </span>
@@ -554,7 +589,8 @@ function WhyUs() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
+
       </div>
     </section>
   );
@@ -586,15 +622,18 @@ function AcrossOdisha() {
               title: "Come in for assessment",
               text: "We guide you to CARE Hospital, Bhubaneswar for clinical examination, final planning and treatment.",
             },
-          ].map((c) => (
-            <article key={c.title} className="card-premium p-7">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
-                <c.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">{c.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-            </article>
+          ].map((c, i) => (
+            <Reveal key={c.title} delay={i * 110}>
+              <article className="card-premium h-full p-7">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
+                  <c.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{c.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+              </article>
+            </Reveal>
           ))}
+
         </div>
       </div>
     </section>
@@ -626,8 +665,11 @@ function Faqs() {
                   />
                 </button>
                 {isOpen && (
-                  <p className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+                  <p className="faq-answer px-6 pb-6 text-sm leading-relaxed text-muted-foreground">
+                    {f.a}
+                  </p>
                 )}
+
               </div>
             );
           })}
@@ -741,7 +783,7 @@ function Contact() {
               </Field>
               <button
                 type="submit"
-                className="gradient-brand shadow-soft w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+                className="cta-gradient shadow-soft w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
               >
                 Book FREE Online Consultation
               </button>

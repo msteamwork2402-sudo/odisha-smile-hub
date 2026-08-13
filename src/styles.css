@@ -207,12 +207,123 @@
   border-radius: var(--radius-3xl);
   box-shadow: var(--shadow-soft);
   transition:
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+    box-shadow 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease;
 
   &:hover {
     box-shadow: var(--shadow-lift);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--purple) 35%, transparent);
   }
 }
+
+@utility cta-gradient {
+  background-image: var(--gradient-brand);
+  background-size: 160% 100%;
+  background-position: 0% 50%;
+  transition:
+    background-position 0.5s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    background-position: 100% 50%;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@utility zoom-frame {
+  overflow: hidden;
+
+  & img {
+    transition: transform 0.7s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+@layer base {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .faq-answer {
+    animation: faq-open 0.3s ease-out;
+  }
+
+  .pulse-ring {
+    position: relative;
+  }
+
+  .pulse-ring::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in oklab, var(--purple) 55%, transparent);
+    animation: soft-pulse 2.8s ease-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes faq-open {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes soft-pulse {
+    0% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    70% {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .pulse-ring::after,
+    .faq-answer {
+      animation: none;
+    }
+
+    .zoom-frame:hover img,
+    .card-premium:hover,
+    .cta-gradient:hover {
+      transform: none;
+    }
+  }
+}
+
 

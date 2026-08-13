@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-md transition-shadow ${
+      className={`sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-md transition-[box-shadow,background-color] duration-300 ${
         scrolled ? "shadow-soft" : ""
       }`}
     >
@@ -71,7 +71,7 @@ export function Header() {
 
           <a
             href="#contact"
-            className="gradient-brand shadow-soft rounded-full px-5 py-2.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+            className="cta-gradient shadow-soft rounded-full px-5 py-2.5 text-sm font-semibold text-brand-foreground"
           >
             Book FREE Online Consultation
           </a>
@@ -104,7 +104,7 @@ export function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="gradient-brand mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-brand-foreground"
+              className="cta-gradient mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-brand-foreground"
             >
               Book FREE Online Consultation
             </a>
