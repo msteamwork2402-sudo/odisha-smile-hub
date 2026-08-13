@@ -44,19 +44,19 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:flex 2xl:gap-6">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="whitespace-nowrap text-[13px] font-medium text-muted-foreground transition-colors hover:text-primary 2xl:text-sm"
             >
               {item.label}
             </a>
           ))}
           <a
             href={`tel:${PHONE_TEL}`}
-            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-sm font-semibold text-foreground transition-colors hover:text-primary"
+            className="hidden shrink-0 items-center gap-2 whitespace-nowrap text-[13px] font-semibold text-foreground transition-colors hover:text-primary 2xl:inline-flex 2xl:text-sm"
           >
             <Phone className="h-4 w-4 shrink-0 text-primary" /> {PHONE_DISPLAY}
           </a>
@@ -64,16 +64,16 @@ export function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-border px-3.5 py-2 text-[13px] font-semibold text-foreground transition-colors hover:bg-secondary 2xl:px-4 2xl:py-2.5 2xl:text-sm"
           >
-            <MessageCircle className="h-4 w-4 shrink-0 text-primary" /> WhatsApp Us
+            <MessageCircle className="h-4 w-4 shrink-0 text-primary" /> WhatsApp
           </a>
 
           <a
             href="#contact"
-            className="cta-gradient shadow-soft rounded-full px-5 py-2.5 text-sm font-semibold text-brand-foreground"
+            className="cta-gradient shadow-soft whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-semibold text-brand-foreground 2xl:px-5 2xl:py-2.5 2xl:text-sm"
           >
-            Book FREE Online Consultation
+            Book FREE Consultation
           </a>
         </nav>
 
