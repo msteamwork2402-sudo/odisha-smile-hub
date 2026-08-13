@@ -39,6 +39,8 @@ import teamSubham from "@/assets/team-subham-real.jpg";
 import teamMonika from "@/assets/team-monika-real.jpg";
 import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
+import careHospital from "@/assets/care-hospital.png.asset.json";
+
 
 const TITLE = "Dental Implants in Odisha | Free Dental Implant Consultation";
 const DESCRIPTION =
@@ -475,11 +477,18 @@ function Location() {
             <MapPin className="h-6 w-6" />
           </span>
           <h3 className="mt-5 text-lg font-semibold">Where you are treated</h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          <img
+            src={careHospital.url}
+            alt="CARE Hospital building in Bhubaneswar, Odisha"
+            loading="lazy"
+            className="mt-4 aspect-[16/10] w-full rounded-2xl object-cover"
+          />
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             CARE Hospital
             <br />
             Bhubaneswar, Odisha
           </p>
+
           <div className="mt-6 space-y-3 text-sm">
             <a
               href={`tel:${PHONE_TEL}`}
