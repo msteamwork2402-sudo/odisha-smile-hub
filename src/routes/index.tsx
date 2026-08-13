@@ -402,15 +402,18 @@ function Journey() {
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {JOURNEY.map((s, i) => (
-            <article key={s.title} className="card-premium relative p-7">
-              <span className="text-sm font-bold text-primary/40">0{i + 1}</span>
-              <span className="mt-4 grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
-                <s.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-            </article>
+            <Reveal key={s.title} delay={(i % 3) * 110}>
+              <article className="card-premium relative h-full p-7">
+                <span className="text-sm font-bold text-primary/40">0{i + 1}</span>
+                <span className="mt-4 grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
+                  <s.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              </article>
+            </Reveal>
           ))}
+
         </div>
         <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">
           The online stage provides a Preliminary Treatment Roadmap only. The final treatment plan is
