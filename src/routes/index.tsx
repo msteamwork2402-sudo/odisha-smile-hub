@@ -617,15 +617,18 @@ function AcrossOdisha() {
               title: "Come in for assessment",
               text: "We guide you to CARE Hospital, Bhubaneswar for clinical examination, final planning and treatment.",
             },
-          ].map((c) => (
-            <article key={c.title} className="card-premium p-7">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
-                <c.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">{c.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
-            </article>
+          ].map((c, i) => (
+            <Reveal key={c.title} delay={i * 110}>
+              <article className="card-premium h-full p-7">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-secondary text-primary">
+                  <c.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{c.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+              </article>
+            </Reveal>
           ))}
+
         </div>
       </div>
     </section>
