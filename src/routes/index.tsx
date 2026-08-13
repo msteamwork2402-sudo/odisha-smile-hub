@@ -35,7 +35,7 @@ import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
 import teamSauvik from "@/assets/team-sauvik-real.jpg";
 import teamNeha from "@/assets/team-neha.jpg";
-import teamSubham from "@/assets/team-subham.jpg";
+import teamSubham from "@/assets/team-subham-real.jpg";
 import teamMonika from "@/assets/team-monika.jpg";
 import teamAnu from "@/assets/team-anu.jpg";
 import teamBarsha from "@/assets/team-barsha.jpg";
