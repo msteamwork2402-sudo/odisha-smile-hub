@@ -373,15 +373,18 @@ function Services() {
           text="Every case is reviewed by a qualified implantologist and treated at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <article key={s.title} className="card-premium p-7">
-              <span className="gradient-brand grid h-12 w-12 place-items-center rounded-2xl text-brand-foreground">
-                <s.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-            </article>
+          {SERVICES.map((s, i) => (
+            <Reveal key={s.title} delay={(i % 3) * 100}>
+              <article className="card-premium h-full p-7">
+                <span className="gradient-brand grid h-12 w-12 place-items-center rounded-2xl text-brand-foreground">
+                  <s.icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+              </article>
+            </Reveal>
           ))}
+
         </div>
       </div>
     </section>
