@@ -329,12 +329,15 @@ function TrustBar() {
   return (
     <section className="border-y bg-background">
       <div className="mx-auto grid max-w-7xl gap-4 px-4 py-8 sm:px-6 md:grid-cols-4">
-        {items.map((item) => (
-          <div key={item} className="flex items-start gap-3">
-            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-            <p className="text-sm font-medium text-muted-foreground">{item}</p>
-          </div>
+        {items.map((item, i) => (
+          <Reveal key={item} delay={i * 80}>
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p className="text-sm font-medium text-muted-foreground">{item}</p>
+            </div>
+          </Reveal>
         ))}
+
       </div>
     </section>
   );
