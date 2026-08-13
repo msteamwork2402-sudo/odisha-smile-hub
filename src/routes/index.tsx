@@ -40,6 +40,8 @@ import teamMonika from "@/assets/team-monika-real.jpg";
 import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
+import { Reveal, CountUp } from "@/components/site/Reveal";
+
 
 
 const TITLE = "Dental Implants in Odisha | Free Dental Implant Consultation";
