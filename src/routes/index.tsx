@@ -660,8 +660,11 @@ function Faqs() {
                   />
                 </button>
                 {isOpen && (
-                  <p className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+                  <p className="faq-answer px-6 pb-6 text-sm leading-relaxed text-muted-foreground">
+                    {f.a}
+                  </p>
                 )}
+
               </div>
             );
           })}
