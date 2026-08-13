@@ -235,49 +235,65 @@ function Hero() {
     <section id="home" className="gradient-soft relative overflow-hidden">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
-            <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile
-          </span>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
-            Dental Implant Care for{" "}
-            <span className="text-gradient-brand">Patients Across Odisha</span>
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Start with a free online consultation with an experienced implantologist and receive a
-            preliminary treatment roadmap. Your final treatment plan is confirmed after clinical
-            examination, with implant treatment at {TREATMENT_LOCATION}.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#contact"
-              className="gradient-brand shadow-lift rounded-full px-7 py-3.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
-            >
-              Book FREE Online Consultation
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-            >
-              <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
-            </a>
-          </div>
-          <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
-            {[
-              ["2,500+", "Cases reviewed"],
-              ["Statewide", "Patients across Odisha"],
-              ["20+ yrs", "Combined experience"],
-            ].map(([value, label]) => (
-              <div key={label}>
-                <dt className="font-display text-2xl font-bold text-primary">{value}</dt>
-                <dd className="mt-1 text-xs text-muted-foreground">{label}</dd>
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+              <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile
+            </span>
+          </Reveal>
+          <Reveal delay={90}>
+            <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
+              Dental Implant Care for{" "}
+              <span className="text-gradient-brand">Patients Across Odisha</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={180}>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Start with a free online consultation with an experienced implantologist and receive a
+              preliminary treatment roadmap. Your final treatment plan is confirmed after clinical
+              examination, with implant treatment at {TREATMENT_LOCATION}.
+            </p>
+          </Reveal>
+          <Reveal delay={270}>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="cta-gradient shadow-lift rounded-full px-7 py-3.5 text-sm font-semibold text-brand-foreground"
+              >
+                Book FREE Online Consultation
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pulse-ring inline-flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
+                <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={360}>
+            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
+              <div>
+                <dt className="font-display text-2xl font-bold text-primary">
+                  <CountUp to={2500} suffix="+" />
+                </dt>
+                <dd className="mt-1 text-xs text-muted-foreground">Cases reviewed</dd>
               </div>
-            ))}
-          </dl>
+              <div>
+                <dt className="font-display text-2xl font-bold text-primary">Statewide</dt>
+                <dd className="mt-1 text-xs text-muted-foreground">Patients across Odisha</dd>
+              </div>
+              <div>
+                <dt className="font-display text-2xl font-bold text-primary">
+                  <CountUp to={20} suffix="+ yrs" />
+                </dt>
+                <dd className="mt-1 text-xs text-muted-foreground">Combined experience</dd>
+              </div>
+            </dl>
+          </Reveal>
         </div>
 
-        <div className="relative">
+        <Reveal delay={150} className="relative">
           <img
             src={heroClinic}
             alt="Modern dental implant treatment room at an i-Smile partner clinic in Odisha"
@@ -296,7 +312,8 @@ function Hero() {
             </p>
             <p className="mt-1 text-xs text-muted-foreground">Patient, Cuttack</p>
           </div>
-        </div>
+        </Reveal>
+
       </div>
     </section>
   );
