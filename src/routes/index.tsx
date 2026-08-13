@@ -489,7 +489,7 @@ function Location() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#contact"
-              className="gradient-brand shadow-soft rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+              className="cta-gradient shadow-soft rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground"
             >
               Book FREE Online Consultation
             </a>
@@ -778,7 +778,7 @@ function Contact() {
               </Field>
               <button
                 type="submit"
-                className="gradient-brand shadow-soft w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+                className="cta-gradient shadow-soft w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
               >
                 Book FREE Online Consultation
               </button>
