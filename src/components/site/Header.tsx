@@ -89,7 +89,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t bg-background lg:hidden">
+        <div className="border-t bg-background xl:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
             {NAV.map((item) => (
               <a
