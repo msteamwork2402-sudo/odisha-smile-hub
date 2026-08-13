@@ -434,22 +434,25 @@ function Team() {
           text="A surgical, prosthetic and coordination team that stays with you from your first online consultation through follow-up."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM.map((m) => (
-            <article key={m.name} className="card-premium overflow-hidden p-0">
-              <img
-                src={m.img}
-                alt={`Portrait of ${m.name}, ${m.role}`}
-                width={768}
-                height={960}
-                loading="lazy"
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold">{m.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
-              </div>
-            </article>
+          {TEAM.map((m, i) => (
+            <Reveal key={m.name} delay={(i % 3) * 100}>
+              <article className="card-premium zoom-frame h-full overflow-hidden p-0">
+                <img
+                  src={m.img}
+                  alt={`Portrait of ${m.name}, ${m.role}`}
+                  width={768}
+                  height={960}
+                  loading="lazy"
+                  className="aspect-[4/5] w-full object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold">{m.name}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
+                </div>
+              </article>
+            </Reveal>
           ))}
+
         </div>
       </div>
     </section>
