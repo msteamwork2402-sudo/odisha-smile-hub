@@ -547,25 +547,29 @@ function WhyUs() {
   return (
     <section className="bg-background py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
-        <div className="grid gap-5 sm:grid-cols-2">
-          <img
-            src={dentistConsult}
-            alt="Implantologist reviewing a treatment plan with a patient"
-            width={1200}
-            height={912}
-            loading="lazy"
-            className="shadow-soft h-full w-full rounded-3xl object-cover"
-          />
-          <img
-            src={implantDetail}
-            alt="Titanium dental implant model showing the implant fixture and ceramic crown"
-            width={1200}
-            height={800}
-            loading="lazy"
-            className="shadow-soft mt-0 h-full w-full rounded-3xl object-cover sm:mt-10"
-          />
-        </div>
-        <div>
+        <Reveal className="grid gap-5 sm:grid-cols-2">
+          <div className="zoom-frame shadow-soft rounded-3xl">
+            <img
+              src={dentistConsult}
+              alt="Implantologist reviewing a treatment plan with a patient"
+              width={1200}
+              height={912}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="zoom-frame shadow-soft mt-0 rounded-3xl sm:mt-10">
+            <img
+              src={implantDetail}
+              alt="Titanium dental implant model showing the implant fixture and ceramic crown"
+              width={1200}
+              height={800}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             Why Patients Choose Us
           </span>
@@ -585,7 +589,8 @@ function WhyUs() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
+
       </div>
     </section>
   );
