@@ -38,8 +38,9 @@ export function MobileCtaBar() {
         </a>
         <a
           href="#contact"
-          className="gradient-brand flex flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-semibold text-brand-foreground"
+          className="cta-gradient flex flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-semibold text-brand-foreground"
         >
+
           <CalendarCheck className="h-4 w-4" />
           FREE Consultation
         </a>
