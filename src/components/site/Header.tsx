@@ -56,18 +56,19 @@ export function Header() {
           ))}
           <a
             href={`tel:${PHONE_TEL}`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-sm font-semibold text-foreground transition-colors hover:text-primary"
           >
-            <Phone className="h-4 w-4 text-primary" /> {PHONE_DISPLAY}
+            <Phone className="h-4 w-4 shrink-0 text-primary" /> {PHONE_DISPLAY}
           </a>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
           >
-            <MessageCircle className="h-4 w-4 text-primary" /> WhatsApp Us
+            <MessageCircle className="h-4 w-4 shrink-0 text-primary" /> WhatsApp Us
           </a>
+
           <a
             href="#contact"
             className="gradient-brand shadow-soft rounded-full px-5 py-2.5 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
