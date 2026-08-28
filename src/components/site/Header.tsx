@@ -38,10 +38,10 @@ export function Header() {
             className="h-10 w-auto shrink-0"
           />
           <span className="min-w-0">
-            <span className="block truncate font-display text-base font-bold leading-tight sm:text-lg">
-              OdishaDentalImplants
+            <span className="block max-w-[11rem] font-display text-sm font-bold leading-[1.15] sm:text-base">
+              Odisha Dental Implants
             </span>
-            <span className="block truncate text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+            <span className="block text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
               Powered by i-Smile
             </span>
           </span>
