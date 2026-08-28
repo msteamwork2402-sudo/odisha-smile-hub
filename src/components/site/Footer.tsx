@@ -6,6 +6,7 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
+import logoMark from "@/assets/logo-mark.png";
 
 export function Footer() {
   return (
@@ -13,9 +14,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <span className="gradient-brand grid h-10 w-10 shrink-0 place-items-center rounded-2xl text-sm font-bold text-brand-foreground">
-              OD
-            </span>
+            <img
+              src={logoMark}
+              alt="OdishaDentalImplants.com logo"
+              className="h-10 w-auto shrink-0"
+            />
             <span>
               <span className="block font-display text-base font-bold">OdishaDentalImplants</span>
               <span className="block text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
