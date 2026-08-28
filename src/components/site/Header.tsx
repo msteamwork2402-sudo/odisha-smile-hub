@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/site";
+import logoMark from "@/assets/logo-mark.png";
 
 const NAV = [
   { label: "Home", href: "#home" },
@@ -31,9 +32,11 @@ export function Header() {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-6 lg:py-4">
         <a href="#home" className="flex min-w-0 items-center gap-3">
-          <span className="gradient-brand grid h-10 w-10 shrink-0 place-items-center rounded-2xl text-sm font-bold text-brand-foreground">
-            OD
-          </span>
+          <img
+            src={logoMark}
+            alt="OdishaDentalImplants.com logo"
+            className="h-10 w-auto shrink-0"
+          />
           <span className="min-w-0">
             <span className="block truncate font-display text-base font-bold leading-tight sm:text-lg">
               OdishaDentalImplants
