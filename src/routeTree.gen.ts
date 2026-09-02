@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
+import { Route as SingleToothDentalImplantRouteImport } from './routes/single-tooth-dental-implant'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,46 @@ const DentalImplantCostOdishaRoute = DentalImplantCostOdishaRouteImport.update({
   path: '/dental-implant-cost-odisha',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SingleToothDentalImplantRoute =
+  SingleToothDentalImplantRouteImport.update({
+    id: '/single-tooth-dental-implant',
+    path: '/single-tooth-dental-implant',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dental-implant-cost-odisha'
+  fullPaths:
+    '/' | '/dental-implant-cost-odisha' | '/single-tooth-dental-implant'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dental-implant-cost-odisha'
-  id: '__root__' | '/' | '/dental-implant-cost-odisha'
+  to: '/' | '/dental-implant-cost-odisha' | '/single-tooth-dental-implant'
+  id:
+    | '__root__'
+    | '/'
+    | '/dental-implant-cost-odisha'
+    | '/single-tooth-dental-implant'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
+  SingleToothDentalImplantRoute: typeof SingleToothDentalImplantRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +81,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DentalImplantCostOdishaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/single-tooth-dental-implant': {
+      id: '/single-tooth-dental-implant'
+      path: '/single-tooth-dental-implant'
+      fullPath: '/single-tooth-dental-implant'
+      preLoaderRoute: typeof SingleToothDentalImplantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
+  SingleToothDentalImplantRoute: SingleToothDentalImplantRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
