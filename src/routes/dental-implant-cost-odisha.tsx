@@ -580,7 +580,7 @@ function CostPage() {
               phoneDisplay={PHONE_DISPLAY}
               phoneTel={PHONE_TEL}
               hours="Appointment hours are confirmed by the coordinator when your visit is scheduled."
-              image={careHospital.src}
+              image={careHospital.url}
             />
           </div>
         </Section>

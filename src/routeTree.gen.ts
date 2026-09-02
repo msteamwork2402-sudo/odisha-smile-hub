@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DentalImplantCostOdishaRoute = DentalImplantCostOdishaRouteImport.update({
+  id: '/dental-implant-cost-odisha',
+  path: '/dental-implant-cost-odisha',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/dental-implant-cost-odisha'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/dental-implant-cost-odisha'
+  id: '__root__' | '/' | '/dental-implant-cost-odisha'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dental-implant-cost-odisha': {
+      id: '/dental-implant-cost-odisha'
+      path: '/dental-implant-cost-odisha'
+      fullPath: '/dental-implant-cost-odisha'
+      preLoaderRoute: typeof DentalImplantCostOdishaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
