@@ -54,7 +54,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
             {i > 0 && <ChevronRight className="h-3.5 w-3.5 opacity-60" aria-hidden="true" />}
             {item.href ? (
               item.href.startsWith("/#") || item.href === "/" ? (
-                <Link to="/" hash={item.href.slice(2) || undefined} className="hover:text-primary">
+                <Link to="/" className="hover:text-primary">
                   {item.label}
                 </Link>
               ) : (
