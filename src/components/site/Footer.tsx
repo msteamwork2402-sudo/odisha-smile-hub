@@ -37,12 +37,12 @@ export function Footer() {
           <h3 className="text-sm font-semibold">Quick links</h3>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             {[
-              ["Implant Services", "#services"],
-              ["How It Works", "#how-it-works"],
-              ["Implant Team", "#team"],
-              ["Treatment Location", "#location"],
-              ["FAQs", "#faqs"],
-              ["Book FREE Online Consultation", "#contact"],
+              ["Implant Services", "/#services"],
+              ["How It Works", "/#how-it-works"],
+              ["Implant Team", "/#team"],
+              ["Treatment Location", "/#location"],
+              ["FAQs", "/#faqs"],
+              ["Book FREE Online Consultation", "/#contact"],
             ].map(([label, href]) => (
               <li key={href}>
                 <a href={href} className="transition-colors hover:text-primary">

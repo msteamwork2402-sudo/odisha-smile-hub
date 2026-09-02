@@ -53,7 +53,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
           <li key={item.label} className="flex items-center gap-1">
             {i > 0 && <ChevronRight className="h-3.5 w-3.5 opacity-60" aria-hidden="true" />}
             {item.href ? (
-              item.href.startsWith("/#") || item.href === "/" ? (
+              item.href === "/" ? (
                 <Link to="/" className="hover:text-primary">
                   {item.label}
                 </Link>
