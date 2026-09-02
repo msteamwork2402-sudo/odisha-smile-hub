@@ -495,3 +495,101 @@ export function ImplantCTA({
     </div>
   );
 }
+
+/* ------------------------ two-option comparison (responsive) ---------------- */
+
+export type FactorRow = { factor: string; a: string; b: string };
+
+export function FactorComparison({
+  caption,
+  optionA,
+  optionB,
+  rows,
+  note,
+}: {
+  caption: string;
+  optionA: string;
+  optionB: string;
+  rows: FactorRow[];
+  note?: string;
+}) {
+  return (
+    <div className="mt-8">
+      {/* Desktop table */}
+      <div className="card-premium hidden p-0 sm:block">
+        <table className="w-full border-collapse text-left text-sm">
+          <caption className="sr-only">{caption}</caption>
+          <thead>
+            <tr className="bg-secondary/60">
+              <th scope="col" className="px-4 py-3 font-semibold text-foreground">Factor</th>
+              <th scope="col" className="px-4 py-3 font-semibold text-foreground">{optionA}</th>
+              <th scope="col" className="px-4 py-3 font-semibold text-foreground">{optionB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.factor} className="border-t border-border align-top">
+                <th scope="row" className="px-4 py-4 font-semibold text-foreground">{r.factor}</th>
+                <td className="px-4 py-4 text-muted-foreground">{r.a}</td>
+                <td className="px-4 py-4 text-muted-foreground">{r.b}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Mobile stacked cards */}
+      <div className="grid gap-4 sm:hidden">
+        {rows.map((r) => (
+          <article key={r.factor} className="card-premium p-5">
+            <h3 className="text-sm font-semibold text-foreground">{r.factor}</h3>
+            <dl className="mt-3 space-y-3 text-sm">
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{optionA}</dt>
+                <dd className="mt-1 text-muted-foreground">{r.a}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">{optionB}</dt>
+                <dd className="mt-1 text-muted-foreground">{r.b}</dd>
+              </div>
+            </dl>
+          </article>
+        ))}
+      </div>
+      {note ? <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{note}</p> : null}
+    </div>
+  );
+}
+
+/* ------------------------------ parts diagram ------------------------------ */
+
+export function PartsDiagram({
+  parts,
+}: {
+  parts: { label: string; title: string; text: string; icon: React.ComponentType<{ className?: string }> }[];
+}) {
+  return (
+    <div className="mt-10">
+      <div className="grid gap-5 lg:grid-cols-3">
+        {parts.map((p, i) => (
+          <Reveal key={p.label} delay={i * 80}>
+            <article className="card-premium h-full p-6">
+              <span className="gradient-brand grid h-11 w-11 place-items-center rounded-2xl">
+                <p.icon className="h-5 w-5 text-brand-foreground" />
+              </span>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                {p.label}
+              </p>
+              <h3 className="mt-1 text-base font-semibold text-foreground">{p.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+            </article>
+          </Reveal>
+        ))}
+      </div>
+      <p className="mt-4 text-center text-sm font-semibold text-foreground">
+        Implant <span aria-hidden="true">→</span> Abutment <span aria-hidden="true">→</span> Crown
+      </p>
+    </div>
+  );
+}
+
