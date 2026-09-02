@@ -4,13 +4,13 @@ import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/site";
 import logoMark from "@/assets/logo-mark.png";
 
 const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "Implant Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Implant Team", href: "#team" },
-  { label: "Treatment Location", href: "#location" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Implant Services", href: "/#services" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Implant Team", href: "/#team" },
+  { label: "Treatment Location", href: "/#location" },
+  { label: "FAQs", href: "/#faqs" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Header() {
@@ -31,7 +31,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-6 lg:py-4">
-        <a href="#home" className="flex min-w-0 items-center gap-3">
+        <a href="/" className="flex min-w-0 items-center gap-3">
           <img
             src={logoMark}
             alt="OdishaDentalImplants.com logo"
@@ -67,7 +67,7 @@ export function Header() {
           </a>
 
           <a
-            href="#contact"
+            href="/#contact"
             className="cta-gradient shadow-soft whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-semibold text-brand-foreground"
           >
             Book FREE Consultation
@@ -99,7 +99,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="cta-gradient mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-brand-foreground"
             >

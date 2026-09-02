@@ -37,7 +37,7 @@ export function MobileCtaBar() {
           WhatsApp
         </a>
         <a
-          href="#contact"
+          href="/#contact"
           className="cta-gradient flex flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[11px] font-semibold text-brand-foreground"
         >
 
