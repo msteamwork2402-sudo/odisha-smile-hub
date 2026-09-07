@@ -593,3 +593,119 @@ export function PartsDiagram({
   );
 }
 
+
+/* --------------------------- generic responsive table ---------------------- */
+
+export function DataTable({
+  caption,
+  columns,
+  rows,
+  note,
+}: {
+  caption: string;
+  columns: string[];
+  rows: string[][];
+  note?: string;
+}) {
+  return (
+    <div className="mt-8">
+      <div className="card-premium hidden p-0 md:block">
+        <table className="w-full border-collapse text-left text-sm">
+          <caption className="sr-only">{caption}</caption>
+          <thead>
+            <tr className="bg-secondary/60">
+              {columns.map((c) => (
+                <th key={c} scope="col" className="px-4 py-3 font-semibold text-foreground">
+                  {c}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r[0]} className="border-t border-border align-top">
+                <th scope="row" className="px-4 py-4 font-semibold text-foreground">{r[0]}</th>
+                {r.slice(1).map((cell, i) => (
+                  <td key={i} className="px-4 py-4 text-muted-foreground">{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="grid gap-4 md:hidden">
+        {rows.map((r) => (
+          <article key={r[0]} className="card-premium p-5">
+            <h3 className="text-sm font-semibold text-foreground">{r[0]}</h3>
+            <dl className="mt-3 space-y-3 text-sm">
+              {r.slice(1).map((cell, i) => (
+                <div key={i}>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+                    {columns[i + 1]}
+                  </dt>
+                  <dd className="mt-1 text-muted-foreground">{cell}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+        ))}
+      </div>
+      {note ? <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{note}</p> : null}
+    </div>
+  );
+}
+
+/* ------------------------------- plain cards ------------------------------- */
+
+export function InfoCards({
+  items,
+  columns = 3,
+}: {
+  items: { title: string; text: string; href?: string; cta?: string }[];
+  columns?: 2 | 3;
+}) {
+  return (
+    <div className={`mt-8 grid gap-5 ${columns === 2 ? "lg:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+      {items.map((c, i) => (
+        <Reveal key={c.title} delay={i * 60}>
+          <article className="card-premium h-full p-6">
+            <h3 className="text-base font-semibold text-foreground">{c.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.text}</p>
+            {c.href ? (
+              <a className="mt-4 inline-block text-sm font-semibold text-primary" href={c.href}>
+                {c.cta ?? "Learn more"} →
+              </a>
+            ) : null}
+          </article>
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
+/* ------------------------------- bullet list -------------------------------- */
+
+export function BulletGrid({ items }: { items: string[] }) {
+  return (
+    <ul className="mt-8 grid gap-2 sm:grid-cols-2">
+      {items.map((f) => (
+        <li key={f} className="flex gap-2 text-sm text-muted-foreground">
+          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+          {f}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* --------------------------------- callout ---------------------------------- */
+
+export function Callout({ title, text }: { title: string; text: ReactNode }) {
+  return (
+    <div className="mt-8 rounded-3xl border border-border bg-card p-6">
+      <h3 className="text-base font-semibold text-foreground">{title}</h3>
+      <div className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</div>
+    </div>
+  );
+}
