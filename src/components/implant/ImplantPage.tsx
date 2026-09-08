@@ -238,8 +238,8 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
         </Section>
 
         {cfg.sections.map((s, i) => (
-          <Section key={s.title} id={s.id} tone={s.tone ?? (i % 2 === 0 ? "soft" : "plain")}>
-            <SectionHeading title={s.title} intro={s.intro} />
+          <Section key={s.title} {...(s.id ? { id: s.id } : {})} tone={s.tone ?? (i % 2 === 0 ? "soft" : "plain")}>
+            <SectionHeading title={s.title} {...(s.intro ? { intro: s.intro } : {})} />
             {s.blocks.map((b, bi) => (
               <BlockView key={bi} block={b} />
             ))}
