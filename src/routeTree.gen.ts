@@ -10,7 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AllOn4AllOn6OdishaRouteImport } from './routes/all-on-4-all-on-6-odisha'
 import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
+import { Route as FlaplessGuidedDentalImplantsRouteImport } from './routes/flapless-guided-dental-implants'
+import { Route as FullMouthDentalImplantsRouteImport } from './routes/full-mouth-dental-implants'
+import { Route as ImmediateDentalImplantsRouteImport } from './routes/immediate-dental-implants'
+import { Route as MultipleDentalImplantsRouteImport } from './routes/multiple-dental-implants'
 import { Route as SingleToothDentalImplantRouteImport } from './routes/single-tooth-dental-implant'
 
 const IndexRoute = IndexRouteImport.update({
@@ -18,9 +23,35 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AllOn4AllOn6OdishaRoute = AllOn4AllOn6OdishaRouteImport.update({
+  id: '/all-on-4-all-on-6-odisha',
+  path: '/all-on-4-all-on-6-odisha',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DentalImplantCostOdishaRoute = DentalImplantCostOdishaRouteImport.update({
   id: '/dental-implant-cost-odisha',
   path: '/dental-implant-cost-odisha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlaplessGuidedDentalImplantsRoute =
+  FlaplessGuidedDentalImplantsRouteImport.update({
+    id: '/flapless-guided-dental-implants',
+    path: '/flapless-guided-dental-implants',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FullMouthDentalImplantsRoute = FullMouthDentalImplantsRouteImport.update({
+  id: '/full-mouth-dental-implants',
+  path: '/full-mouth-dental-implants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImmediateDentalImplantsRoute = ImmediateDentalImplantsRouteImport.update({
+  id: '/immediate-dental-implants',
+  path: '/immediate-dental-implants',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MultipleDentalImplantsRoute = MultipleDentalImplantsRouteImport.update({
+  id: '/multiple-dental-implants',
+  path: '/multiple-dental-implants',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SingleToothDentalImplantRoute =
@@ -32,36 +63,76 @@ const SingleToothDentalImplantRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
+  '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
+  '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
+  '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
+  '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
+  '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
+  '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
+  '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
+  '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
+  '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/dental-implant-cost-odisha' | '/single-tooth-dental-implant'
+    | '/'
+    | '/all-on-4-all-on-6-odisha'
+    | '/dental-implant-cost-odisha'
+    | '/flapless-guided-dental-implants'
+    | '/full-mouth-dental-implants'
+    | '/immediate-dental-implants'
+    | '/multiple-dental-implants'
+    | '/single-tooth-dental-implant'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dental-implant-cost-odisha' | '/single-tooth-dental-implant'
+  to:
+    | '/'
+    | '/all-on-4-all-on-6-odisha'
+    | '/dental-implant-cost-odisha'
+    | '/flapless-guided-dental-implants'
+    | '/full-mouth-dental-implants'
+    | '/immediate-dental-implants'
+    | '/multiple-dental-implants'
+    | '/single-tooth-dental-implant'
   id:
     | '__root__'
     | '/'
+    | '/all-on-4-all-on-6-odisha'
     | '/dental-implant-cost-odisha'
+    | '/flapless-guided-dental-implants'
+    | '/full-mouth-dental-implants'
+    | '/immediate-dental-implants'
+    | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AllOn4AllOn6OdishaRoute: typeof AllOn4AllOn6OdishaRoute
   DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
+  FlaplessGuidedDentalImplantsRoute: typeof FlaplessGuidedDentalImplantsRoute
+  FullMouthDentalImplantsRoute: typeof FullMouthDentalImplantsRoute
+  ImmediateDentalImplantsRoute: typeof ImmediateDentalImplantsRoute
+  MultipleDentalImplantsRoute: typeof MultipleDentalImplantsRoute
   SingleToothDentalImplantRoute: typeof SingleToothDentalImplantRoute
 }
 
@@ -74,11 +145,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/all-on-4-all-on-6-odisha': {
+      id: '/all-on-4-all-on-6-odisha'
+      path: '/all-on-4-all-on-6-odisha'
+      fullPath: '/all-on-4-all-on-6-odisha'
+      preLoaderRoute: typeof AllOn4AllOn6OdishaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dental-implant-cost-odisha': {
       id: '/dental-implant-cost-odisha'
       path: '/dental-implant-cost-odisha'
       fullPath: '/dental-implant-cost-odisha'
       preLoaderRoute: typeof DentalImplantCostOdishaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flapless-guided-dental-implants': {
+      id: '/flapless-guided-dental-implants'
+      path: '/flapless-guided-dental-implants'
+      fullPath: '/flapless-guided-dental-implants'
+      preLoaderRoute: typeof FlaplessGuidedDentalImplantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/full-mouth-dental-implants': {
+      id: '/full-mouth-dental-implants'
+      path: '/full-mouth-dental-implants'
+      fullPath: '/full-mouth-dental-implants'
+      preLoaderRoute: typeof FullMouthDentalImplantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/immediate-dental-implants': {
+      id: '/immediate-dental-implants'
+      path: '/immediate-dental-implants'
+      fullPath: '/immediate-dental-implants'
+      preLoaderRoute: typeof ImmediateDentalImplantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/multiple-dental-implants': {
+      id: '/multiple-dental-implants'
+      path: '/multiple-dental-implants'
+      fullPath: '/multiple-dental-implants'
+      preLoaderRoute: typeof MultipleDentalImplantsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/single-tooth-dental-implant': {
@@ -93,7 +199,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AllOn4AllOn6OdishaRoute: AllOn4AllOn6OdishaRoute,
   DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
+  FlaplessGuidedDentalImplantsRoute: FlaplessGuidedDentalImplantsRoute,
+  FullMouthDentalImplantsRoute: FullMouthDentalImplantsRoute,
+  ImmediateDentalImplantsRoute: ImmediateDentalImplantsRoute,
+  MultipleDentalImplantsRoute: MultipleDentalImplantsRoute,
   SingleToothDentalImplantRoute: SingleToothDentalImplantRoute,
 }
 export const routeTree = rootRouteImport
