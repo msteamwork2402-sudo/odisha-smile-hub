@@ -171,7 +171,7 @@ function BlockView({ block }: { block: Block }) {
     case "checklist":
       return <Checklist items={block.items} />;
     case "cards":
-      return <InfoCards items={block.items} columns={block.columns} />;
+      return <InfoCards items={block.items} {...(block.columns ? { columns: block.columns } : {})} />;
     case "process":
       return <TreatmentProcess steps={block.steps} />;
     case "timeline":
@@ -183,12 +183,17 @@ function BlockView({ block }: { block: Block }) {
           optionA={block.optionA}
           optionB={block.optionB}
           rows={block.rows}
-          note={block.note}
+          {...(block.note ? { note: block.note } : {})}
         />
       );
     case "table":
       return (
-        <DataTable caption={block.caption} columns={block.columns} rows={block.rows} note={block.note} />
+        <DataTable
+          caption={block.caption}
+          columns={block.columns}
+          rows={block.rows}
+          {...(block.note ? { note: block.note } : {})}
+        />
       );
     case "callout":
       return <Callout title={block.title} text={block.text} />;
@@ -233,8 +238,8 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
         </Section>
 
         {cfg.sections.map((s, i) => (
-          <Section key={s.title} id={s.id} tone={s.tone ?? (i % 2 === 0 ? "soft" : "plain")}>
-            <SectionHeading title={s.title} intro={s.intro} />
+          <Section key={s.title} {...(s.id ? { id: s.id } : {})} tone={s.tone ?? (i % 2 === 0 ? "soft" : "plain")}>
+            <SectionHeading title={s.title} {...(s.intro ? { intro: s.intro } : {})} />
             {s.blocks.map((b, bi) => (
               <BlockView key={bi} block={b} />
             ))}
