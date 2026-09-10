@@ -11,12 +11,17 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AllOn4AllOn6OdishaRouteImport } from './routes/all-on-4-all-on-6-odisha'
+import { Route as BoneGraftingForDentalImplantsRouteImport } from './routes/bone-grafting-for-dental-implants'
 import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
+import { Route as DentalImplantMaintenanceFailureRouteImport } from './routes/dental-implant-maintenance-failure'
+import { Route as DentalImplantSecondOpinionRouteImport } from './routes/dental-implant-second-opinion'
 import { Route as FlaplessGuidedDentalImplantsRouteImport } from './routes/flapless-guided-dental-implants'
 import { Route as FullMouthDentalImplantsRouteImport } from './routes/full-mouth-dental-implants'
 import { Route as ImmediateDentalImplantsRouteImport } from './routes/immediate-dental-implants'
+import { Route as ImplantsVsBridgeVsDentureRouteImport } from './routes/implants-vs-bridge-vs-denture'
 import { Route as MultipleDentalImplantsRouteImport } from './routes/multiple-dental-implants'
 import { Route as SingleToothDentalImplantRouteImport } from './routes/single-tooth-dental-implant'
+import { Route as SinusLiftDentalImplantsRouteImport } from './routes/sinus-lift-dental-implants'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,11 +33,29 @@ const AllOn4AllOn6OdishaRoute = AllOn4AllOn6OdishaRouteImport.update({
   path: '/all-on-4-all-on-6-odisha',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BoneGraftingForDentalImplantsRoute =
+  BoneGraftingForDentalImplantsRouteImport.update({
+    id: '/bone-grafting-for-dental-implants',
+    path: '/bone-grafting-for-dental-implants',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DentalImplantCostOdishaRoute = DentalImplantCostOdishaRouteImport.update({
   id: '/dental-implant-cost-odisha',
   path: '/dental-implant-cost-odisha',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DentalImplantMaintenanceFailureRoute =
+  DentalImplantMaintenanceFailureRouteImport.update({
+    id: '/dental-implant-maintenance-failure',
+    path: '/dental-implant-maintenance-failure',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantSecondOpinionRoute =
+  DentalImplantSecondOpinionRouteImport.update({
+    id: '/dental-implant-second-opinion',
+    path: '/dental-implant-second-opinion',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FlaplessGuidedDentalImplantsRoute =
   FlaplessGuidedDentalImplantsRouteImport.update({
     id: '/flapless-guided-dental-implants',
@@ -49,6 +72,12 @@ const ImmediateDentalImplantsRoute = ImmediateDentalImplantsRouteImport.update({
   path: '/immediate-dental-implants',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImplantsVsBridgeVsDentureRoute =
+  ImplantsVsBridgeVsDentureRouteImport.update({
+    id: '/implants-vs-bridge-vs-denture',
+    path: '/implants-vs-bridge-vs-denture',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MultipleDentalImplantsRoute = MultipleDentalImplantsRouteImport.update({
   id: '/multiple-dental-implants',
   path: '/multiple-dental-implants',
@@ -60,80 +89,120 @@ const SingleToothDentalImplantRoute =
     path: '/single-tooth-dental-implant',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SinusLiftDentalImplantsRoute = SinusLiftDentalImplantsRouteImport.update({
+  id: '/sinus-lift-dental-implants',
+  path: '/sinus-lift-dental-implants',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
+  '/bone-grafting-for-dental-implants': typeof BoneGraftingForDentalImplantsRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
+  '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
+  '/implants-vs-bridge-vs-denture': typeof ImplantsVsBridgeVsDentureRoute
   '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
+  '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
+  '/bone-grafting-for-dental-implants': typeof BoneGraftingForDentalImplantsRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
+  '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
+  '/implants-vs-bridge-vs-denture': typeof ImplantsVsBridgeVsDentureRoute
   '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
+  '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
+  '/bone-grafting-for-dental-implants': typeof BoneGraftingForDentalImplantsRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
+  '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
+  '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
+  '/implants-vs-bridge-vs-denture': typeof ImplantsVsBridgeVsDentureRoute
   '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
+  '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/all-on-4-all-on-6-odisha'
+    | '/bone-grafting-for-dental-implants'
     | '/dental-implant-cost-odisha'
+    | '/dental-implant-maintenance-failure'
+    | '/dental-implant-second-opinion'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
+    | '/implants-vs-bridge-vs-denture'
     | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
+    | '/sinus-lift-dental-implants'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/all-on-4-all-on-6-odisha'
+    | '/bone-grafting-for-dental-implants'
     | '/dental-implant-cost-odisha'
+    | '/dental-implant-maintenance-failure'
+    | '/dental-implant-second-opinion'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
+    | '/implants-vs-bridge-vs-denture'
     | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
+    | '/sinus-lift-dental-implants'
   id:
     | '__root__'
     | '/'
     | '/all-on-4-all-on-6-odisha'
+    | '/bone-grafting-for-dental-implants'
     | '/dental-implant-cost-odisha'
+    | '/dental-implant-maintenance-failure'
+    | '/dental-implant-second-opinion'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
+    | '/implants-vs-bridge-vs-denture'
     | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
+    | '/sinus-lift-dental-implants'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AllOn4AllOn6OdishaRoute: typeof AllOn4AllOn6OdishaRoute
+  BoneGraftingForDentalImplantsRoute: typeof BoneGraftingForDentalImplantsRoute
   DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
+  DentalImplantMaintenanceFailureRoute: typeof DentalImplantMaintenanceFailureRoute
+  DentalImplantSecondOpinionRoute: typeof DentalImplantSecondOpinionRoute
   FlaplessGuidedDentalImplantsRoute: typeof FlaplessGuidedDentalImplantsRoute
   FullMouthDentalImplantsRoute: typeof FullMouthDentalImplantsRoute
   ImmediateDentalImplantsRoute: typeof ImmediateDentalImplantsRoute
+  ImplantsVsBridgeVsDentureRoute: typeof ImplantsVsBridgeVsDentureRoute
   MultipleDentalImplantsRoute: typeof MultipleDentalImplantsRoute
   SingleToothDentalImplantRoute: typeof SingleToothDentalImplantRoute
+  SinusLiftDentalImplantsRoute: typeof SinusLiftDentalImplantsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,11 +221,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AllOn4AllOn6OdishaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bone-grafting-for-dental-implants': {
+      id: '/bone-grafting-for-dental-implants'
+      path: '/bone-grafting-for-dental-implants'
+      fullPath: '/bone-grafting-for-dental-implants'
+      preLoaderRoute: typeof BoneGraftingForDentalImplantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dental-implant-cost-odisha': {
       id: '/dental-implant-cost-odisha'
       path: '/dental-implant-cost-odisha'
       fullPath: '/dental-implant-cost-odisha'
       preLoaderRoute: typeof DentalImplantCostOdishaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implant-maintenance-failure': {
+      id: '/dental-implant-maintenance-failure'
+      path: '/dental-implant-maintenance-failure'
+      fullPath: '/dental-implant-maintenance-failure'
+      preLoaderRoute: typeof DentalImplantMaintenanceFailureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implant-second-opinion': {
+      id: '/dental-implant-second-opinion'
+      path: '/dental-implant-second-opinion'
+      fullPath: '/dental-implant-second-opinion'
+      preLoaderRoute: typeof DentalImplantSecondOpinionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/flapless-guided-dental-implants': {
@@ -180,6 +270,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImmediateDentalImplantsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/implants-vs-bridge-vs-denture': {
+      id: '/implants-vs-bridge-vs-denture'
+      path: '/implants-vs-bridge-vs-denture'
+      fullPath: '/implants-vs-bridge-vs-denture'
+      preLoaderRoute: typeof ImplantsVsBridgeVsDentureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/multiple-dental-implants': {
       id: '/multiple-dental-implants'
       path: '/multiple-dental-implants'
@@ -194,18 +291,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SingleToothDentalImplantRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sinus-lift-dental-implants': {
+      id: '/sinus-lift-dental-implants'
+      path: '/sinus-lift-dental-implants'
+      fullPath: '/sinus-lift-dental-implants'
+      preLoaderRoute: typeof SinusLiftDentalImplantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AllOn4AllOn6OdishaRoute: AllOn4AllOn6OdishaRoute,
+  BoneGraftingForDentalImplantsRoute: BoneGraftingForDentalImplantsRoute,
   DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
+  DentalImplantMaintenanceFailureRoute: DentalImplantMaintenanceFailureRoute,
+  DentalImplantSecondOpinionRoute: DentalImplantSecondOpinionRoute,
   FlaplessGuidedDentalImplantsRoute: FlaplessGuidedDentalImplantsRoute,
   FullMouthDentalImplantsRoute: FullMouthDentalImplantsRoute,
   ImmediateDentalImplantsRoute: ImmediateDentalImplantsRoute,
+  ImplantsVsBridgeVsDentureRoute: ImplantsVsBridgeVsDentureRoute,
   MultipleDentalImplantsRoute: MultipleDentalImplantsRoute,
   SingleToothDentalImplantRoute: SingleToothDentalImplantRoute,
+  SinusLiftDentalImplantsRoute: SinusLiftDentalImplantsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
