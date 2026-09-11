@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone, Globe } from "lucide-react";
 import {
   EMAIL,
   PHONE_DISPLAY,
@@ -8,6 +8,7 @@ import {
   WHATSAPP_URL,
 } from "@/lib/site";
 import { IMPLANT_NAV_ITEMS } from "@/lib/implant-navigation";
+import { ODISHA_SERVICE_CITIES, LOCATION_TRUTH } from "@/lib/implant-cluster";
 import logoMark from "@/assets/logo-mark.png";
 
 export function Footer() {
@@ -29,10 +30,14 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Dental implant care for patients across Odisha. Begin with a free online consultation
-            and receive a preliminary treatment roadmap, with implant treatment carried out at{" "}
-            {TREATMENT_LOCATION}.
+            Specialist dental implant care for patients across Odisha. {LOCATION_TRUTH.consultation} Treatment is carried out at {TREATMENT_LOCATION}.
           </p>
+          <div className="mt-6">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-foreground">Service Areas</h3>
+            <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
+              Providing implant consultations for patients in {ODISHA_SERVICE_CITIES.join(", ")} and throughout Odisha.
+            </p>
+          </div>
         </div>
 
         <div>
@@ -49,15 +54,15 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold">Quick links</h3>
+          <h3 className="text-sm font-semibold">Care Pathway</h3>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             {[
-              ["Implant Services", "/#services"],
-              ["How It Works", "/#how-it-works"],
-              ["Implant Team", "/#team"],
-              ["Treatment Location", "/#location"],
-              ["FAQs", "/#faqs"],
-              ["Book FREE Online Consultation", "/#contact"],
+              ["FREE Online Consultation", "/#contact"],
+              ["How the Journey Works", "/#how-it-works"],
+              ["Implant Specialist Team", "/#team"],
+              ["Hospital Treatment Site", "/#location"],
+              ["Patient FAQs", "/#faqs"],
+              ["Cost & Price Guide", "/dental-implant-cost-odisha/"],
             ].map(([label, href]) => (
               <li key={href}>
                 <a href={href} className="transition-colors hover:text-primary">
@@ -97,8 +102,13 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <span>
-                Treatment location: {TREATMENT_LOCATION} — online consultations for patients
-                anywhere in Odisha
+                <strong>Treatment:</strong> {TREATMENT_LOCATION}
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Globe className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <span>
+                <strong>Consultations:</strong> Online across Odisha
               </span>
             </li>
           </ul>
