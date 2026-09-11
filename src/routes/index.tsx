@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import {
   ShieldCheck,
@@ -41,6 +42,8 @@ import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
 import { Reveal, CountUp } from "@/components/site/Reveal";
+import { submitConsultation } from "@/lib/consultation.functions";
+import { Button } from "@/components/ui/button";
 
 
 
@@ -682,6 +685,38 @@ function Faqs() {
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const sendConsultation = useServerFn(submitConsultation);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSubmitting(true);
+    setSubmitError("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await sendConsultation({
+        data: {
+          name: String(formData.get("name") ?? ""),
+          phone: String(formData.get("phone") ?? ""),
+          city: String(formData.get("city") ?? ""),
+          message: String(formData.get("message") ?? ""),
+        },
+      });
+      form.reset();
+      setSent(true);
+    } catch {
+      setSubmitError(
+        "Your request could not be sent. Please try again, call us, or contact us on WhatsApp.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="gradient-soft py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-2">
@@ -728,13 +763,7 @@ function Contact() {
           </div>
         </div>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-          }}
-          className="card-premium p-7 sm:p-9"
-        >
+        <form onSubmit={handleSubmit} className="card-premium p-7 sm:p-9">
           {sent ? (
             <div className="py-10 text-center">
               <CheckCircle2 className="mx-auto h-12 w-12 text-primary" />
@@ -782,12 +811,18 @@ function Contact() {
                   placeholder="e.g. Missing two lower molars, considering implants"
                 />
               </Field>
-              <button
+              <Button
                 type="submit"
-                className="cta-gradient shadow-soft w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
+                disabled={submitting}
+                className="cta-gradient shadow-soft h-auto w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
               >
-                Book FREE Online Consultation
-              </button>
+                {submitting ? "Sending request…" : "Book FREE Online Consultation"}
+              </Button>
+              {submitError && (
+                <p role="alert" className="text-center text-sm font-medium text-destructive">
+                  {submitError}
+                </p>
+              )}
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
