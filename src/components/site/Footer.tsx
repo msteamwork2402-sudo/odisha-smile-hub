@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import {
   EMAIL,
@@ -6,12 +7,13 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
+import { IMPLANT_NAV_ITEMS } from "@/lib/implant-navigation";
 import logoMark from "@/assets/logo-mark.png";
 
 export function Footer() {
   return (
     <footer className="border-t bg-surface pb-20 lg:pb-0">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 xl:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <img
@@ -31,6 +33,19 @@ export function Footer() {
             and receive a preliminary treatment roadmap, with implant treatment carried out at{" "}
             {TREATMENT_LOCATION}.
           </p>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-semibold">Dental implant treatments</h3>
+          <ul className="mt-4 grid gap-x-5 gap-y-2 text-sm text-muted-foreground sm:grid-cols-2 md:grid-cols-1">
+            {IMPLANT_NAV_ITEMS.map((item) => (
+              <li key={item.href}>
+                <Link to={item.href} className="transition-colors hover:text-primary">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>

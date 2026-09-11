@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { ChevronDown, Menu, X, Phone, MessageCircle } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/site";
+import { IMPLANT_NAV_ITEMS } from "@/lib/implant-navigation";
 import logoMark from "@/assets/logo-mark.png";
 
 const NAV = [
   { label: "Home", href: "/#home" },
-  { label: "Implant Services", href: "/#services" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Implant Team", href: "/#team" },
   { label: "Treatment Location", href: "/#location" },
@@ -48,6 +49,25 @@ export function Header() {
         </a>
 
         <nav className="hidden min-w-0 items-center gap-4 xl:flex">
+          <details className="group relative">
+            <summary className="flex cursor-pointer list-none items-center gap-1 whitespace-nowrap text-[13px] font-medium text-muted-foreground transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
+              Dental Implants
+              <ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180" />
+            </summary>
+            <div className="absolute left-0 top-full z-50 mt-4 w-[34rem] rounded-lg border border-border bg-background p-3 shadow-soft">
+              <div className="grid grid-cols-2 gap-1">
+                {IMPLANT_NAV_ITEMS.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </details>
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -87,7 +107,25 @@ export function Header() {
 
       {open && (
         <div className="border-t bg-background xl:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
+          <nav className="mx-auto flex max-h-[calc(100vh-4.5rem)] max-w-7xl flex-col gap-1 overflow-y-auto px-4 py-4 sm:px-6">
+            <details className="group">
+              <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary [&::-webkit-details-marker]:hidden">
+                Dental Implants
+                <ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" />
+              </summary>
+              <div className="ml-3 grid border-l border-border py-1 pl-3 sm:grid-cols-2">
+                {IMPLANT_NAV_ITEMS.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
             {NAV.map((item) => (
               <a
                 key={item.href}
