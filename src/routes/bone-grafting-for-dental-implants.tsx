@@ -179,6 +179,7 @@ const cfg: ImplantPageConfig = {
 };
 
 export const Route = createFileRoute("/bone-grafting-for-dental-implants")({
+  staticData: { sitemap: true },
   head: implantPageHead(cfg),
   component: () => <ImplantPage cfg={cfg} />,
 });

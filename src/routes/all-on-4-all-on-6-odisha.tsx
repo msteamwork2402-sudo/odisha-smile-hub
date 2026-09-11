@@ -173,6 +173,7 @@ const cfg: ImplantPageConfig = {
 };
 
 export const Route = createFileRoute("/all-on-4-all-on-6-odisha")({
+  staticData: { sitemap: true },
   head: implantPageHead(cfg),
   component: () => <ImplantPage cfg={cfg} />,
 });

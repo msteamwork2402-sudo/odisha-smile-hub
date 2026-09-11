@@ -193,6 +193,7 @@ const FAQ_ITEMS: Faq[] = [
 ];
 
 export const Route = createFileRoute("/dental-implant-cost-odisha")({
+  staticData: { sitemap: true },
   component: CostPage,
   head: () => ({
     meta: [

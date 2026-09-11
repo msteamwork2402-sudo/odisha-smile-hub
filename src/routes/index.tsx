@@ -49,6 +49,7 @@ const DESCRIPTION =
   "Free online dental implant consultations for patients across Odisha, powered by i-Smile.";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   component: Home,
   head: () => ({
     meta: [

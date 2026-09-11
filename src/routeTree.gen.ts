@@ -22,6 +22,7 @@ import { Route as ImplantsVsBridgeVsDentureRouteImport } from './routes/implants
 import { Route as MultipleDentalImplantsRouteImport } from './routes/multiple-dental-implants'
 import { Route as SingleToothDentalImplantRouteImport } from './routes/single-tooth-dental-implant'
 import { Route as SinusLiftDentalImplantsRouteImport } from './routes/sinus-lift-dental-implants'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -94,6 +95,11 @@ const SinusLiftDentalImplantsRoute = SinusLiftDentalImplantsRouteImport.update({
   path: '/sinus-lift-dental-implants',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -109,6 +115,7 @@ export interface FileRoutesByFullPath {
   '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
   '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -124,6 +131,7 @@ export interface FileRoutesByTo {
   '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
   '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/multiple-dental-implants': typeof MultipleDentalImplantsRoute
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
   '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -157,6 +166,7 @@ export interface FileRouteTypes {
     | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
     | '/sinus-lift-dental-implants'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -172,6 +182,7 @@ export interface FileRouteTypes {
     | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
     | '/sinus-lift-dental-implants'
+    | '/sitemap.xml'
   id:
     | '__root__'
     | '/'
@@ -187,6 +198,7 @@ export interface FileRouteTypes {
     | '/multiple-dental-implants'
     | '/single-tooth-dental-implant'
     | '/sinus-lift-dental-implants'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   MultipleDentalImplantsRoute: typeof MultipleDentalImplantsRoute
   SingleToothDentalImplantRoute: typeof SingleToothDentalImplantRoute
   SinusLiftDentalImplantsRoute: typeof SinusLiftDentalImplantsRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -298,6 +311,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SinusLiftDentalImplantsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -315,6 +335,7 @@ const rootRouteChildren: RootRouteChildren = {
   MultipleDentalImplantsRoute: MultipleDentalImplantsRoute,
   SingleToothDentalImplantRoute: SingleToothDentalImplantRoute,
   SinusLiftDentalImplantsRoute: SinusLiftDentalImplantsRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

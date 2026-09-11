@@ -135,6 +135,7 @@ const cfg: ImplantPageConfig = {
 };
 
 export const Route = createFileRoute("/dental-implant-second-opinion")({
+  staticData: { sitemap: true },
   head: implantPageHead(cfg),
   component: () => <ImplantPage cfg={cfg} />,
 });
