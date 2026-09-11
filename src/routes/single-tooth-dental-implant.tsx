@@ -174,6 +174,7 @@ const FAQ_ITEMS: Faq[] = [
 ];
 
 export const Route = createFileRoute("/single-tooth-dental-implant")({
+  staticData: { sitemap: true },
   component: SingleToothPage,
   head: () => ({
     meta: [

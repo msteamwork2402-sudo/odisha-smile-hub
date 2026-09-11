@@ -222,6 +222,7 @@ const cfg: ImplantPageConfig = {
 };
 
 export const Route = createFileRoute("/multiple-dental-implants")({
+  staticData: { sitemap: true },
   head: implantPageHead(cfg),
   component: () => <ImplantPage cfg={cfg} />,
 });

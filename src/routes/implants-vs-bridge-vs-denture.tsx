@@ -155,6 +155,7 @@ const cfg: ImplantPageConfig = {
 };
 
 export const Route = createFileRoute("/implants-vs-bridge-vs-denture")({
+  staticData: { sitemap: true },
   head: implantPageHead(cfg),
   component: () => <ImplantPage cfg={cfg} />,
 });
