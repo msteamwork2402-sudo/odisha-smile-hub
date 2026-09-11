@@ -47,9 +47,9 @@ import { Button } from "@/components/ui/button";
 
 
 
-const TITLE = "Dental Implants in Odisha | Free Dental Implant Consultation";
+const TITLE = "Dental Implants in Odisha | Free Online Consultation";
 const DESCRIPTION =
-  "Free online dental implant consultations for patients across Odisha, powered by i-Smile.";
+  "Explore dental implant options in Odisha. Start with a free online consultation, then receive care at CARE Hospital, Bhubaneswar.";
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
