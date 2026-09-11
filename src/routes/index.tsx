@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import {
@@ -19,6 +19,7 @@ import {
   Building2,
   HeartPulse,
   ScanLine,
+  ArrowRight,
 } from "lucide-react";
 
 import { Header } from "@/components/site/Header";
@@ -95,31 +96,38 @@ const SERVICES = [
     icon: Stethoscope,
     title: "Single Tooth Implant",
     text: "A titanium root and custom ceramic crown that restores one missing tooth without touching the neighbouring teeth.",
+    href: "/single-tooth-dental-implant" as const,
   },
   {
     icon: Layers,
     title: "Multiple Tooth Implants",
     text: "Implant-supported bridges that rebuild a section of missing teeth with natural contour and full chewing strength.",
+    href: "/multiple-dental-implants" as const,
   },
   {
     icon: Smile,
     title: "Full Mouth Rehabilitation",
     text: "All-on-4 and All-on-6 protocols for a fixed, permanent set of teeth — planned case by case after clinical assessment.",
+    href: "/full-mouth-dental-implants" as const,
   },
   {
     icon: Activity,
     title: "Bone Grafting & Sinus Lift",
     text: "Ridge augmentation for patients previously told they do not have enough bone for implants.",
+    href: "/bone-grafting-for-dental-implants" as const,
+    secondaryLink: { label: "Sinus lift", href: "/sinus-lift-dental-implants" as const },
   },
   {
     icon: Sparkles,
     title: "Zirconia Crowns & Smile Design",
     text: "Metal-free, shade-matched restorations designed digitally before a single tooth is prepared.",
+    href: "/zirconia-crowns-smile-design" as const,
   },
   {
     icon: ShieldCheck,
     title: "Second Opinion Review",
     text: "Already have a treatment plan or quote? Our team reviews your X-ray and explains your options clearly.",
+    href: "/dental-implant-second-opinion" as const,
   },
 ];
 
@@ -379,12 +387,32 @@ function Services() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
             <Reveal key={s.title} delay={(i % 3) * 100}>
-              <article className="card-premium h-full p-7">
+              <article className="card-premium relative h-full p-7 transition-transform duration-300 hover:-translate-y-1 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-primary">
                 <span className="gradient-brand grid h-12 w-12 place-items-center rounded-2xl text-brand-foreground">
                   <s.icon className="h-6 w-6" />
                 </span>
-                <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
+                <h3 className="mt-5 text-lg font-semibold">
+                  <Link
+                    to={s.href}
+                    className="after:absolute after:inset-0 focus-visible:outline-none"
+                  >
+                    {s.title}
+                  </Link>
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
+                <div className="mt-5 flex flex-wrap items-center gap-4">
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    View treatment <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  {s.secondaryLink ? (
+                    <Link
+                      to={s.secondaryLink.href}
+                      className="relative z-10 text-sm font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    >
+                      {s.secondaryLink.label}
+                    </Link>
+                  ) : null}
+                </div>
               </article>
             </Reveal>
           ))}

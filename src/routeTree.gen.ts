@@ -23,6 +23,7 @@ import { Route as MultipleDentalImplantsRouteImport } from './routes/multiple-de
 import { Route as SingleToothDentalImplantRouteImport } from './routes/single-tooth-dental-implant'
 import { Route as SinusLiftDentalImplantsRouteImport } from './routes/sinus-lift-dental-implants'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ZirconiaCrownsSmileDesignRouteImport } from './routes/zirconia-crowns-smile-design'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -100,6 +101,12 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ZirconiaCrownsSmileDesignRoute =
+  ZirconiaCrownsSmileDesignRouteImport.update({
+    id: '/zirconia-crowns-smile-design',
+    path: '/zirconia-crowns-smile-design',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -116,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
   '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zirconia-crowns-smile-design': typeof ZirconiaCrownsSmileDesignRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -132,6 +140,7 @@ export interface FileRoutesByTo {
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
   '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zirconia-crowns-smile-design': typeof ZirconiaCrownsSmileDesignRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -149,6 +158,7 @@ export interface FileRoutesById {
   '/single-tooth-dental-implant': typeof SingleToothDentalImplantRoute
   '/sinus-lift-dental-implants': typeof SinusLiftDentalImplantsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zirconia-crowns-smile-design': typeof ZirconiaCrownsSmileDesignRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/single-tooth-dental-implant'
     | '/sinus-lift-dental-implants'
     | '/sitemap.xml'
+    | '/zirconia-crowns-smile-design'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
     | '/single-tooth-dental-implant'
     | '/sinus-lift-dental-implants'
     | '/sitemap.xml'
+    | '/zirconia-crowns-smile-design'
   id:
     | '__root__'
     | '/'
@@ -199,6 +211,7 @@ export interface FileRouteTypes {
     | '/single-tooth-dental-implant'
     | '/sinus-lift-dental-implants'
     | '/sitemap.xml'
+    | '/zirconia-crowns-smile-design'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -216,6 +229,7 @@ export interface RootRouteChildren {
   SingleToothDentalImplantRoute: typeof SingleToothDentalImplantRoute
   SinusLiftDentalImplantsRoute: typeof SinusLiftDentalImplantsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ZirconiaCrownsSmileDesignRoute: typeof ZirconiaCrownsSmileDesignRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -318,6 +332,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/zirconia-crowns-smile-design': {
+      id: '/zirconia-crowns-smile-design'
+      path: '/zirconia-crowns-smile-design'
+      fullPath: '/zirconia-crowns-smile-design'
+      preLoaderRoute: typeof ZirconiaCrownsSmileDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -336,6 +357,7 @@ const rootRouteChildren: RootRouteChildren = {
   SingleToothDentalImplantRoute: SingleToothDentalImplantRoute,
   SinusLiftDentalImplantsRoute: SinusLiftDentalImplantsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ZirconiaCrownsSmileDesignRoute: ZirconiaCrownsSmileDesignRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -12,7 +12,8 @@ export type ClusterKey =
   | "sinus"
   | "second"
   | "compare"
-  | "maintenance";
+  | "maintenance"
+  | "zirconia";
 
 export const CLUSTER: Record<ClusterKey, { title: string; href: string; text: string; nav: string }> = {
   cost: {
@@ -87,6 +88,12 @@ export const CLUSTER: Record<ClusterKey, { title: string; href: string; text: st
     nav: "Maintenance & Failure",
     text: "Aftercare, warning signs and implant complications.",
   },
+  zirconia: {
+    title: "Zirconia Crowns & Smile Design",
+    href: "/zirconia-crowns-smile-design/",
+    nav: "Zirconia Crowns",
+    text: "Metal-free crowns and digitally planned smile restorations.",
+  },
 };
 
 export const CLUSTER_ORDER: ClusterKey[] = [
@@ -102,6 +109,7 @@ export const CLUSTER_ORDER: ClusterKey[] = [
   "second",
   "compare",
   "maintenance",
+  "zirconia",
 ];
 
 export const REVIEWER = {
