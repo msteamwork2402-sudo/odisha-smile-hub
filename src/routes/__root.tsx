@@ -85,6 +85,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Free online dental implant consultations for patients across Odisha, powered by i-Smile.",
       },
       { name: "author", content: "i-Smile" },
+      {
+        name: "google-site-verification",
+        content: "-LEghI8_V9KHhM7N4YZilHl42OtqvnnOF3N8Zzm9nm4",
+      },
       { property: "og:site_name", content: "OdishaDentalImplants.com" },
       { property: "og:type", content: "website" },
 
