@@ -3,11 +3,13 @@ import { getRouterInstance } from "@tanstack/react-start";
 
 import { sitemapStaticPaths, sitemapXML, type SitemapEntry } from "@/lib/sitemap";
 
+const BASE_URL = "https://odisha-smile-hub.lovable.app";
+
 export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
   server: {
     handlers: {
-      GET: async ({ request }) => {
+      GET: async () => {
         const router = await getRouterInstance();
         const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
 
@@ -18,7 +20,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
-        return new Response(sitemapXML(new URL(request.url).origin, entries), {
+        return new Response(sitemapXML(BASE_URL, entries), {
           headers: {
             "Content-Type": "application/xml; charset=utf-8",
             "Cache-Control": "public, max-age=3600",
