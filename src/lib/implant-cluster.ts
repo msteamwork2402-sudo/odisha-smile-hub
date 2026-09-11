@@ -122,3 +122,21 @@ export const REVIEWER = {
 
 export const ODISHA_CITIES =
   "Patients commonly travel to Bhubaneswar from Cuttack, Puri, Berhampur (Brahmapur), Sambalpur, Rourkela, Balasore, Baripada, Angul and Jharsuguda.";
+
+export const ODISHA_SERVICE_CITIES: readonly string[] = [
+  "Bhubaneswar",
+  "Cuttack",
+  "Puri",
+  "Berhampur (Brahmapur)",
+  "Sambalpur",
+  "Rourkela",
+  "Balasore",
+  "Baripada",
+  "Angul",
+  "Jharsuguda",
+];
+
+export const LOCATION_TRUTH = {
+  consultation: "Patients across Odisha can begin with an online consultation.",
+  treatment: "In-person assessment and treatment take place at CARE Hospital, Bhubaneswar.",
+} as const;

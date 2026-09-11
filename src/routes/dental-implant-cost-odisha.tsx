@@ -346,7 +346,7 @@ function CostPage() {
             intro="We welcome patients from across Odisha. The pathway is designed to be efficient, requiring travel only for essential clinical steps."
           />
           <p className="mt-6 text-sm text-muted-foreground">
-            {LOCATION_TRUTH.consultation} {LOCATION_TRUTH.treatment} Physical assessment and surgery take place at CARE Hospital, Bhubaneswar.
+            {LOCATION_TRUTH.consultation} {LOCATION_TRUTH.treatment}
           </p>
           <div className="mt-8">
             <LocationTrustBlock
