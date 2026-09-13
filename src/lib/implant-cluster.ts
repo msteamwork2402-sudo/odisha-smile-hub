@@ -118,7 +118,11 @@ export const REVIEWER = {
   role: "Maxillofacial Surgeon & Implant Specialist",
   reviewedOn: "2 September 2026",
   reviewedOnISO: "2026-09-02",
+  profileUrl: "https://appointment.carehospitals.com/?facilityID=8&DoctorID=5700",
 };
+
+export const CARE_HOSPITAL_URL =
+  "https://www.carehospitals.com/contact-us/care-super-specialty-hospital-bhubaneswar";
 
 export const ODISHA_CITIES =
   "Patients commonly travel to Bhubaneswar from Cuttack, Puri, Berhampur (Brahmapur), Sambalpur, Rourkela, Balasore, Baripada, Angul and Jharsuguda.";

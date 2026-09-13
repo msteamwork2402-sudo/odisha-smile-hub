@@ -318,9 +318,15 @@ export function ClinicalReviewer({
           <dt className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Clinically reviewed by</dt>
           <dd className="mt-1 text-sm font-semibold text-foreground">
             {profileHref ? (
-              <Link to="/" hash="team" className="hover:text-primary">
-                {reviewer}
-              </Link>
+              profileHref.startsWith("http") ? (
+                <a href={profileHref} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                  {reviewer}
+                </a>
+              ) : (
+                <Link to="/" hash="team" className="hover:text-primary">
+                  {reviewer}
+                </Link>
+              )
             ) : (
               reviewer
             )}
@@ -345,6 +351,7 @@ export function LocationTrustBlock({
   phoneTel,
   hours,
   image,
+  hospitalHref,
 }: {
   hospital: string;
   location: string;
@@ -352,6 +359,7 @@ export function LocationTrustBlock({
   phoneTel: string;
   hours: string;
   image?: string;
+  hospitalHref?: string;
 }) {
   return (
     <div className="card-premium grid gap-6 p-6 sm:p-8 lg:grid-cols-2 lg:items-center">
@@ -362,7 +370,13 @@ export function LocationTrustBlock({
             <Building2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
             <span className="text-foreground">
               <span className="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Hospital</span>
-              {hospital}
+              {hospitalHref ? (
+                <a href={hospitalHref} target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary">
+                  {hospital}
+                </a>
+              ) : (
+                hospital
+              )}
             </span>
           </li>
           <li className="flex gap-3">

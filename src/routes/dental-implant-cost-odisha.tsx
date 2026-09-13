@@ -31,14 +31,14 @@ import {
   type Faq,
 } from "@/components/implant/blocks";
 import { PHONE_DISPLAY, PHONE_TEL, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
-import { SITE, REVIEWER, ODISHA_SERVICE_CITIES, LOCATION_TRUTH } from "@/lib/implant-cluster";
+import { CARE_HOSPITAL_URL, SITE, REVIEWER, ODISHA_SERVICE_CITIES, LOCATION_TRUTH } from "@/lib/implant-cluster";
 import implantDetail from "@/assets/implant-detail.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
 
 const URL = `${SITE}/dental-implant-cost-odisha/`;
-const TITLE = "Dental Implant Cost in Odisha 2026 | Price & Treatment Guide";
+const TITLE = "Dental Implant Cost in Odisha 2026 | Treatment Guide";
 const DESCRIPTION =
-  "Learn about dental implant cost in Odisha in 2026, what affects the price, single-tooth and full-mouth implant costs, All-on-4/6 treatment, and what is included in an implant treatment plan.";
+  "Understand dental implant cost in Odisha in 2026, including price factors for single-tooth, multiple, full-mouth and All-on-4/6 treatment.";
 const H1 = "Dental Implant Cost in Odisha — 2026 Patient Guide";
 const REVIEWED_ON = "2 September 2026";
 
@@ -129,6 +129,7 @@ export const Route = createFileRoute("/dental-implant-cost-odisha")({
                 name: REVIEWER.name,
                 jobTitle: REVIEWER.role,
                 medicalSpecialty: "Maxillofacial Surgery",
+                url: REVIEWER.profileUrl,
               },
               about: {
                 "@type": "MedicalProcedure",
@@ -141,12 +142,14 @@ export const Route = createFileRoute("/dental-implant-cost-odisha")({
               provider: {
                 "@type": "MedicalBusiness",
                 name: "OdishaDentalImplants.com",
+                url: SITE,
                 medicalSpecialty: "Dentistry",
                 areaServed: ODISHA_SERVICE_CITIES.map(city => ({
                   "@type": "City",
                   name: city,
                 })),
                 telephone: PHONE_TEL,
+                sameAs: [CARE_HOSPITAL_URL],
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "CARE Hospital",
@@ -356,6 +359,7 @@ function CostPage() {
               phoneTel={PHONE_TEL}
               hours="Appointment hours are confirmed by the coordinator when your visit is scheduled."
               image={careHospital.url}
+              hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>
         </Section>
@@ -366,7 +370,7 @@ function CostPage() {
             reviewer={REVIEWER.name}
             reviewerRole={REVIEWER.role}
             reviewedOn={REVIEWED_ON}
-            profileHref="/#team"
+            profileHref={REVIEWER.profileUrl}
           />
         </Section>
 

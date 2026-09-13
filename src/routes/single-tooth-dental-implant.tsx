@@ -25,6 +25,7 @@ import {
   type Faq,
 } from "@/components/implant/blocks";
 import { PHONE_DISPLAY, PHONE_TEL, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
+import { CARE_HOSPITAL_URL, REVIEWER } from "@/lib/implant-cluster";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
 
@@ -32,12 +33,12 @@ const SITE = "https://odishadentalimplants.com";
 const URL = `${SITE}/single-tooth-dental-implant/`;
 const TITLE = "Single Tooth Dental Implant in Odisha | Treatment Guide";
 const DESCRIPTION =
-  "Learn how a single tooth dental implant replaces a missing tooth, how the treatment works, who may be suitable, recovery expectations, alternatives and cost considerations in Odisha.";
+  "Learn about single tooth implants in Odisha: procedure, suitability, recovery, implant versus bridge choices and cost factors for replacing one tooth.";
 const H1 = "Single Tooth Dental Implant in Odisha";
 const REVIEWED_ON = "2 September 2026";
 
 const QUICK_ANSWER =
-  "A single tooth dental implant is a treatment used to replace one missing tooth. An implant is placed in the jaw as a foundation for a replacement tooth, followed by an appropriate restoration after the required healing and treatment stages. Whether this option is suitable depends on the individual's oral health, bone condition and overall treatment requirements.";
+  "A single tooth dental implant replaces one missing tooth with an implant, connector and crown. Suitability and treatment stages depend on oral health, available bone and the clinical assessment. Patients across India can begin with an online consultation; examination and treatment take place in Bhubaneswar.";
 
 const FAQ_ITEMS: Faq[] = [
   {
@@ -208,6 +209,12 @@ export const Route = createFileRoute("/single-tooth-dental-implant")({
               url: URL,
               inLanguage: "en-IN",
               lastReviewed: "2026-09-02",
+              reviewedBy: {
+                "@type": "Person",
+                name: REVIEWER.name,
+                jobTitle: REVIEWER.role,
+                url: REVIEWER.profileUrl,
+              },
               about: {
                 "@type": "MedicalProcedure",
                 name: "Single tooth dental implant",
@@ -219,9 +226,11 @@ export const Route = createFileRoute("/single-tooth-dental-implant")({
               provider: {
                 "@type": "MedicalBusiness",
                 name: "OdishaDentalImplants.com",
+                url: SITE,
                 medicalSpecialty: "Dentistry",
                 areaServed: "Odisha, India",
                 telephone: PHONE_TEL,
+                sameAs: [CARE_HOSPITAL_URL],
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "CARE Hospital",
@@ -649,6 +658,7 @@ function SingleToothPage() {
               phoneTel={PHONE_TEL}
               hours="Appointment hours are confirmed by the coordinator when your visit is scheduled."
               image={careHospital.url}
+              hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>
         </Section>
@@ -659,7 +669,7 @@ function SingleToothPage() {
             reviewer="Dr. Sauvik Singha, MDS"
             reviewerRole="Maxillofacial Surgeon & Implant Specialist"
             reviewedOn={REVIEWED_ON}
-            profileHref="/#team"
+            profileHref={REVIEWER.profileUrl}
           />
         </Section>
 
@@ -688,8 +698,15 @@ function SingleToothPage() {
             <div className="card-premium p-6">
               <h2 className="text-lg font-bold text-foreground">Clinical Information &amp; References</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Verified clinical and professional references for this page will be listed here as they are
-                reviewed and approved by the clinical team.
+                Review the official CARE Hospitals pages for{" "}
+                <a className="font-semibold text-primary underline" href={REVIEWER.profileUrl} target="_blank" rel="noopener noreferrer">
+                  Dr. Sauvik Singha
+                </a>{" "}
+                and the{" "}
+                <a className="font-semibold text-primary underline" href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer">
+                  Bhubaneswar treatment location
+                </a>
+                . Additional clinical references are added after review by the dental team.
               </p>
             </div>
             <div className="rounded-3xl border border-border bg-secondary/50 p-6">
