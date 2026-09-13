@@ -26,7 +26,7 @@ import {
   type ProcessStep,
 } from "@/components/implant/blocks";
 import { PHONE_DISPLAY, PHONE_TEL, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
-import { CLUSTER, ODISHA_CITIES, REVIEWER, SITE, type ClusterKey } from "@/lib/implant-cluster";
+import { CARE_HOSPITAL_URL, CLUSTER, ODISHA_CITIES, REVIEWER, SITE, type ClusterKey } from "@/lib/implant-cluster";
 import careHospital from "@/assets/care-hospital.png.asset.json";
 
 /* --------------------------------- content -------------------------------- */
@@ -122,7 +122,12 @@ export function implantPageHead(cfg: ImplantPageConfig) {
               url: cfg.url,
               inLanguage: "en-IN",
               lastReviewed: REVIEWER.reviewedOnISO,
-              reviewedBy: { "@type": "Person", name: REVIEWER.name, jobTitle: REVIEWER.role },
+              reviewedBy: {
+                "@type": "Person",
+                name: REVIEWER.name,
+                jobTitle: REVIEWER.role,
+                url: REVIEWER.profileUrl,
+              },
               about: {
                 "@type": "MedicalProcedure",
                 name: cfg.procedureName,
@@ -133,9 +138,11 @@ export function implantPageHead(cfg: ImplantPageConfig) {
               provider: {
                 "@type": "MedicalBusiness",
                 name: "OdishaDentalImplants.com",
+                url: SITE,
                 medicalSpecialty: "Dentistry",
                 areaServed: "Odisha, India",
                 telephone: PHONE_TEL,
+                sameAs: [CARE_HOSPITAL_URL],
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "CARE Hospital",
@@ -259,8 +266,8 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
 
         <Section tone="soft">
           <SectionHeading
-            title="Treatment for Patients Across Odisha"
-            intro="Patients from across Odisha can contact the dental team to discuss their treatment requirements. The physical treatment location is always confirmed before an appointment is scheduled."
+             title="Online Consultation Across India, Treatment in Bhubaneswar"
+             intro="Patients across India can begin with an online consultation and receive a preliminary treatment roadmap. Clinical examination, final planning and treatment take place at CARE Hospital, Bhubaneswar."
           />
           <p className="mt-6 text-sm text-muted-foreground">
             {ODISHA_CITIES} Physical examination and implant treatment take place at {TREATMENT_LOCATION}.
@@ -273,6 +280,7 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
               phoneTel={PHONE_TEL}
               hours="Appointment hours are confirmed by the coordinator when your visit is scheduled."
               image={careHospital.url}
+              hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>
         </Section>
@@ -283,7 +291,7 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
             reviewer={REVIEWER.name}
             reviewerRole={REVIEWER.role}
             reviewedOn={REVIEWER.reviewedOn}
-            profileHref="/#team"
+            profileHref={REVIEWER.profileUrl}
           />
         </Section>
 
@@ -318,8 +326,15 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
             <div className="card-premium p-6">
               <h2 className="text-lg font-bold text-foreground">Clinical Information &amp; References</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Verified clinical and professional references for this page will be listed here as they are
-                reviewed and approved by the clinical team.
+                Review the official CARE Hospitals pages for{" "}
+                <a className="font-semibold text-primary underline" href={REVIEWER.profileUrl} target="_blank" rel="noopener noreferrer">
+                  Dr. Sauvik Singha
+                </a>{" "}
+                and the{" "}
+                <a className="font-semibold text-primary underline" href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer">
+                  Bhubaneswar treatment location
+                </a>
+                . Additional clinical references are added after review by the dental team.
               </p>
             </div>
             <div className="rounded-3xl border border-border bg-secondary/50 p-6">

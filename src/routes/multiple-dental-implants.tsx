@@ -9,7 +9,7 @@ const cfg: ImplantPageConfig = {
   url: `${SITE}/multiple-dental-implants/`,
   title: "Multiple Dental Implants in Odisha | Treatment Guide",
   description:
-    "How multiple dental implants replace several missing teeth, implant-supported bridges, how many implants may be needed, treatment stages, suitability and cost considerations in Odisha.",
+    "Learn how multiple dental implants and implant-supported bridges replace several missing teeth, including treatment stages, suitability and cost factors.",
   h1: "Multiple Dental Implants in Odisha",
   eyebrow: "Implant Treatment Guide",
   heroCopy:
@@ -19,7 +19,7 @@ const cfg: ImplantPageConfig = {
   heroImageAlt: "Close-up clinical illustration of dental implants supporting replacement teeth",
   quickQuestion: "What are multiple dental implants?",
   quickAnswer:
-    "Multiple dental implants are used when more than one tooth is missing. Depending on the clinical situation, each missing tooth may receive its own implant, or a smaller number of implants may be used to support a fixed bridge spanning several teeth. The number and position of implants is decided after clinical examination and radiographic assessment.",
+    "Multiple dental implants replace several missing teeth with individual implant crowns or an implant-supported bridge. The number and position of implants are decided after clinical examination and imaging. Patients across India can start with an online consultation; assessment and treatment take place in Bhubaneswar.",
   sections: [
     {
       title: "When Are Multiple Implants Considered?",

@@ -9,7 +9,7 @@ const cfg: ImplantPageConfig = {
   url: `${SITE}/all-on-4-all-on-6-odisha/`,
   title: "All-on-4 & All-on-6 Dental Implants in Odisha | Guide",
   description:
-    "Understand All-on-4 and All-on-6 full-arch dental implant treatment in Odisha: how fixed full-arch teeth are planned, who may be suitable, treatment stages, aftercare and cost considerations.",
+    "Understand All-on-4 and All-on-6 dental implants in Odisha, including suitability, fixed full-arch planning, treatment stages, aftercare and cost factors.",
   h1: "All-on-4 & All-on-6 Dental Implants in Odisha",
   eyebrow: "Full-Arch Implant Guide",
   heroCopy:

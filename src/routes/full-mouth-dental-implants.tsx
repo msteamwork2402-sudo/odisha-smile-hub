@@ -9,7 +9,7 @@ const cfg: ImplantPageConfig = {
   url: `${SITE}/full-mouth-dental-implants/`,
   title: "Full-Mouth Dental Implants in Odisha | Treatment Guide",
   description:
-    "Full-mouth dental implant rehabilitation in Odisha: fixed and removable implant-supported options, planning for extensive tooth loss, treatment stages, aftercare and cost considerations.",
+    "Explore full-mouth dental implants in Odisha, including fixed and removable options, All-on-4/6, treatment stages, aftercare and cost factors.",
   h1: "Full-Mouth Dental Implants in Odisha",
   eyebrow: "Full-Mouth Rehabilitation",
   heroCopy:
@@ -19,7 +19,7 @@ const cfg: ImplantPageConfig = {
   heroImageAlt: "Dentist discussing a full-mouth implant treatment plan with a patient",
   quickQuestion: "What are full-mouth dental implants?",
   quickAnswer:
-    "Full-mouth dental implants replace the teeth of one or both jaws using implants placed in the jawbone. The replacement teeth may be fixed to the implants or be an implant-supported removable overdenture. The right option is determined by bone volume, gum health, bite, general health and the patient's functional priorities.",
+    "Full-mouth dental implants replace the teeth of one or both jaws using fixed or removable implant-supported teeth. The right approach—including whether All-on-4 or All-on-6 may be considered—depends on bone, gums, bite, health and functional needs after clinical assessment.",
   sections: [
     {
       title: "Who May Need Full-Mouth Rehabilitation?",
