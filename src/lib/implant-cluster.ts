@@ -118,7 +118,7 @@ export const REVIEWER = {
   role: "Maxillofacial Surgeon & Implant Specialist",
   reviewedOn: "2 September 2026",
   reviewedOnISO: "2026-09-02",
-  profileUrl: "https://appointment.carehospitals.com/?facilityID=8&DoctorID=5700",
+  profileUrl: `${SITE}/#team`,
 };
 
 export const CARE_HOSPITAL_URL =
