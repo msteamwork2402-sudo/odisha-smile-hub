@@ -1,9 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, MessageCircle, Phone, Globe } from "lucide-react";
+import { Clock, ExternalLink, Mail, MapPin, MessageCircle, Phone, Globe } from "lucide-react";
 import {
+  CARE_HOSPITAL_MAPS_URL,
+  CONSULTATION_HOURS,
   EMAIL,
   PHONE_DISPLAY,
   PHONE_TEL,
+  TREATMENT_ADDRESS,
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
@@ -103,6 +106,21 @@ export function Footer() {
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <span>
                 <strong>Treatment:</strong> {TREATMENT_LOCATION}
+                <span className="mt-1 block text-xs leading-relaxed">{TREATMENT_ADDRESS}</span>
+                <a
+                  href={CARE_HOSPITAL_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                >
+                  View on Google Maps <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <span>
+                <strong>Dental consultation hours:</strong> {CONSULTATION_HOURS}
               </span>
             </li>
             <li className="flex items-start gap-3">

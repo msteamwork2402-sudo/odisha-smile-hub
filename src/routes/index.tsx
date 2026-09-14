@@ -29,6 +29,9 @@ import {
   EMAIL,
   PHONE_DISPLAY,
   PHONE_TEL,
+  CARE_HOSPITAL_MAPS_URL,
+  CONSULTATION_HOURS,
+  TREATMENT_ADDRESS,
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
@@ -80,9 +83,10 @@ export const Route = createFileRoute("/")({
           email: EMAIL,
           address: {
             "@type": "PostalAddress",
-            streetAddress: "CARE Hospital",
+            streetAddress: `CARE Hospital, ${TREATMENT_ADDRESS}`,
             addressLocality: "Bhubaneswar",
             addressRegion: "Odisha",
+            postalCode: "751016",
             addressCountry: "IN",
           },
         }),
@@ -549,10 +553,21 @@ function Location() {
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             CARE Hospital
             <br />
-            Bhubaneswar, Odisha
+            {TREATMENT_ADDRESS}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            <strong className="text-foreground">Dental consultation hours:</strong> {CONSULTATION_HOURS}
           </p>
 
           <div className="mt-6 space-y-3 text-sm">
+            <a
+              href={CARE_HOSPITAL_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 font-medium hover:text-primary"
+            >
+              <MapPin className="h-4 w-4 text-primary" /> View on Google Maps
+            </a>
             <a
               href={`tel:${PHONE_TEL}`}
               className="flex items-center gap-3 font-medium hover:text-primary"

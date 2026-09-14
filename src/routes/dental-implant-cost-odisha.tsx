@@ -30,7 +30,7 @@ import {
   TreatmentProcess,
   type Faq,
 } from "@/components/implant/blocks";
-import { PHONE_DISPLAY, PHONE_TEL, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
+import { CONSULTATION_HOURS, PHONE_DISPLAY, PHONE_TEL, TREATMENT_ADDRESS, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
 import { CARE_HOSPITAL_URL, SITE, REVIEWER, ODISHA_SERVICE_CITIES, LOCATION_TRUTH } from "@/lib/implant-cluster";
 import implantDetail from "@/assets/implant-detail.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
@@ -152,9 +152,10 @@ export const Route = createFileRoute("/dental-implant-cost-odisha")({
                 sameAs: [CARE_HOSPITAL_URL],
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "CARE Hospital",
+                  streetAddress: `CARE Hospital, ${TREATMENT_ADDRESS}`,
                   addressLocality: "Bhubaneswar",
                   addressRegion: "Odisha",
+                  postalCode: "751016",
                   addressCountry: "IN",
                 },
               },
@@ -357,7 +358,7 @@ function CostPage() {
               location={TREATMENT_LOCATION}
               phoneDisplay={PHONE_DISPLAY}
               phoneTel={PHONE_TEL}
-              hours="Appointment hours are confirmed by the coordinator when your visit is scheduled."
+              hours={CONSULTATION_HOURS}
               image={careHospital.url}
               hospitalHref={CARE_HOSPITAL_URL}
             />
