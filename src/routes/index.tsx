@@ -131,7 +131,7 @@ const SERVICES = [
     icon: ShieldCheck,
     title: "Second Opinion Review",
     text: "Already have a treatment plan or quote? Our team reviews your X-ray and explains your options clearly.",
-    href: "/dental-implant-second-opinion" as const,
+    href: "/dental-implant-second-opinion/" as const,
   },
 ];
 
