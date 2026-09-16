@@ -12,6 +12,7 @@ declare global {
 }
 
 const GOOGLE_TAG_SCRIPT_ID = "google-analytics-gtag";
+const DEFAULT_MEASUREMENT_ID = "G-V1MCCK3ZLM";
 
 export function GoogleAnalytics() {
   const location = useLocation();
@@ -23,7 +24,12 @@ export function GoogleAnalytics() {
 
     async function trackPageView() {
       try {
-        const measurementId = await fetchMeasurementId();
+        let measurementId: string;
+        try {
+          measurementId = (await fetchMeasurementId()) || DEFAULT_MEASUREMENT_ID;
+        } catch {
+          measurementId = (import.meta.env["VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID"] as string) || DEFAULT_MEASUREMENT_ID;
+        }
         if (cancelled) return;
 
         window.dataLayer = window.dataLayer ?? [];

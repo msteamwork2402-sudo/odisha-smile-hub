@@ -1,11 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
 
-export const getAnalyticsMeasurementId = createServerFn({ method: "GET" }).handler(() => {
-  const measurementId = process.env["GOOGLE_ANALYTICS_MEASUREMENT_ID"];
+const DEFAULT_MEASUREMENT_ID = "G-V1MCCK3ZLM";
 
-  if (!measurementId) {
-    throw new Error("Google Analytics Measurement ID is not configured");
-  }
+export const getAnalyticsMeasurementId = createServerFn({ method: "GET" }).handler(() => {
+  const measurementId = process.env["GOOGLE_ANALYTICS_MEASUREMENT_ID"] || DEFAULT_MEASUREMENT_ID;
 
   return measurementId;
 });

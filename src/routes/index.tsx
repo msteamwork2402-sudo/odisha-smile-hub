@@ -44,7 +44,7 @@ import teamSubham from "@/assets/team-subham-real.jpg";
 import teamMonika from "@/assets/team-monika-real.jpg";
 import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
-import careHospital from "@/assets/care-hospital.png.asset.json";
+import careHospital from "@/assets/care-hospital.png";
 import { Reveal, CountUp } from "@/components/site/Reveal";
 import { submitConsultation } from "@/lib/consultation.functions";
 import { Button } from "@/components/ui/button";
@@ -545,7 +545,7 @@ function Location() {
           </span>
           <h3 className="mt-5 text-lg font-semibold">Where you are treated</h3>
           <img
-            src={careHospital.url}
+            src={careHospital}
             alt="CARE Hospital building in Bhubaneswar, Odisha"
             loading="lazy"
             className="mt-4 aspect-[16/10] w-full rounded-2xl object-cover"

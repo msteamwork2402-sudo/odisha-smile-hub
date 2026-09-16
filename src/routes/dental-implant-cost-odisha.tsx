@@ -31,7 +31,7 @@ import {
 import { CONSULTATION_HOURS, PHONE_DISPLAY, PHONE_TEL, TREATMENT_ADDRESS, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
 import { CARE_HOSPITAL_URL, SITE, REVIEWER, ODISHA_SERVICE_CITIES, LOCATION_TRUTH } from "@/lib/implant-cluster";
 import implantDetail from "@/assets/implant-detail.jpg";
-import careHospital from "@/assets/care-hospital.png.asset.json";
+import careHospital from "@/assets/care-hospital.png";
 
 const URL = `${SITE}/dental-implant-cost-odisha/`;
 const TITLE = "Dental Implant Cost in Odisha | 2026 Patient Guide";
@@ -374,7 +374,7 @@ function CostPage() {
               phoneDisplay={PHONE_DISPLAY}
               phoneTel={PHONE_TEL}
               hours={CONSULTATION_HOURS}
-              image={careHospital.url}
+              image={careHospital}
               hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>

@@ -34,7 +34,7 @@ import {
   WHATSAPP_URL,
 } from "@/lib/site";
 import { CARE_HOSPITAL_URL, CLUSTER, ODISHA_CITIES, REVIEWER, SITE, type ClusterKey } from "@/lib/implant-cluster";
-import careHospital from "@/assets/care-hospital.png.asset.json";
+import careHospital from "@/assets/care-hospital.png";
 
 /* --------------------------------- content -------------------------------- */
 
@@ -287,7 +287,7 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
               phoneDisplay={PHONE_DISPLAY}
               phoneTel={PHONE_TEL}
               hours={CONSULTATION_HOURS}
-              image={careHospital.url}
+              image={careHospital}
               hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>

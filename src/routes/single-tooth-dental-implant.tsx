@@ -27,7 +27,7 @@ import {
 import { CONSULTATION_HOURS, PHONE_DISPLAY, PHONE_TEL, TREATMENT_ADDRESS, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
 import { CARE_HOSPITAL_URL, REVIEWER } from "@/lib/implant-cluster";
 import dentistConsult from "@/assets/dentist-consult.jpg";
-import careHospital from "@/assets/care-hospital.png.asset.json";
+import careHospital from "@/assets/care-hospital.png";
 
 const SITE = "https://odishadentalimplants.com";
 const URL = `${SITE}/single-tooth-dental-implant/`;
@@ -653,12 +653,12 @@ function SingleToothPage() {
           </p>
           <div className="mt-8">
             <LocationTrustBlock
-              hospital="CARE Hospital"
-              location={TREATMENT_LOCATION}
+              hospital="CARE Hospital, Bhubaneswar"
+              location={TREATMENT_ADDRESS}
               phoneDisplay={PHONE_DISPLAY}
               phoneTel={PHONE_TEL}
               hours={CONSULTATION_HOURS}
-              image={careHospital.url}
+              image={careHospital}
               hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>

@@ -15,6 +15,16 @@ import { Route as BoneGraftingForDentalImplantsRouteImport } from './routes/bone
 import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
 import { Route as DentalImplantMaintenanceFailureRouteImport } from './routes/dental-implant-maintenance-failure'
 import { Route as DentalImplantSecondOpinionRouteImport } from './routes/dental-implant-second-opinion'
+import { Route as DentalImplantsAngulRouteImport } from './routes/dental-implants-angul'
+import { Route as DentalImplantsBalasoreRouteImport } from './routes/dental-implants-balasore'
+import { Route as DentalImplantsBaripadaRouteImport } from './routes/dental-implants-baripada'
+import { Route as DentalImplantsBerhampurRouteImport } from './routes/dental-implants-berhampur'
+import { Route as DentalImplantsBhubaneswarRouteImport } from './routes/dental-implants-bhubaneswar'
+import { Route as DentalImplantsCuttackRouteImport } from './routes/dental-implants-cuttack'
+import { Route as DentalImplantsJharsugudaRouteImport } from './routes/dental-implants-jharsuguda'
+import { Route as DentalImplantsPuriRouteImport } from './routes/dental-implants-puri'
+import { Route as DentalImplantsRourkelaRouteImport } from './routes/dental-implants-rourkela'
+import { Route as DentalImplantsSambalpurRouteImport } from './routes/dental-implants-sambalpur'
 import { Route as FlaplessGuidedDentalImplantsRouteImport } from './routes/flapless-guided-dental-implants'
 import { Route as FullMouthDentalImplantsRouteImport } from './routes/full-mouth-dental-implants'
 import { Route as ImmediateDentalImplantsRouteImport } from './routes/immediate-dental-implants'
@@ -58,6 +68,58 @@ const DentalImplantSecondOpinionRoute =
     path: '/dental-implant-second-opinion',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DentalImplantsAngulRoute = DentalImplantsAngulRouteImport.update({
+  id: '/dental-implants-angul',
+  path: '/dental-implants-angul',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsBalasoreRoute = DentalImplantsBalasoreRouteImport.update({
+  id: '/dental-implants-balasore',
+  path: '/dental-implants-balasore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsBaripadaRoute = DentalImplantsBaripadaRouteImport.update({
+  id: '/dental-implants-baripada',
+  path: '/dental-implants-baripada',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsBerhampurRoute = DentalImplantsBerhampurRouteImport.update({
+  id: '/dental-implants-berhampur',
+  path: '/dental-implants-berhampur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsBhubaneswarRoute =
+  DentalImplantsBhubaneswarRouteImport.update({
+    id: '/dental-implants-bhubaneswar',
+    path: '/dental-implants-bhubaneswar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsCuttackRoute = DentalImplantsCuttackRouteImport.update({
+  id: '/dental-implants-cuttack',
+  path: '/dental-implants-cuttack',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsJharsugudaRoute =
+  DentalImplantsJharsugudaRouteImport.update({
+    id: '/dental-implants-jharsuguda',
+    path: '/dental-implants-jharsuguda',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsPuriRoute = DentalImplantsPuriRouteImport.update({
+  id: '/dental-implants-puri',
+  path: '/dental-implants-puri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsRourkelaRoute = DentalImplantsRourkelaRouteImport.update({
+  id: '/dental-implants-rourkela',
+  path: '/dental-implants-rourkela',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsSambalpurRoute = DentalImplantsSambalpurRouteImport.update({
+  id: '/dental-implants-sambalpur',
+  path: '/dental-implants-sambalpur',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FlaplessGuidedDentalImplantsRoute =
   FlaplessGuidedDentalImplantsRouteImport.update({
     id: '/flapless-guided-dental-implants',
@@ -115,6 +177,16 @@ export interface FileRoutesByFullPath {
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
+  '/dental-implants-angul': typeof DentalImplantsAngulRoute
+  '/dental-implants-balasore': typeof DentalImplantsBalasoreRoute
+  '/dental-implants-baripada': typeof DentalImplantsBaripadaRoute
+  '/dental-implants-berhampur': typeof DentalImplantsBerhampurRoute
+  '/dental-implants-bhubaneswar': typeof DentalImplantsBhubaneswarRoute
+  '/dental-implants-cuttack': typeof DentalImplantsCuttackRoute
+  '/dental-implants-jharsuguda': typeof DentalImplantsJharsugudaRoute
+  '/dental-implants-puri': typeof DentalImplantsPuriRoute
+  '/dental-implants-rourkela': typeof DentalImplantsRourkelaRoute
+  '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -132,6 +204,16 @@ export interface FileRoutesByTo {
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
+  '/dental-implants-angul': typeof DentalImplantsAngulRoute
+  '/dental-implants-balasore': typeof DentalImplantsBalasoreRoute
+  '/dental-implants-baripada': typeof DentalImplantsBaripadaRoute
+  '/dental-implants-berhampur': typeof DentalImplantsBerhampurRoute
+  '/dental-implants-bhubaneswar': typeof DentalImplantsBhubaneswarRoute
+  '/dental-implants-cuttack': typeof DentalImplantsCuttackRoute
+  '/dental-implants-jharsuguda': typeof DentalImplantsJharsugudaRoute
+  '/dental-implants-puri': typeof DentalImplantsPuriRoute
+  '/dental-implants-rourkela': typeof DentalImplantsRourkelaRoute
+  '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -150,6 +232,16 @@ export interface FileRoutesById {
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
+  '/dental-implants-angul': typeof DentalImplantsAngulRoute
+  '/dental-implants-balasore': typeof DentalImplantsBalasoreRoute
+  '/dental-implants-baripada': typeof DentalImplantsBaripadaRoute
+  '/dental-implants-berhampur': typeof DentalImplantsBerhampurRoute
+  '/dental-implants-bhubaneswar': typeof DentalImplantsBhubaneswarRoute
+  '/dental-implants-cuttack': typeof DentalImplantsCuttackRoute
+  '/dental-implants-jharsuguda': typeof DentalImplantsJharsugudaRoute
+  '/dental-implants-puri': typeof DentalImplantsPuriRoute
+  '/dental-implants-rourkela': typeof DentalImplantsRourkelaRoute
+  '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -169,6 +261,16 @@ export interface FileRouteTypes {
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
+    | '/dental-implants-angul'
+    | '/dental-implants-balasore'
+    | '/dental-implants-baripada'
+    | '/dental-implants-berhampur'
+    | '/dental-implants-bhubaneswar'
+    | '/dental-implants-cuttack'
+    | '/dental-implants-jharsuguda'
+    | '/dental-implants-puri'
+    | '/dental-implants-rourkela'
+    | '/dental-implants-sambalpur'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -186,6 +288,16 @@ export interface FileRouteTypes {
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
+    | '/dental-implants-angul'
+    | '/dental-implants-balasore'
+    | '/dental-implants-baripada'
+    | '/dental-implants-berhampur'
+    | '/dental-implants-bhubaneswar'
+    | '/dental-implants-cuttack'
+    | '/dental-implants-jharsuguda'
+    | '/dental-implants-puri'
+    | '/dental-implants-rourkela'
+    | '/dental-implants-sambalpur'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -203,6 +315,16 @@ export interface FileRouteTypes {
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
+    | '/dental-implants-angul'
+    | '/dental-implants-balasore'
+    | '/dental-implants-baripada'
+    | '/dental-implants-berhampur'
+    | '/dental-implants-bhubaneswar'
+    | '/dental-implants-cuttack'
+    | '/dental-implants-jharsuguda'
+    | '/dental-implants-puri'
+    | '/dental-implants-rourkela'
+    | '/dental-implants-sambalpur'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -221,6 +343,16 @@ export interface RootRouteChildren {
   DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
   DentalImplantMaintenanceFailureRoute: typeof DentalImplantMaintenanceFailureRoute
   DentalImplantSecondOpinionRoute: typeof DentalImplantSecondOpinionRoute
+  DentalImplantsAngulRoute: typeof DentalImplantsAngulRoute
+  DentalImplantsBalasoreRoute: typeof DentalImplantsBalasoreRoute
+  DentalImplantsBaripadaRoute: typeof DentalImplantsBaripadaRoute
+  DentalImplantsBerhampurRoute: typeof DentalImplantsBerhampurRoute
+  DentalImplantsBhubaneswarRoute: typeof DentalImplantsBhubaneswarRoute
+  DentalImplantsCuttackRoute: typeof DentalImplantsCuttackRoute
+  DentalImplantsJharsugudaRoute: typeof DentalImplantsJharsugudaRoute
+  DentalImplantsPuriRoute: typeof DentalImplantsPuriRoute
+  DentalImplantsRourkelaRoute: typeof DentalImplantsRourkelaRoute
+  DentalImplantsSambalpurRoute: typeof DentalImplantsSambalpurRoute
   FlaplessGuidedDentalImplantsRoute: typeof FlaplessGuidedDentalImplantsRoute
   FullMouthDentalImplantsRoute: typeof FullMouthDentalImplantsRoute
   ImmediateDentalImplantsRoute: typeof ImmediateDentalImplantsRoute
@@ -274,6 +406,76 @@ declare module '@tanstack/react-router' {
       path: '/dental-implant-second-opinion'
       fullPath: '/dental-implant-second-opinion'
       preLoaderRoute: typeof DentalImplantSecondOpinionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-angul': {
+      id: '/dental-implants-angul'
+      path: '/dental-implants-angul'
+      fullPath: '/dental-implants-angul'
+      preLoaderRoute: typeof DentalImplantsAngulRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-balasore': {
+      id: '/dental-implants-balasore'
+      path: '/dental-implants-balasore'
+      fullPath: '/dental-implants-balasore'
+      preLoaderRoute: typeof DentalImplantsBalasoreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-baripada': {
+      id: '/dental-implants-baripada'
+      path: '/dental-implants-baripada'
+      fullPath: '/dental-implants-baripada'
+      preLoaderRoute: typeof DentalImplantsBaripadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-berhampur': {
+      id: '/dental-implants-berhampur'
+      path: '/dental-implants-berhampur'
+      fullPath: '/dental-implants-berhampur'
+      preLoaderRoute: typeof DentalImplantsBerhampurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-bhubaneswar': {
+      id: '/dental-implants-bhubaneswar'
+      path: '/dental-implants-bhubaneswar'
+      fullPath: '/dental-implants-bhubaneswar'
+      preLoaderRoute: typeof DentalImplantsBhubaneswarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-cuttack': {
+      id: '/dental-implants-cuttack'
+      path: '/dental-implants-cuttack'
+      fullPath: '/dental-implants-cuttack'
+      preLoaderRoute: typeof DentalImplantsCuttackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-jharsuguda': {
+      id: '/dental-implants-jharsuguda'
+      path: '/dental-implants-jharsuguda'
+      fullPath: '/dental-implants-jharsuguda'
+      preLoaderRoute: typeof DentalImplantsJharsugudaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-puri': {
+      id: '/dental-implants-puri'
+      path: '/dental-implants-puri'
+      fullPath: '/dental-implants-puri'
+      preLoaderRoute: typeof DentalImplantsPuriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-rourkela': {
+      id: '/dental-implants-rourkela'
+      path: '/dental-implants-rourkela'
+      fullPath: '/dental-implants-rourkela'
+      preLoaderRoute: typeof DentalImplantsRourkelaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-sambalpur': {
+      id: '/dental-implants-sambalpur'
+      path: '/dental-implants-sambalpur'
+      fullPath: '/dental-implants-sambalpur'
+      preLoaderRoute: typeof DentalImplantsSambalpurRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/flapless-guided-dental-implants': {
@@ -349,6 +551,16 @@ const rootRouteChildren: RootRouteChildren = {
   DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
   DentalImplantMaintenanceFailureRoute: DentalImplantMaintenanceFailureRoute,
   DentalImplantSecondOpinionRoute: DentalImplantSecondOpinionRoute,
+  DentalImplantsAngulRoute: DentalImplantsAngulRoute,
+  DentalImplantsBalasoreRoute: DentalImplantsBalasoreRoute,
+  DentalImplantsBaripadaRoute: DentalImplantsBaripadaRoute,
+  DentalImplantsBerhampurRoute: DentalImplantsBerhampurRoute,
+  DentalImplantsBhubaneswarRoute: DentalImplantsBhubaneswarRoute,
+  DentalImplantsCuttackRoute: DentalImplantsCuttackRoute,
+  DentalImplantsJharsugudaRoute: DentalImplantsJharsugudaRoute,
+  DentalImplantsPuriRoute: DentalImplantsPuriRoute,
+  DentalImplantsRourkelaRoute: DentalImplantsRourkelaRoute,
+  DentalImplantsSambalpurRoute: DentalImplantsSambalpurRoute,
   FlaplessGuidedDentalImplantsRoute: FlaplessGuidedDentalImplantsRoute,
   FullMouthDentalImplantsRoute: FullMouthDentalImplantsRoute,
   ImmediateDentalImplantsRoute: ImmediateDentalImplantsRoute,
