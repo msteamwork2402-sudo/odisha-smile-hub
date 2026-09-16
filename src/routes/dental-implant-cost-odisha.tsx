@@ -11,7 +11,6 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { MobileCtaBar } from "@/components/site/MobileCtaBar";
-import { Reveal } from "@/components/site/Reveal";
 import {
   Breadcrumbs,
   Checklist,
@@ -25,7 +24,6 @@ import {
   RelatedServices,
   Section,
   SectionHeading,
-  Timeline,
   TreatmentComparisonTable,
   TreatmentProcess,
   type Faq,
@@ -36,14 +34,14 @@ import implantDetail from "@/assets/implant-detail.jpg";
 import careHospital from "@/assets/care-hospital.png.asset.json";
 
 const URL = `${SITE}/dental-implant-cost-odisha/`;
-const TITLE = "Dental Implant Cost in Odisha 2026 | Treatment Guide";
+const TITLE = "Dental Implant Cost in Odisha | 2026 Patient Guide";
 const DESCRIPTION =
-  "Understand dental implant cost in Odisha in 2026, including price factors for single-tooth, multiple, full-mouth and All-on-4/6 treatment.";
-const H1 = "Dental Implant Cost in Odisha — 2026 Patient Guide";
+  "Understand dental implant cost in Odisha and Bhubaneswar, including factors affecting single tooth, full mouth and All-on-4 treatment costs.";
+const H1 = "Dental Implant Cost in Odisha: 2026 Patient Guide";
 const REVIEWED_ON = "2 September 2026";
 
 const QUICK_ANSWER =
-  "Dental implant cost in Odisha varies from patient to patient. The final treatment cost depends on the number of implants required, implant system, type of crown or full-arch restoration, available bone, and whether procedures such as bone grafting or sinus lifting are needed. A clinical examination and appropriate diagnostic evaluation are required to determine the treatment plan and exact cost.";
+  "Dental implant cost in Odisha varies from patient to patient. The final cost depends on the number of implants required, implant system, type of crown or full-arch restoration, available bone, and whether procedures such as bone grafting or sinus lifting are needed. A dental implant consultation, clinical examination and appropriate diagnostic evaluation are required to confirm the treatment plan and exact cost.";
 
 const FAQ_ITEMS: Faq[] = [
   {
@@ -278,7 +276,9 @@ const PROCESS = [
 const RELATED = [
   { title: "Single Tooth Dental Implant", href: "/single-tooth-dental-implant/", text: "Replacing one missing tooth with an implant and crown." },
   { title: "Multiple Dental Implants", href: "/multiple-dental-implants/", text: "Implant-supported solutions for several missing teeth." },
+  { title: "Full Mouth Dental Implants", href: "/full-mouth-dental-implants/", text: "Planning full-mouth rehabilitation for extensive tooth loss." },
   { title: "All-on-4 / All-on-6", href: "/all-on-4-all-on-6-odisha/", text: "Full-arch fixed teeth protocols and what they involve." },
+  { title: "Bone Grafting for Dental Implants", href: "/bone-grafting-for-dental-implants/", text: "When additional bone may be needed before or during implant placement." },
 ];
 
 function CostPage() {
@@ -296,7 +296,7 @@ function CostPage() {
         <ImplantHero
           eyebrow="Cost Guide 2026"
           title={H1}
-          copy="Understand the clinical factors that influence dental implant pricing and what is included in a comprehensive treatment plan in Odisha."
+          copy="Understand what influences dental implant cost in Bhubaneswar and across Odisha, from a single tooth implant to full-mouth and All-on-4 treatment."
           primaryCta={{ label: "Request a Preliminary Roadmap", href: "/#contact" }}
           secondaryCta={{ label: "Talk to the Team", href: WHATSAPP_URL, external: true }}
           trustLine="Clinical assessment • Individual treatment planning • Treatment at CARE Hospital, Bhubaneswar"
@@ -305,48 +305,63 @@ function CostPage() {
         />
 
         <Section>
-          <QuickAnswerBox question="What affects the cost of dental implants?" answer={QUICK_ANSWER} />
+          <QuickAnswerBox question="How much does a dental implant cost in Odisha?" answer={QUICK_ANSWER} />
         </Section>
 
         <Section>
           <SectionHeading
-            title="Factors Influencing Treatment Cost"
-            intro="The cost of implant treatment is not determined by the price of a single component, but by the complete clinical and prosthetic requirement."
+            title="What Affects Dental Implant Cost in Bhubaneswar and Odisha?"
+            intro="Dental implant cost is not determined by one component. It reflects the complete surgical and restorative plan recommended after assessment."
           />
           <CostFactorGrid items={COST_FACTORS} />
         </Section>
 
         <Section tone="soft">
           <SectionHeading
-            title="Comparison of Implant Treatment Types"
-            intro="Indicative factors for different implant configurations. Exact requirements are confirmed after diagnostic assessment."
+            title="Single Tooth, Full Mouth and All-on-4 Cost Factors"
+            intro="Compare the factors that influence single tooth implant cost, full mouth implant cost and All-on-4 cost. Exact requirements are confirmed after diagnostic assessment."
           />
           <TreatmentComparisonTable
             caption="Comparison of dental implant treatment types and cost factors"
             rows={TABLE_ROWS}
             note="Complexity and factors are determined on a case-by-case basis."
           />
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            Read the detailed guides to a{` `}
+            <a className="font-semibold text-primary underline" href="/single-tooth-dental-implant/">
+              single tooth dental implant
+            </a>
+            ,{` `}
+            <a className="font-semibold text-primary underline" href="/full-mouth-dental-implants/">
+              full mouth dental implants
+            </a>
+            , or{` `}
+            <a className="font-semibold text-primary underline" href="/all-on-4-all-on-6-odisha/">
+              All-on-4 and All-on-6 treatment
+            </a>
+            .
+          </p>
         </Section>
 
         <Section>
           <SectionHeading
-            title="What Is Included in the Plan?"
-            intro="A comprehensive implant treatment plan covers all the necessary stages from the first consultation to the final restoration."
+            title="What Is Included in a Dental Implant Treatment Plan?"
+            intro="A comprehensive plan identifies the necessary stages from the dental implant consultation to the final restoration. Confirm which items are included in your written estimate before treatment."
           />
           <Checklist items={INCLUSIONS} />
         </Section>
 
         <Section tone="soft">
           <SectionHeading
-            title="The Cost-to-Restoration Process"
-            intro="How we move from your first enquiry to the final successful restoration of your smile."
+            title="From Dental Implant Consultation to Final Cost"
+            intro="The steps used to assess your needs, explain suitable options and confirm an individual treatment estimate."
           />
           <TreatmentProcess steps={PROCESS} />
         </Section>
 
         <Section>
           <SectionHeading
-            title="Patient Travel & Treatment Location"
+            title="Dental Implant Consultation and Treatment in Bhubaneswar"
             intro="We welcome patients from across Odisha. The pathway is designed to be efficient, requiring travel only for essential clinical steps."
           />
           <p className="mt-6 text-sm text-muted-foreground">
@@ -376,7 +391,7 @@ function CostPage() {
         </Section>
 
         <Section id="faqs" tone="soft">
-          <SectionHeading title="Frequently Asked Questions about Implant Cost" />
+          <SectionHeading title="Dental Implant Cost in Odisha: Frequently Asked Questions" />
           <FAQSection faqs={FAQ_ITEMS} />
         </Section>
 
