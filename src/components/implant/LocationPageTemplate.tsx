@@ -14,6 +14,10 @@ import {
   Sparkles,
   ArrowRight,
   ExternalLink,
+  FileText,
+  Stethoscope,
+  Activity,
+  HeartPulse,
 } from "lucide-react";
 
 import { Header } from "@/components/site/Header";
@@ -109,9 +113,9 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
       <main id="main-content">
         <Breadcrumbs items={breadcrumbItems} />
 
-        {/* Hero */}
+        {/* Hero Section */}
         <ImplantHero
-          eyebrow={city.isPrimaryHub ? "Primary Implant Center" : `Serving ${city.cityName} & Surrounding Areas`}
+          eyebrow={city.isPrimaryHub ? "Primary Surgical Center" : `Dental Implant Guide for ${city.cityName} Patients`}
           title={city.h1}
           copy={city.intro}
           primaryCta={{ label: "Book Free Online Consultation", href: "/#contact" }}
@@ -119,13 +123,17 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           trustLine={
             city.isPrimaryHub
               ? "CARE Hospital, Chandrasekharpur, Bhubaneswar • 3D CBCT Imaging • MDS Specialists"
-              : `Specialist Dental Implant Care for ${city.cityName} Residents at CARE Hospital, Bhubaneswar`
+              : `Specialist Dental Implant Treatment for ${city.cityName} Patients at CARE Hospital, Bhubaneswar`
           }
           image={dentistConsult}
-          imageAlt={`Dental implant consultation for ${city.cityName} patients at CARE Hospital Bhubaneswar`}
+          imageAlt={
+            city.isPrimaryHub
+              ? "Specialist dental implant consultation and 3D CBCT surgical planning at CARE Hospital, Bhubaneswar"
+              : `Dental implant consultation and 3D CBCT surgical planning for patients from ${city.cityName} at CARE Hospital, Bhubaneswar`
+          }
         />
 
-        {/* Quick Answer */}
+        {/* Quick Answer Section */}
         <Section tone="soft">
           <Reveal>
             <QuickAnswerBox
@@ -203,9 +211,9 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
               {/* Local Neighborhoods served */}
               {city.localAreas && city.localAreas.length > 0 && (
                 <div className="mt-6 rounded-xl border border-border/80 bg-secondary/30 p-4">
-                  <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Key Areas & Neighborhoods in {city.cityName} Served:
-                  </h4>
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    Key Areas & Neighborhoods Served in {city.cityName}:
+                  </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-foreground/80">
                     {city.localAreas.join(" • ")} and surrounding localities in {city.cityName}.
                   </p>
@@ -214,9 +222,9 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
 
               {/* Travel tips */}
               <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-4 sm:p-5">
-                <h4 className="flex items-center gap-2 text-sm font-bold text-primary">
+                <h3 className="flex items-center gap-2 text-sm font-bold text-primary">
                   <Sparkles className="h-4 w-4" /> Patient Travel Tips for {city.cityName} Visitors
-                </h4>
+                </h3>
                 <ul className="mt-2.5 space-y-2 text-xs text-foreground/90 sm:text-sm">
                   {city.citySpecificTips.map((tip, idx) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -230,46 +238,20 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           </Reveal>
         </Section>
 
-        {/* 5-Step Remote & In-Person Workflow */}
+        {/* 4-Stage Consultation, Investigation & Treatment Workflow Section */}
         <Section tone="soft">
           <Reveal>
             <SectionHeading
-              title={`5-Step Implant Treatment Journey for ${city.cityName} Patients`}
-              intro="We make traveling to Bhubaneswar for dental implants stress-free with a structured 5-step consultation and appointment workflow."
+              title={city.planningSectionHeading}
+              intro={city.planningSectionIntro}
             />
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-              {[
-                {
-                  step: "01",
-                  title: "Online Pre-Consultation",
-                  desc: "Send your existing dental X-rays, OPGs, or photos via WhatsApp for an initial clinical review.",
-                },
-                {
-                  step: "02",
-                  title: "Custom Travel Plan",
-                  desc: "Our coordinator provides appointment slots and transit route suggestions tailored for travel from " + city.cityName + ".",
-                },
-                {
-                  step: "03",
-                  title: "3D CBCT & Placement",
-                  desc: "Visit CARE Hospital in Chandrasekharpur, Bhubaneswar for 3D imaging and precise implant placement.",
-                },
-                {
-                  step: "04",
-                  title: "Temporary Restoration",
-                  desc: "Receive temporary crown or bridge fitted to protect the surgical site during initial healing.",
-                },
-                {
-                  step: "05",
-                  title: "Remote Care & Final Crown",
-                  desc: "Follow-up monitoring via video calls, followed by final custom crown fitting upon full healing.",
-                },
-              ].map((item) => (
-                <div key={item.step} className="rounded-xl border border-border bg-background p-5 shadow-soft">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {city.planningSteps.map((item) => (
+                <div key={item.step} className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:shadow-md">
                   <span className="block text-2xl font-extrabold text-primary">{item.step}</span>
-                  <h3 className="mt-2 text-base font-bold text-foreground">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{item.desc}</p>
+                  <h3 className="mt-3 text-base font-bold text-foreground">{item.title}</h3>
+                  <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -280,8 +262,8 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="plain">
           <Reveal>
             <SectionHeading
-              title="Explore Advanced Dental Implant Solutions"
-              intro={`Whether you need to replace a single missing tooth or require complete upper and lower arch restorations, our Bhubaneswar surgical center provides specialized treatment plans for ${city.cityName} patients.`}
+              title={`Explore Specialized Dental Implant Options for ${city.cityName} Patients`}
+              intro={`Whether you require a single tooth replacement or full upper and lower arch restorations, our Bhubaneswar center provides tailored treatment plans.`}
             />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -316,18 +298,24 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           </Reveal>
         </Section>
 
-        {/* Location Trust Block */}
+        {/* Location Trust Block Section */}
         <Section tone="soft">
           <Reveal>
-            <LocationTrustBlock
-              hospital="CARE Hospital, Bhubaneswar"
-              location={TREATMENT_ADDRESS}
-              phoneDisplay={PHONE_DISPLAY}
-              phoneTel={PHONE_TEL}
-              hours={CONSULTATION_HOURS}
-              image={careHospitalImage}
-              hospitalHref={CARE_HOSPITAL_URL}
+            <SectionHeading
+              title="Treatment Center & Facilities at CARE Hospital, Bhubaneswar"
+              intro="All in-person surgical placements, 3D CBCT imaging, and clinical procedures take place at CARE Hospital under Dr. Sauvik Singha (MDS)."
             />
+            <div className="mt-6">
+              <LocationTrustBlock
+                hospital="CARE Hospital, Bhubaneswar"
+                location={TREATMENT_ADDRESS}
+                phoneDisplay={PHONE_DISPLAY}
+                phoneTel={PHONE_TEL}
+                hours={CONSULTATION_HOURS}
+                image={careHospitalImage}
+                hospitalHref={CARE_HOSPITAL_URL}
+              />
+            </div>
           </Reveal>
         </Section>
 
@@ -335,7 +323,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="plain">
           <Reveal>
             <SectionHeading
-              title={`Frequently Asked Questions — Dental Implants for ${city.cityName} Patients`}
+              title={`Frequently Asked Questions About Dental Implants for ${city.cityName} Patients`}
               intro={`Common queries from ${city.cityName} residents regarding travel, appointments, costs, and surgical care at CARE Hospital, Bhubaneswar.`}
             />
             <FAQSection
@@ -348,7 +336,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           </Reveal>
         </Section>
 
-        {/* Clinical Reviewer */}
+        {/* Clinical Reviewer Section */}
         <Section tone="soft">
           <Reveal>
             <ClinicalReviewer
@@ -361,7 +349,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           </Reveal>
         </Section>
 
-        {/* Related Services */}
+        {/* Related Services Section */}
         <Section tone="plain">
           <Reveal>
             <SectionHeading
@@ -372,11 +360,11 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           </Reveal>
         </Section>
 
-        {/* CTA */}
+        {/* CTA Section */}
         <Section tone="soft">
           <Reveal>
             <ImplantCTA
-              title={`Restore Your Smile with Dental Implants in ${city.cityName}`}
+              title={`Start Your Dental Implant Consultation from ${city.cityName}`}
               copy={`Begin your journey with a free online consultation today. Share your X-rays or photos via WhatsApp and let our team organize your appointment at CARE Hospital, Bhubaneswar.`}
               primary={{ label: "Book Free Online Consultation", href: "/#contact" }}
               secondary={{ label: "WhatsApp Consultation", href: WHATSAPP_URL, external: true }}
