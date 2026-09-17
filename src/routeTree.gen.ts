@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AllOn4AllOn6OdishaRouteImport } from './routes/all-on-4-all-on-6-odisha'
 import { Route as BoneGraftingForDentalImplantsRouteImport } from './routes/bone-grafting-for-dental-implants'
+import { Route as DentalImplantCostBhubaneswarRouteImport } from './routes/dental-implant-cost-bhubaneswar'
 import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
 import { Route as DentalImplantMaintenanceFailureRouteImport } from './routes/dental-implant-maintenance-failure'
 import { Route as DentalImplantSecondOpinionRouteImport } from './routes/dental-implant-second-opinion'
@@ -49,6 +50,12 @@ const BoneGraftingForDentalImplantsRoute =
   BoneGraftingForDentalImplantsRouteImport.update({
     id: '/bone-grafting-for-dental-implants',
     path: '/bone-grafting-for-dental-implants',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantCostBhubaneswarRoute =
+  DentalImplantCostBhubaneswarRouteImport.update({
+    id: '/dental-implant-cost-bhubaneswar',
+    path: '/dental-implant-cost-bhubaneswar',
     getParentRoute: () => rootRouteImport,
   } as any)
 const DentalImplantCostOdishaRoute = DentalImplantCostOdishaRouteImport.update({
@@ -174,6 +181,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
   '/bone-grafting-for-dental-implants': typeof BoneGraftingForDentalImplantsRoute
+  '/dental-implant-cost-bhubaneswar': typeof DentalImplantCostBhubaneswarRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
@@ -201,6 +209,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
   '/bone-grafting-for-dental-implants': typeof BoneGraftingForDentalImplantsRoute
+  '/dental-implant-cost-bhubaneswar': typeof DentalImplantCostBhubaneswarRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
@@ -229,6 +238,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/all-on-4-all-on-6-odisha': typeof AllOn4AllOn6OdishaRoute
   '/bone-grafting-for-dental-implants': typeof BoneGraftingForDentalImplantsRoute
+  '/dental-implant-cost-bhubaneswar': typeof DentalImplantCostBhubaneswarRoute
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
@@ -258,6 +268,7 @@ export interface FileRouteTypes {
     | '/'
     | '/all-on-4-all-on-6-odisha'
     | '/bone-grafting-for-dental-implants'
+    | '/dental-implant-cost-bhubaneswar'
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
@@ -285,6 +296,7 @@ export interface FileRouteTypes {
     | '/'
     | '/all-on-4-all-on-6-odisha'
     | '/bone-grafting-for-dental-implants'
+    | '/dental-implant-cost-bhubaneswar'
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
@@ -312,6 +324,7 @@ export interface FileRouteTypes {
     | '/'
     | '/all-on-4-all-on-6-odisha'
     | '/bone-grafting-for-dental-implants'
+    | '/dental-implant-cost-bhubaneswar'
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
@@ -340,6 +353,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AllOn4AllOn6OdishaRoute: typeof AllOn4AllOn6OdishaRoute
   BoneGraftingForDentalImplantsRoute: typeof BoneGraftingForDentalImplantsRoute
+  DentalImplantCostBhubaneswarRoute: typeof DentalImplantCostBhubaneswarRoute
   DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
   DentalImplantMaintenanceFailureRoute: typeof DentalImplantMaintenanceFailureRoute
   DentalImplantSecondOpinionRoute: typeof DentalImplantSecondOpinionRoute
@@ -385,6 +399,13 @@ declare module '@tanstack/react-router' {
       path: '/bone-grafting-for-dental-implants'
       fullPath: '/bone-grafting-for-dental-implants'
       preLoaderRoute: typeof BoneGraftingForDentalImplantsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implant-cost-bhubaneswar': {
+      id: '/dental-implant-cost-bhubaneswar'
+      path: '/dental-implant-cost-bhubaneswar'
+      fullPath: '/dental-implant-cost-bhubaneswar'
+      preLoaderRoute: typeof DentalImplantCostBhubaneswarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dental-implant-cost-odisha': {
@@ -548,6 +569,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AllOn4AllOn6OdishaRoute: AllOn4AllOn6OdishaRoute,
   BoneGraftingForDentalImplantsRoute: BoneGraftingForDentalImplantsRoute,
+  DentalImplantCostBhubaneswarRoute: DentalImplantCostBhubaneswarRoute,
   DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
   DentalImplantMaintenanceFailureRoute: DentalImplantMaintenanceFailureRoute,
   DentalImplantSecondOpinionRoute: DentalImplantSecondOpinionRoute,
