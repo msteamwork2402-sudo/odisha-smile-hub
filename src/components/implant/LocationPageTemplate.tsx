@@ -59,46 +59,56 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
 
   const serviceLinks = [
     {
+      key: "single",
       title: "Single Tooth Dental Implant",
       href: "/single-tooth-dental-implant/",
       desc: "Ideal for replacing one missing tooth with a standalone implant & custom crown.",
     },
     {
+      key: "multiple",
       title: "Multiple Dental Implants",
       href: "/multiple-dental-implants/",
       desc: "Implant-supported bridges to restore consecutive missing teeth without altering adjacent teeth.",
     },
     {
+      key: "allon",
       title: "All-on-4 & All-on-6 Implants",
       href: "/all-on-4-all-on-6-odisha/",
       desc: "Fixed full-arch rehabilitation for complete tooth loss in upper or lower jaw.",
     },
     {
+      key: "fullmouth",
       title: "Full-Mouth Dental Implants",
       href: "/full-mouth-dental-implants/",
       desc: "Comprehensive restoration plans for complex tooth loss and severe jaw deterioration.",
     },
     {
+      key: "cost",
       title: "Dental Implant Cost Guide",
       href: "/dental-implant-cost-odisha/",
       desc: "Transparent pricing factors, diagnostic costs, and flexible treatment packages.",
     },
     {
+      key: "immediate",
       title: "Immediate Dental Implants",
       href: "/immediate-dental-implants/",
       desc: "Same-day extraction and implant placement for qualified clinical candidates.",
     },
     {
+      key: "bone",
       title: "Bone Grafting for Implants",
       href: "/bone-grafting-for-dental-implants/",
       desc: "Advanced bone volume augmentation when jaw bone density is insufficient.",
     },
     {
+      key: "compare",
       title: "Implants vs Bridge vs Denture",
       href: "/implants-vs-bridge-vs-denture/",
       desc: "Side-by-side comparative guide to help you choose the best tooth replacement option.",
     },
   ];
+
+  const cityServiceLinks = serviceLinks.filter((service) => city.servicePageKeys.includes(service.key));
 
   const relatedServiceItems = [
     { title: CLUSTER.single.title, href: CLUSTER.single.href, text: CLUSTER.single.text },
@@ -126,18 +136,14 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
               : `Specialist Dental Implant Treatment for ${city.cityName} Patients at CARE Hospital, Bhubaneswar`
           }
           image={dentistConsult}
-          imageAlt={
-            city.isPrimaryHub
-              ? "Specialist dental implant consultation and 3D CBCT surgical planning at CARE Hospital, Bhubaneswar"
-              : `Dental implant consultation and 3D CBCT surgical planning for patients from ${city.cityName} at CARE Hospital, Bhubaneswar`
-          }
+          imageAlt={city.heroImageAlt}
         />
 
         {/* Quick Answer Section */}
         <Section tone="soft">
           <Reveal>
             <QuickAnswerBox
-              question={`Dental Implant Care Overview for ${city.cityName}`}
+              question={`What should patients know about dental implants in ${city.cityName}?`}
               answer={city.quickAnswer}
             />
           </Reveal>
@@ -208,14 +214,19 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
                 </ul>
               </div>
 
+              <div className="mt-6 border-l-4 border-primary pl-4 sm:pl-5">
+                <h3 className="text-lg font-semibold text-foreground">{city.localPatientHeading}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{city.localPatientInfo}</p>
+              </div>
+
               {/* Local Neighborhoods served */}
               {city.localAreas && city.localAreas.length > 0 && (
                 <div className="mt-6 rounded-xl border border-border/80 bg-secondary/30 p-4">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Key Areas & Neighborhoods Served in {city.cityName}:
+                     Patients who contact us from {city.cityName} often live in:
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-foreground/80">
-                    {city.localAreas.join(" • ")} and surrounding localities in {city.cityName}.
+                    {city.localAreas.join(" • ")} and surrounding localities. Online enquiries are coordinated from these areas; treatment is not provided at a local branch.
                   </p>
                 </div>
               )}
@@ -262,12 +273,12 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="plain">
           <Reveal>
             <SectionHeading
-              title={`Explore Specialized Dental Implant Options for ${city.cityName} Patients`}
-              intro={`Whether you require a single tooth replacement or full upper and lower arch restorations, our Bhubaneswar center provides tailored treatment plans.`}
+              title={`Dental Implant Treatment Options for Patients from ${city.cityName}`}
+              intro={city.serviceLinksIntro}
             />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {serviceLinks.map((item) => (
+              {cityServiceLinks.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
