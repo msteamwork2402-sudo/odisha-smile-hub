@@ -37,6 +37,7 @@ import {
   SectionHeading,
 } from "@/components/implant/blocks";
 import { LOCATION_PAGES, type CityKey } from "@/lib/location-data";
+import { LOCATION_SEO } from "@/lib/location-seo";
 import { CARE_HOSPITAL_URL, CLUSTER, REVIEWER } from "@/lib/implant-cluster";
 import { CONSULTATION_HOURS, PHONE_DISPLAY, PHONE_TEL, TREATMENT_ADDRESS, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
 import dentistConsult from "@/assets/dentist-consult.jpg";
@@ -50,6 +51,7 @@ interface LocationPageProps {
 export function LocationPageTemplate({ cityKey }: LocationPageProps) {
   const city = LOCATION_PAGES[cityKey];
   if (!city) return null;
+  const seo = LOCATION_SEO[cityKey];
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
@@ -108,7 +110,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
     },
   ];
 
-  const cityServiceLinks = serviceLinks.filter((service) => city.servicePageKeys.includes(service.key));
+  const cityServiceLinks = serviceLinks.filter((service) => seo.servicePageKeys.includes(service.key));
 
   const relatedServiceItems = [
     { title: CLUSTER.single.title, href: CLUSTER.single.href, text: CLUSTER.single.text },
@@ -136,7 +138,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
               : `Specialist Dental Implant Treatment for ${city.cityName} Patients at CARE Hospital, Bhubaneswar`
           }
           image={dentistConsult}
-          imageAlt={city.heroImageAlt}
+          imageAlt={seo.heroImageAlt}
         />
 
         {/* Quick Answer Section */}
@@ -215,8 +217,8 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
               </div>
 
               <div className="mt-6 border-l-4 border-primary pl-4 sm:pl-5">
-                <h3 className="text-lg font-semibold text-foreground">{city.localPatientHeading}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{city.localPatientInfo}</p>
+                <h3 className="text-lg font-semibold text-foreground">{seo.localPatientHeading}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{seo.localPatientInfo}</p>
               </div>
 
               {/* Local Neighborhoods served */}
@@ -274,7 +276,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
           <Reveal>
             <SectionHeading
               title={`Dental Implant Treatment Options for Patients from ${city.cityName}`}
-              intro={city.serviceLinksIntro}
+              intro={seo.serviceLinksIntro}
             />
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
