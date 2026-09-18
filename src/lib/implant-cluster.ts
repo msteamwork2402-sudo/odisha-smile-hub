@@ -112,6 +112,15 @@ export const CLUSTER_ORDER: ClusterKey[] = [
   "zirconia",
 ];
 
+export const DR_SAUVIK_PROFILES = {
+  linkedin: "https://www.linkedin.com/in/dr-sauvik-singha-404399366/",
+  apollo: "https://www.apollo247.com/doctors/dr-sauvik-singha-802dda3b-3e3c-420e-a2d7-158bb12a4900",
+  googleMaps: "https://maps.app.goo.gl/boCc4sAHYoLP2jge7",
+} as const;
+
+export const CARE_HOSPITAL_URL =
+  "https://www.carehospitals.com/contact-us/care-super-specialty-hospital-bhubaneswar";
+
 export const REVIEWER = {
   writtenBy: "Dental Content Team",
   name: "Dr. Sauvik Singha, MDS",
@@ -119,10 +128,58 @@ export const REVIEWER = {
   reviewedOn: "2 September 2026",
   reviewedOnISO: "2026-09-02",
   profileUrl: `${SITE}/#team`,
+  sameAs: [
+    DR_SAUVIK_PROFILES.linkedin,
+    DR_SAUVIK_PROFILES.apollo,
+    DR_SAUVIK_PROFILES.googleMaps,
+  ],
 };
 
-export const CARE_HOSPITAL_URL =
-  "https://www.carehospitals.com/contact-us/care-super-specialty-hospital-bhubaneswar";
+export const DOCTOR_SCHEMA = {
+  "@type": ["Person", "Physician"],
+  "@id": `${SITE}/#dr-sauvik-singha`,
+  name: "Dr. Sauvik Singha, MDS",
+  givenName: "Sauvik",
+  familyName: "Singha",
+  honorificPrefix: "Dr.",
+  jobTitle: "Maxillofacial Surgeon & Implant Specialist",
+  medicalSpecialty: ["Oral and Maxillofacial Surgery", "Implantology"],
+  description:
+    "Maxillofacial Surgeon and Dental Implant Specialist leading consultations, 3D CBCT digital diagnostics, and surgical implant placements at CARE Hospital, Bhubaneswar.",
+  worksFor: {
+    "@type": "MedicalOrganization",
+    name: "CARE Hospital, Bhubaneswar",
+    url: CARE_HOSPITAL_URL,
+  },
+  affiliation: {
+    "@type": "MedicalBusiness",
+    name: "OdishaDentalImplants.com",
+    url: SITE,
+  },
+  sameAs: [
+    DR_SAUVIK_PROFILES.linkedin,
+    DR_SAUVIK_PROFILES.apollo,
+    DR_SAUVIK_PROFILES.googleMaps,
+  ],
+};
+
+export const REVIEWER_SCHEMA = {
+  "@type": ["Person", "Physician"],
+  name: REVIEWER.name,
+  jobTitle: REVIEWER.role,
+  url: REVIEWER.profileUrl,
+  worksFor: {
+    "@type": "MedicalOrganization",
+    name: "CARE Hospital, Bhubaneswar",
+    url: CARE_HOSPITAL_URL,
+  },
+  affiliation: {
+    "@type": "MedicalBusiness",
+    name: "OdishaDentalImplants.com",
+    url: SITE,
+  },
+  sameAs: REVIEWER.sameAs,
+};
 
 export const ODISHA_CITIES =
   "Patients commonly travel to Bhubaneswar from Cuttack, Puri, Berhampur (Brahmapur), Sambalpur, Rourkela, Balasore, Baripada, Angul and Jharsuguda.";

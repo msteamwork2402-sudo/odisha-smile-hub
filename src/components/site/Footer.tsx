@@ -11,7 +11,7 @@ import {
   WHATSAPP_URL,
 } from "@/lib/site";
 import { IMPLANT_NAV_ITEMS } from "@/lib/implant-navigation";
-import { ODISHA_SERVICE_CITIES, LOCATION_TRUTH } from "@/lib/implant-cluster";
+import { ODISHA_SERVICE_CITIES, LOCATION_TRUTH, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 import logoMark from "@/assets/logo-mark.png";
 
 export function Footer() {
@@ -40,6 +40,37 @@ export function Footer() {
             <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               Providing implant consultations for patients in {ODISHA_SERVICE_CITIES.join(", ")} and throughout Odisha.
             </p>
+          </div>
+          <div className="mt-6 border-t border-border/60 pt-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-foreground">
+              Dr. Sauvik Singha (MDS) — Profiles
+            </h3>
+            <div className="mt-2.5 flex flex-wrap gap-2 text-xs">
+              <a
+                href={DR_SAUVIK_PROFILES.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                LinkedIn <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href={DR_SAUVIK_PROFILES.apollo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                Apollo 24|7 <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href={DR_SAUVIK_PROFILES.googleMaps}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                Google Maps <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
           </div>
         </div>
 

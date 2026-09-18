@@ -20,6 +20,7 @@ import {
   HeartPulse,
   ScanLine,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 
 import { Header } from "@/components/site/Header";
@@ -35,6 +36,7 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
+import { DOCTOR_SCHEMA, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
@@ -48,8 +50,6 @@ import careHospital from "@/assets/care-hospital.png";
 import { Reveal, CountUp } from "@/components/site/Reveal";
 import { submitConsultation } from "@/lib/consultation.functions";
 import { Button } from "@/components/ui/button";
-
-
 
 const TITLE = "Dental Implants in Odisha | Free Online Consultation";
 const DESCRIPTION =
@@ -74,21 +74,27 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MedicalBusiness",
-          name: "OdishaDentalImplants.com",
-          description: DESCRIPTION,
-          medicalSpecialty: "Dentistry",
-          areaServed: "Odisha, India",
-          telephone: PHONE_TEL,
-          email: EMAIL,
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: `CARE Hospital, ${TREATMENT_ADDRESS}`,
-            addressLocality: "Bhubaneswar",
-            addressRegion: "Odisha",
-            postalCode: "751016",
-            addressCountry: "IN",
-          },
+          "@graph": [
+            {
+              "@type": "MedicalBusiness",
+              "@id": "https://odishadentalimplants.com/#organization",
+              name: "OdishaDentalImplants.com",
+              description: DESCRIPTION,
+              medicalSpecialty: "Dentistry",
+              areaServed: "Odisha, India",
+              telephone: PHONE_TEL,
+              email: EMAIL,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: `CARE Hospital, ${TREATMENT_ADDRESS}`,
+                addressLocality: "Bhubaneswar",
+                addressRegion: "Odisha",
+                postalCode: "751016",
+                addressCountry: "IN",
+              },
+            },
+            DOCTOR_SCHEMA,
+          ],
         }),
       },
     ],
@@ -470,25 +476,62 @@ function Team() {
           text="A surgical, prosthetic and coordination team that stays with you from your first online consultation through follow-up."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TEAM.map((m, i) => (
-            <Reveal key={m.name} delay={(i % 3) * 100}>
-              <article className="card-premium zoom-frame h-full overflow-hidden p-0">
-                <img
-                  src={m.img}
-                  alt={`Portrait of ${m.name}, ${m.role}`}
-                  width={768}
-                  height={960}
-                  loading="lazy"
-                  className="aspect-[4/5] w-full object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold">{m.name}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+          {TEAM.map((m, i) => {
+            const isSauvik = m.name.includes("Sauvik");
 
+            return (
+              <Reveal key={m.name} delay={(i % 3) * 100}>
+                <article className="card-premium zoom-frame h-full overflow-hidden p-0">
+                  <img
+                    src={m.img}
+                    alt={`Portrait of ${m.name}, ${m.role}`}
+                    width={768}
+                    height={960}
+                    loading="lazy"
+                    className="aspect-[4/5] w-full object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold">{m.name}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
+
+                    {isSauvik && (
+                      <div className="mt-4 border-t border-border/80 pt-3">
+                        <span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                          Verified Profiles & Location:
+                        </span>
+                        <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                          <a
+                            href={DR_SAUVIK_PROFILES.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground hover:border-primary/50 hover:text-primary"
+                          >
+                            LinkedIn <ExternalLink className="h-3 w-3" />
+                          </a>
+                          <a
+                            href={DR_SAUVIK_PROFILES.apollo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground hover:border-primary/50 hover:text-primary"
+                          >
+                            Apollo 24|7 <ExternalLink className="h-3 w-3" />
+                          </a>
+                          <a
+                            href={DR_SAUVIK_PROFILES.googleMaps}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground hover:border-primary/50 hover:text-primary"
+                          >
+                            Google Maps <ExternalLink className="h-3 w-3" />
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

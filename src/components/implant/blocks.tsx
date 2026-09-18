@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronRight, CheckCircle2, HelpCircle, MapPin, Phone, Clock, Building2, ArrowRight } from "lucide-react";
+import { ChevronRight, CheckCircle2, HelpCircle, MapPin, Phone, Clock, Building2, ArrowRight, ExternalLink } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 
 /* ---------------------------------- utils --------------------------------- */
 
@@ -306,6 +307,8 @@ export function ClinicalReviewer({
   reviewedOn: string;
   profileHref?: string;
 }) {
+  const isSauvik = reviewer.includes("Sauvik");
+
   return (
     <div className="card-premium p-6 sm:p-8">
       <h2 className="text-xl font-bold text-foreground">Reviewed by our dental implant team</h2>
@@ -332,6 +335,34 @@ export function ClinicalReviewer({
             )}
             <span className="block text-xs font-medium text-muted-foreground">{reviewerRole}</span>
           </dd>
+          {isSauvik && (
+            <div className="mt-2.5 flex flex-wrap gap-2 text-xs">
+              <a
+                href={DR_SAUVIK_PROFILES.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/50 px-2.5 py-0.5 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary"
+              >
+                LinkedIn <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href={DR_SAUVIK_PROFILES.apollo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/50 px-2.5 py-0.5 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary"
+              >
+                Apollo 24|7 <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href={DR_SAUVIK_PROFILES.googleMaps}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/50 px-2.5 py-0.5 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary"
+              >
+                Google Maps <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
+          )}
         </div>
         <div>
           <dt className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Last medically reviewed</dt>
