@@ -16,16 +16,33 @@ import { Route as DentalImplantCostBhubaneswarRouteImport } from './routes/denta
 import { Route as DentalImplantCostOdishaRouteImport } from './routes/dental-implant-cost-odisha'
 import { Route as DentalImplantMaintenanceFailureRouteImport } from './routes/dental-implant-maintenance-failure'
 import { Route as DentalImplantSecondOpinionRouteImport } from './routes/dental-implant-second-opinion'
+import { Route as DentalImplantsAcharyaViharRouteImport } from './routes/dental-implants-acharya-vihar'
 import { Route as DentalImplantsAngulRouteImport } from './routes/dental-implants-angul'
 import { Route as DentalImplantsBalasoreRouteImport } from './routes/dental-implants-balasore'
 import { Route as DentalImplantsBaripadaRouteImport } from './routes/dental-implants-baripada'
 import { Route as DentalImplantsBerhampurRouteImport } from './routes/dental-implants-berhampur'
 import { Route as DentalImplantsBhubaneswarRouteImport } from './routes/dental-implants-bhubaneswar'
+import { Route as DentalImplantsChandrasekharpurRouteImport } from './routes/dental-implants-chandrasekharpur'
 import { Route as DentalImplantsCuttackRouteImport } from './routes/dental-implants-cuttack'
+import { Route as DentalImplantsDumdumaRouteImport } from './routes/dental-implants-dumduma'
+import { Route as DentalImplantsForestParkRouteImport } from './routes/dental-implants-forest-park'
+import { Route as DentalImplantsGajapatiNagarRouteImport } from './routes/dental-implants-gajapati-nagar'
+import { Route as DentalImplantsJayadevViharRouteImport } from './routes/dental-implants-jayadev-vihar'
 import { Route as DentalImplantsJharsugudaRouteImport } from './routes/dental-implants-jharsuguda'
+import { Route as DentalImplantsKalingaNagarRouteImport } from './routes/dental-implants-kalinga-nagar'
+import { Route as DentalImplantsKharavelaNagarRouteImport } from './routes/dental-implants-kharavela-nagar'
+import { Route as DentalImplantsNayapalliRouteImport } from './routes/dental-implants-nayapalli'
+import { Route as DentalImplantsNiladriViharRouteImport } from './routes/dental-implants-niladri-vihar'
+import { Route as DentalImplantsPatiaRouteImport } from './routes/dental-implants-patia'
+import { Route as DentalImplantsPatrapadaRouteImport } from './routes/dental-implants-patrapada'
+import { Route as DentalImplantsPokhariputRouteImport } from './routes/dental-implants-pokhariput'
 import { Route as DentalImplantsPuriRouteImport } from './routes/dental-implants-puri'
 import { Route as DentalImplantsRourkelaRouteImport } from './routes/dental-implants-rourkela'
+import { Route as DentalImplantsSaheedNagarRouteImport } from './routes/dental-implants-saheed-nagar'
+import { Route as DentalImplantsSailashreeViharRouteImport } from './routes/dental-implants-sailashree-vihar'
 import { Route as DentalImplantsSambalpurRouteImport } from './routes/dental-implants-sambalpur'
+import { Route as DentalImplantsSatyaNagarRouteImport } from './routes/dental-implants-satya-nagar'
+import { Route as DentalImplantsSundarpurRouteImport } from './routes/dental-implants-sundarpur'
 import { Route as FlaplessGuidedDentalImplantsRouteImport } from './routes/flapless-guided-dental-implants'
 import { Route as FullMouthDentalImplantsRouteImport } from './routes/full-mouth-dental-implants'
 import { Route as ImmediateDentalImplantsRouteImport } from './routes/immediate-dental-implants'
@@ -75,6 +92,12 @@ const DentalImplantSecondOpinionRoute =
     path: '/dental-implant-second-opinion',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DentalImplantsAcharyaViharRoute =
+  DentalImplantsAcharyaViharRouteImport.update({
+    id: '/dental-implants-acharya-vihar',
+    path: '/dental-implants-acharya-vihar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DentalImplantsAngulRoute = DentalImplantsAngulRouteImport.update({
   id: '/dental-implants-angul',
   path: '/dental-implants-angul',
@@ -101,15 +124,83 @@ const DentalImplantsBhubaneswarRoute =
     path: '/dental-implants-bhubaneswar',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DentalImplantsChandrasekharpurRoute =
+  DentalImplantsChandrasekharpurRouteImport.update({
+    id: '/dental-implants-chandrasekharpur',
+    path: '/dental-implants-chandrasekharpur',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DentalImplantsCuttackRoute = DentalImplantsCuttackRouteImport.update({
   id: '/dental-implants-cuttack',
   path: '/dental-implants-cuttack',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DentalImplantsDumdumaRoute = DentalImplantsDumdumaRouteImport.update({
+  id: '/dental-implants-dumduma',
+  path: '/dental-implants-dumduma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsForestParkRoute =
+  DentalImplantsForestParkRouteImport.update({
+    id: '/dental-implants-forest-park',
+    path: '/dental-implants-forest-park',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsGajapatiNagarRoute =
+  DentalImplantsGajapatiNagarRouteImport.update({
+    id: '/dental-implants-gajapati-nagar',
+    path: '/dental-implants-gajapati-nagar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsJayadevViharRoute =
+  DentalImplantsJayadevViharRouteImport.update({
+    id: '/dental-implants-jayadev-vihar',
+    path: '/dental-implants-jayadev-vihar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DentalImplantsJharsugudaRoute =
   DentalImplantsJharsugudaRouteImport.update({
     id: '/dental-implants-jharsuguda',
     path: '/dental-implants-jharsuguda',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsKalingaNagarRoute =
+  DentalImplantsKalingaNagarRouteImport.update({
+    id: '/dental-implants-kalinga-nagar',
+    path: '/dental-implants-kalinga-nagar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsKharavelaNagarRoute =
+  DentalImplantsKharavelaNagarRouteImport.update({
+    id: '/dental-implants-kharavela-nagar',
+    path: '/dental-implants-kharavela-nagar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsNayapalliRoute = DentalImplantsNayapalliRouteImport.update({
+  id: '/dental-implants-nayapalli',
+  path: '/dental-implants-nayapalli',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsNiladriViharRoute =
+  DentalImplantsNiladriViharRouteImport.update({
+    id: '/dental-implants-niladri-vihar',
+    path: '/dental-implants-niladri-vihar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsPatiaRoute = DentalImplantsPatiaRouteImport.update({
+  id: '/dental-implants-patia',
+  path: '/dental-implants-patia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsPatrapadaRoute = DentalImplantsPatrapadaRouteImport.update({
+  id: '/dental-implants-patrapada',
+  path: '/dental-implants-patrapada',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsPokhariputRoute =
+  DentalImplantsPokhariputRouteImport.update({
+    id: '/dental-implants-pokhariput',
+    path: '/dental-implants-pokhariput',
     getParentRoute: () => rootRouteImport,
   } as any)
 const DentalImplantsPuriRoute = DentalImplantsPuriRouteImport.update({
@@ -122,9 +213,32 @@ const DentalImplantsRourkelaRoute = DentalImplantsRourkelaRouteImport.update({
   path: '/dental-implants-rourkela',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DentalImplantsSaheedNagarRoute =
+  DentalImplantsSaheedNagarRouteImport.update({
+    id: '/dental-implants-saheed-nagar',
+    path: '/dental-implants-saheed-nagar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsSailashreeViharRoute =
+  DentalImplantsSailashreeViharRouteImport.update({
+    id: '/dental-implants-sailashree-vihar',
+    path: '/dental-implants-sailashree-vihar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DentalImplantsSambalpurRoute = DentalImplantsSambalpurRouteImport.update({
   id: '/dental-implants-sambalpur',
   path: '/dental-implants-sambalpur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DentalImplantsSatyaNagarRoute =
+  DentalImplantsSatyaNagarRouteImport.update({
+    id: '/dental-implants-satya-nagar',
+    path: '/dental-implants-satya-nagar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DentalImplantsSundarpurRoute = DentalImplantsSundarpurRouteImport.update({
+  id: '/dental-implants-sundarpur',
+  path: '/dental-implants-sundarpur',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FlaplessGuidedDentalImplantsRoute =
@@ -185,16 +299,33 @@ export interface FileRoutesByFullPath {
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
+  '/dental-implants-acharya-vihar': typeof DentalImplantsAcharyaViharRoute
   '/dental-implants-angul': typeof DentalImplantsAngulRoute
   '/dental-implants-balasore': typeof DentalImplantsBalasoreRoute
   '/dental-implants-baripada': typeof DentalImplantsBaripadaRoute
   '/dental-implants-berhampur': typeof DentalImplantsBerhampurRoute
   '/dental-implants-bhubaneswar': typeof DentalImplantsBhubaneswarRoute
+  '/dental-implants-chandrasekharpur': typeof DentalImplantsChandrasekharpurRoute
   '/dental-implants-cuttack': typeof DentalImplantsCuttackRoute
+  '/dental-implants-dumduma': typeof DentalImplantsDumdumaRoute
+  '/dental-implants-forest-park': typeof DentalImplantsForestParkRoute
+  '/dental-implants-gajapati-nagar': typeof DentalImplantsGajapatiNagarRoute
+  '/dental-implants-jayadev-vihar': typeof DentalImplantsJayadevViharRoute
   '/dental-implants-jharsuguda': typeof DentalImplantsJharsugudaRoute
+  '/dental-implants-kalinga-nagar': typeof DentalImplantsKalingaNagarRoute
+  '/dental-implants-kharavela-nagar': typeof DentalImplantsKharavelaNagarRoute
+  '/dental-implants-nayapalli': typeof DentalImplantsNayapalliRoute
+  '/dental-implants-niladri-vihar': typeof DentalImplantsNiladriViharRoute
+  '/dental-implants-patia': typeof DentalImplantsPatiaRoute
+  '/dental-implants-patrapada': typeof DentalImplantsPatrapadaRoute
+  '/dental-implants-pokhariput': typeof DentalImplantsPokhariputRoute
   '/dental-implants-puri': typeof DentalImplantsPuriRoute
   '/dental-implants-rourkela': typeof DentalImplantsRourkelaRoute
+  '/dental-implants-saheed-nagar': typeof DentalImplantsSaheedNagarRoute
+  '/dental-implants-sailashree-vihar': typeof DentalImplantsSailashreeViharRoute
   '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
+  '/dental-implants-satya-nagar': typeof DentalImplantsSatyaNagarRoute
+  '/dental-implants-sundarpur': typeof DentalImplantsSundarpurRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -213,16 +344,33 @@ export interface FileRoutesByTo {
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
+  '/dental-implants-acharya-vihar': typeof DentalImplantsAcharyaViharRoute
   '/dental-implants-angul': typeof DentalImplantsAngulRoute
   '/dental-implants-balasore': typeof DentalImplantsBalasoreRoute
   '/dental-implants-baripada': typeof DentalImplantsBaripadaRoute
   '/dental-implants-berhampur': typeof DentalImplantsBerhampurRoute
   '/dental-implants-bhubaneswar': typeof DentalImplantsBhubaneswarRoute
+  '/dental-implants-chandrasekharpur': typeof DentalImplantsChandrasekharpurRoute
   '/dental-implants-cuttack': typeof DentalImplantsCuttackRoute
+  '/dental-implants-dumduma': typeof DentalImplantsDumdumaRoute
+  '/dental-implants-forest-park': typeof DentalImplantsForestParkRoute
+  '/dental-implants-gajapati-nagar': typeof DentalImplantsGajapatiNagarRoute
+  '/dental-implants-jayadev-vihar': typeof DentalImplantsJayadevViharRoute
   '/dental-implants-jharsuguda': typeof DentalImplantsJharsugudaRoute
+  '/dental-implants-kalinga-nagar': typeof DentalImplantsKalingaNagarRoute
+  '/dental-implants-kharavela-nagar': typeof DentalImplantsKharavelaNagarRoute
+  '/dental-implants-nayapalli': typeof DentalImplantsNayapalliRoute
+  '/dental-implants-niladri-vihar': typeof DentalImplantsNiladriViharRoute
+  '/dental-implants-patia': typeof DentalImplantsPatiaRoute
+  '/dental-implants-patrapada': typeof DentalImplantsPatrapadaRoute
+  '/dental-implants-pokhariput': typeof DentalImplantsPokhariputRoute
   '/dental-implants-puri': typeof DentalImplantsPuriRoute
   '/dental-implants-rourkela': typeof DentalImplantsRourkelaRoute
+  '/dental-implants-saheed-nagar': typeof DentalImplantsSaheedNagarRoute
+  '/dental-implants-sailashree-vihar': typeof DentalImplantsSailashreeViharRoute
   '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
+  '/dental-implants-satya-nagar': typeof DentalImplantsSatyaNagarRoute
+  '/dental-implants-sundarpur': typeof DentalImplantsSundarpurRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -242,16 +390,33 @@ export interface FileRoutesById {
   '/dental-implant-cost-odisha': typeof DentalImplantCostOdishaRoute
   '/dental-implant-maintenance-failure': typeof DentalImplantMaintenanceFailureRoute
   '/dental-implant-second-opinion': typeof DentalImplantSecondOpinionRoute
+  '/dental-implants-acharya-vihar': typeof DentalImplantsAcharyaViharRoute
   '/dental-implants-angul': typeof DentalImplantsAngulRoute
   '/dental-implants-balasore': typeof DentalImplantsBalasoreRoute
   '/dental-implants-baripada': typeof DentalImplantsBaripadaRoute
   '/dental-implants-berhampur': typeof DentalImplantsBerhampurRoute
   '/dental-implants-bhubaneswar': typeof DentalImplantsBhubaneswarRoute
+  '/dental-implants-chandrasekharpur': typeof DentalImplantsChandrasekharpurRoute
   '/dental-implants-cuttack': typeof DentalImplantsCuttackRoute
+  '/dental-implants-dumduma': typeof DentalImplantsDumdumaRoute
+  '/dental-implants-forest-park': typeof DentalImplantsForestParkRoute
+  '/dental-implants-gajapati-nagar': typeof DentalImplantsGajapatiNagarRoute
+  '/dental-implants-jayadev-vihar': typeof DentalImplantsJayadevViharRoute
   '/dental-implants-jharsuguda': typeof DentalImplantsJharsugudaRoute
+  '/dental-implants-kalinga-nagar': typeof DentalImplantsKalingaNagarRoute
+  '/dental-implants-kharavela-nagar': typeof DentalImplantsKharavelaNagarRoute
+  '/dental-implants-nayapalli': typeof DentalImplantsNayapalliRoute
+  '/dental-implants-niladri-vihar': typeof DentalImplantsNiladriViharRoute
+  '/dental-implants-patia': typeof DentalImplantsPatiaRoute
+  '/dental-implants-patrapada': typeof DentalImplantsPatrapadaRoute
+  '/dental-implants-pokhariput': typeof DentalImplantsPokhariputRoute
   '/dental-implants-puri': typeof DentalImplantsPuriRoute
   '/dental-implants-rourkela': typeof DentalImplantsRourkelaRoute
+  '/dental-implants-saheed-nagar': typeof DentalImplantsSaheedNagarRoute
+  '/dental-implants-sailashree-vihar': typeof DentalImplantsSailashreeViharRoute
   '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
+  '/dental-implants-satya-nagar': typeof DentalImplantsSatyaNagarRoute
+  '/dental-implants-sundarpur': typeof DentalImplantsSundarpurRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -272,16 +437,33 @@ export interface FileRouteTypes {
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
+    | '/dental-implants-acharya-vihar'
     | '/dental-implants-angul'
     | '/dental-implants-balasore'
     | '/dental-implants-baripada'
     | '/dental-implants-berhampur'
     | '/dental-implants-bhubaneswar'
+    | '/dental-implants-chandrasekharpur'
     | '/dental-implants-cuttack'
+    | '/dental-implants-dumduma'
+    | '/dental-implants-forest-park'
+    | '/dental-implants-gajapati-nagar'
+    | '/dental-implants-jayadev-vihar'
     | '/dental-implants-jharsuguda'
+    | '/dental-implants-kalinga-nagar'
+    | '/dental-implants-kharavela-nagar'
+    | '/dental-implants-nayapalli'
+    | '/dental-implants-niladri-vihar'
+    | '/dental-implants-patia'
+    | '/dental-implants-patrapada'
+    | '/dental-implants-pokhariput'
     | '/dental-implants-puri'
     | '/dental-implants-rourkela'
+    | '/dental-implants-saheed-nagar'
+    | '/dental-implants-sailashree-vihar'
     | '/dental-implants-sambalpur'
+    | '/dental-implants-satya-nagar'
+    | '/dental-implants-sundarpur'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -300,16 +482,33 @@ export interface FileRouteTypes {
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
+    | '/dental-implants-acharya-vihar'
     | '/dental-implants-angul'
     | '/dental-implants-balasore'
     | '/dental-implants-baripada'
     | '/dental-implants-berhampur'
     | '/dental-implants-bhubaneswar'
+    | '/dental-implants-chandrasekharpur'
     | '/dental-implants-cuttack'
+    | '/dental-implants-dumduma'
+    | '/dental-implants-forest-park'
+    | '/dental-implants-gajapati-nagar'
+    | '/dental-implants-jayadev-vihar'
     | '/dental-implants-jharsuguda'
+    | '/dental-implants-kalinga-nagar'
+    | '/dental-implants-kharavela-nagar'
+    | '/dental-implants-nayapalli'
+    | '/dental-implants-niladri-vihar'
+    | '/dental-implants-patia'
+    | '/dental-implants-patrapada'
+    | '/dental-implants-pokhariput'
     | '/dental-implants-puri'
     | '/dental-implants-rourkela'
+    | '/dental-implants-saheed-nagar'
+    | '/dental-implants-sailashree-vihar'
     | '/dental-implants-sambalpur'
+    | '/dental-implants-satya-nagar'
+    | '/dental-implants-sundarpur'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -328,16 +527,33 @@ export interface FileRouteTypes {
     | '/dental-implant-cost-odisha'
     | '/dental-implant-maintenance-failure'
     | '/dental-implant-second-opinion'
+    | '/dental-implants-acharya-vihar'
     | '/dental-implants-angul'
     | '/dental-implants-balasore'
     | '/dental-implants-baripada'
     | '/dental-implants-berhampur'
     | '/dental-implants-bhubaneswar'
+    | '/dental-implants-chandrasekharpur'
     | '/dental-implants-cuttack'
+    | '/dental-implants-dumduma'
+    | '/dental-implants-forest-park'
+    | '/dental-implants-gajapati-nagar'
+    | '/dental-implants-jayadev-vihar'
     | '/dental-implants-jharsuguda'
+    | '/dental-implants-kalinga-nagar'
+    | '/dental-implants-kharavela-nagar'
+    | '/dental-implants-nayapalli'
+    | '/dental-implants-niladri-vihar'
+    | '/dental-implants-patia'
+    | '/dental-implants-patrapada'
+    | '/dental-implants-pokhariput'
     | '/dental-implants-puri'
     | '/dental-implants-rourkela'
+    | '/dental-implants-saheed-nagar'
+    | '/dental-implants-sailashree-vihar'
     | '/dental-implants-sambalpur'
+    | '/dental-implants-satya-nagar'
+    | '/dental-implants-sundarpur'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -357,16 +573,33 @@ export interface RootRouteChildren {
   DentalImplantCostOdishaRoute: typeof DentalImplantCostOdishaRoute
   DentalImplantMaintenanceFailureRoute: typeof DentalImplantMaintenanceFailureRoute
   DentalImplantSecondOpinionRoute: typeof DentalImplantSecondOpinionRoute
+  DentalImplantsAcharyaViharRoute: typeof DentalImplantsAcharyaViharRoute
   DentalImplantsAngulRoute: typeof DentalImplantsAngulRoute
   DentalImplantsBalasoreRoute: typeof DentalImplantsBalasoreRoute
   DentalImplantsBaripadaRoute: typeof DentalImplantsBaripadaRoute
   DentalImplantsBerhampurRoute: typeof DentalImplantsBerhampurRoute
   DentalImplantsBhubaneswarRoute: typeof DentalImplantsBhubaneswarRoute
+  DentalImplantsChandrasekharpurRoute: typeof DentalImplantsChandrasekharpurRoute
   DentalImplantsCuttackRoute: typeof DentalImplantsCuttackRoute
+  DentalImplantsDumdumaRoute: typeof DentalImplantsDumdumaRoute
+  DentalImplantsForestParkRoute: typeof DentalImplantsForestParkRoute
+  DentalImplantsGajapatiNagarRoute: typeof DentalImplantsGajapatiNagarRoute
+  DentalImplantsJayadevViharRoute: typeof DentalImplantsJayadevViharRoute
   DentalImplantsJharsugudaRoute: typeof DentalImplantsJharsugudaRoute
+  DentalImplantsKalingaNagarRoute: typeof DentalImplantsKalingaNagarRoute
+  DentalImplantsKharavelaNagarRoute: typeof DentalImplantsKharavelaNagarRoute
+  DentalImplantsNayapalliRoute: typeof DentalImplantsNayapalliRoute
+  DentalImplantsNiladriViharRoute: typeof DentalImplantsNiladriViharRoute
+  DentalImplantsPatiaRoute: typeof DentalImplantsPatiaRoute
+  DentalImplantsPatrapadaRoute: typeof DentalImplantsPatrapadaRoute
+  DentalImplantsPokhariputRoute: typeof DentalImplantsPokhariputRoute
   DentalImplantsPuriRoute: typeof DentalImplantsPuriRoute
   DentalImplantsRourkelaRoute: typeof DentalImplantsRourkelaRoute
+  DentalImplantsSaheedNagarRoute: typeof DentalImplantsSaheedNagarRoute
+  DentalImplantsSailashreeViharRoute: typeof DentalImplantsSailashreeViharRoute
   DentalImplantsSambalpurRoute: typeof DentalImplantsSambalpurRoute
+  DentalImplantsSatyaNagarRoute: typeof DentalImplantsSatyaNagarRoute
+  DentalImplantsSundarpurRoute: typeof DentalImplantsSundarpurRoute
   FlaplessGuidedDentalImplantsRoute: typeof FlaplessGuidedDentalImplantsRoute
   FullMouthDentalImplantsRoute: typeof FullMouthDentalImplantsRoute
   ImmediateDentalImplantsRoute: typeof ImmediateDentalImplantsRoute
@@ -429,6 +662,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DentalImplantSecondOpinionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dental-implants-acharya-vihar': {
+      id: '/dental-implants-acharya-vihar'
+      path: '/dental-implants-acharya-vihar'
+      fullPath: '/dental-implants-acharya-vihar'
+      preLoaderRoute: typeof DentalImplantsAcharyaViharRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dental-implants-angul': {
       id: '/dental-implants-angul'
       path: '/dental-implants-angul'
@@ -464,6 +704,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DentalImplantsBhubaneswarRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dental-implants-chandrasekharpur': {
+      id: '/dental-implants-chandrasekharpur'
+      path: '/dental-implants-chandrasekharpur'
+      fullPath: '/dental-implants-chandrasekharpur'
+      preLoaderRoute: typeof DentalImplantsChandrasekharpurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dental-implants-cuttack': {
       id: '/dental-implants-cuttack'
       path: '/dental-implants-cuttack'
@@ -471,11 +718,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DentalImplantsCuttackRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dental-implants-dumduma': {
+      id: '/dental-implants-dumduma'
+      path: '/dental-implants-dumduma'
+      fullPath: '/dental-implants-dumduma'
+      preLoaderRoute: typeof DentalImplantsDumdumaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-forest-park': {
+      id: '/dental-implants-forest-park'
+      path: '/dental-implants-forest-park'
+      fullPath: '/dental-implants-forest-park'
+      preLoaderRoute: typeof DentalImplantsForestParkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-gajapati-nagar': {
+      id: '/dental-implants-gajapati-nagar'
+      path: '/dental-implants-gajapati-nagar'
+      fullPath: '/dental-implants-gajapati-nagar'
+      preLoaderRoute: typeof DentalImplantsGajapatiNagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-jayadev-vihar': {
+      id: '/dental-implants-jayadev-vihar'
+      path: '/dental-implants-jayadev-vihar'
+      fullPath: '/dental-implants-jayadev-vihar'
+      preLoaderRoute: typeof DentalImplantsJayadevViharRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dental-implants-jharsuguda': {
       id: '/dental-implants-jharsuguda'
       path: '/dental-implants-jharsuguda'
       fullPath: '/dental-implants-jharsuguda'
       preLoaderRoute: typeof DentalImplantsJharsugudaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-kalinga-nagar': {
+      id: '/dental-implants-kalinga-nagar'
+      path: '/dental-implants-kalinga-nagar'
+      fullPath: '/dental-implants-kalinga-nagar'
+      preLoaderRoute: typeof DentalImplantsKalingaNagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-kharavela-nagar': {
+      id: '/dental-implants-kharavela-nagar'
+      path: '/dental-implants-kharavela-nagar'
+      fullPath: '/dental-implants-kharavela-nagar'
+      preLoaderRoute: typeof DentalImplantsKharavelaNagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-nayapalli': {
+      id: '/dental-implants-nayapalli'
+      path: '/dental-implants-nayapalli'
+      fullPath: '/dental-implants-nayapalli'
+      preLoaderRoute: typeof DentalImplantsNayapalliRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-niladri-vihar': {
+      id: '/dental-implants-niladri-vihar'
+      path: '/dental-implants-niladri-vihar'
+      fullPath: '/dental-implants-niladri-vihar'
+      preLoaderRoute: typeof DentalImplantsNiladriViharRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-patia': {
+      id: '/dental-implants-patia'
+      path: '/dental-implants-patia'
+      fullPath: '/dental-implants-patia'
+      preLoaderRoute: typeof DentalImplantsPatiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-patrapada': {
+      id: '/dental-implants-patrapada'
+      path: '/dental-implants-patrapada'
+      fullPath: '/dental-implants-patrapada'
+      preLoaderRoute: typeof DentalImplantsPatrapadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-pokhariput': {
+      id: '/dental-implants-pokhariput'
+      path: '/dental-implants-pokhariput'
+      fullPath: '/dental-implants-pokhariput'
+      preLoaderRoute: typeof DentalImplantsPokhariputRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dental-implants-puri': {
@@ -492,11 +816,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DentalImplantsRourkelaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dental-implants-saheed-nagar': {
+      id: '/dental-implants-saheed-nagar'
+      path: '/dental-implants-saheed-nagar'
+      fullPath: '/dental-implants-saheed-nagar'
+      preLoaderRoute: typeof DentalImplantsSaheedNagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-sailashree-vihar': {
+      id: '/dental-implants-sailashree-vihar'
+      path: '/dental-implants-sailashree-vihar'
+      fullPath: '/dental-implants-sailashree-vihar'
+      preLoaderRoute: typeof DentalImplantsSailashreeViharRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dental-implants-sambalpur': {
       id: '/dental-implants-sambalpur'
       path: '/dental-implants-sambalpur'
       fullPath: '/dental-implants-sambalpur'
       preLoaderRoute: typeof DentalImplantsSambalpurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-satya-nagar': {
+      id: '/dental-implants-satya-nagar'
+      path: '/dental-implants-satya-nagar'
+      fullPath: '/dental-implants-satya-nagar'
+      preLoaderRoute: typeof DentalImplantsSatyaNagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dental-implants-sundarpur': {
+      id: '/dental-implants-sundarpur'
+      path: '/dental-implants-sundarpur'
+      fullPath: '/dental-implants-sundarpur'
+      preLoaderRoute: typeof DentalImplantsSundarpurRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/flapless-guided-dental-implants': {
@@ -573,16 +925,33 @@ const rootRouteChildren: RootRouteChildren = {
   DentalImplantCostOdishaRoute: DentalImplantCostOdishaRoute,
   DentalImplantMaintenanceFailureRoute: DentalImplantMaintenanceFailureRoute,
   DentalImplantSecondOpinionRoute: DentalImplantSecondOpinionRoute,
+  DentalImplantsAcharyaViharRoute: DentalImplantsAcharyaViharRoute,
   DentalImplantsAngulRoute: DentalImplantsAngulRoute,
   DentalImplantsBalasoreRoute: DentalImplantsBalasoreRoute,
   DentalImplantsBaripadaRoute: DentalImplantsBaripadaRoute,
   DentalImplantsBerhampurRoute: DentalImplantsBerhampurRoute,
   DentalImplantsBhubaneswarRoute: DentalImplantsBhubaneswarRoute,
+  DentalImplantsChandrasekharpurRoute: DentalImplantsChandrasekharpurRoute,
   DentalImplantsCuttackRoute: DentalImplantsCuttackRoute,
+  DentalImplantsDumdumaRoute: DentalImplantsDumdumaRoute,
+  DentalImplantsForestParkRoute: DentalImplantsForestParkRoute,
+  DentalImplantsGajapatiNagarRoute: DentalImplantsGajapatiNagarRoute,
+  DentalImplantsJayadevViharRoute: DentalImplantsJayadevViharRoute,
   DentalImplantsJharsugudaRoute: DentalImplantsJharsugudaRoute,
+  DentalImplantsKalingaNagarRoute: DentalImplantsKalingaNagarRoute,
+  DentalImplantsKharavelaNagarRoute: DentalImplantsKharavelaNagarRoute,
+  DentalImplantsNayapalliRoute: DentalImplantsNayapalliRoute,
+  DentalImplantsNiladriViharRoute: DentalImplantsNiladriViharRoute,
+  DentalImplantsPatiaRoute: DentalImplantsPatiaRoute,
+  DentalImplantsPatrapadaRoute: DentalImplantsPatrapadaRoute,
+  DentalImplantsPokhariputRoute: DentalImplantsPokhariputRoute,
   DentalImplantsPuriRoute: DentalImplantsPuriRoute,
   DentalImplantsRourkelaRoute: DentalImplantsRourkelaRoute,
+  DentalImplantsSaheedNagarRoute: DentalImplantsSaheedNagarRoute,
+  DentalImplantsSailashreeViharRoute: DentalImplantsSailashreeViharRoute,
   DentalImplantsSambalpurRoute: DentalImplantsSambalpurRoute,
+  DentalImplantsSatyaNagarRoute: DentalImplantsSatyaNagarRoute,
+  DentalImplantsSundarpurRoute: DentalImplantsSundarpurRoute,
   FlaplessGuidedDentalImplantsRoute: FlaplessGuidedDentalImplantsRoute,
   FullMouthDentalImplantsRoute: FullMouthDentalImplantsRoute,
   ImmediateDentalImplantsRoute: ImmediateDentalImplantsRoute,
