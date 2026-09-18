@@ -13,6 +13,12 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { GoogleAnalytics } from "../components/site/GoogleAnalytics";
 
+const GOOGLE_ANALYTICS_MEASUREMENT_ID = (
+  (import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_ANALYTICS_API_KEY"] as string | undefined) ||
+  (import.meta.env["VITE_GOOGLE_ANALYTICS_MEASUREMENT_ID"] as string | undefined) ||
+  "G-V1MCCK3ZLM"
+).trim();
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -122,6 +128,17 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          id="google-analytics-gtag"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GOOGLE_ANALYTICS_MEASUREMENT_ID)}`}
+        />
+        <script
+          id="google-analytics-config"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GOOGLE_ANALYTICS_MEASUREMENT_ID}');`,
+          }}
+        />
       </head>
       <body>
         {children}
