@@ -748,6 +748,22 @@ function AcrossOdisha() {
           ))}
 
         </div>
+        <div className="mt-16 border-t border-border/50 pt-10">
+          <p className="text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Specialist Consultations for Patients In:
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium">
+            <Link to="/dental-implants-cuttack/" className="hover:text-primary">Cuttack</Link>
+            <Link to="/dental-implants-puri/" className="hover:text-primary">Puri</Link>
+            <Link to="/dental-implants-berhampur/" className="hover:text-primary">Berhampur</Link>
+            <Link to="/dental-implants-sambalpur/" className="hover:text-primary">Sambalpur</Link>
+            <Link to="/dental-implants-rourkela/" className="hover:text-primary">Rourkela</Link>
+            <Link to="/dental-implants-balasore/" className="hover:text-primary">Balasore</Link>
+            <Link to="/dental-implants-jharsuguda/" className="hover:text-primary">Jharsuguda</Link>
+            <Link to="/dental-implants-baripada/" className="hover:text-primary">Baripada</Link>
+            <Link to="/dental-implants-angul/" className="hover:text-primary">Angul</Link>
+          </div>
+        </div>
       </div>
     </section>
   );
