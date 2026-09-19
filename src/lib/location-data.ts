@@ -60,13 +60,17 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
   bhubaneswar: {
     slug: "dental-implants-bhubaneswar",
     cityName: "Bhubaneswar",
-    pageTitle: "Dental Implants in Bhubaneswar | Specialist Consultation & Care",
+    pageTitle: "Dental Implants in Bhubaneswar | Trusted Implant Specialist & Bhala Doctor Care",
     metaDescription:
-      "Looking for dental implants in Bhubaneswar? Receive expert care at CARE Hospital under Dr. Sauvik Singha (MDS). 3D CBCT guided surgery, single tooth & All-on-4.",
-    h1: "Dental Implants in Bhubaneswar, Odisha",
+      "Searching for dental implants near me or a bhala dental implant doctor in Bhubaneswar? Consult MDS specialists at CARE Hospital for trusted & transparent implant care.",
+    h1: "Dental Implants in Bhubaneswar: Trusted Specialist Care Near You",
     primaryKeyword: "dental implants in bhubaneswar",
     secondaryKeywords: [
       "dental implants bhubaneswar",
+      "bhala dental implants",
+      "bhala dental implant doctor",
+      "trusted dental implants bhubaneswar",
+      "dental implants near me",
       "dental implant consultation bhubaneswar",
       "dental implant treatment in bhubaneswar",
       "dental implant cost bhubaneswar",
@@ -83,26 +87,26 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
       "Infocity",
     ],
     intro:
-      "If you are searching for permanent dental implants in Bhubaneswar to replace missing teeth, specialist surgical care is available at CARE Hospital in Chandrasekharpur. Led by Maxillofacial Surgeon Dr. Sauvik Singha (MDS), our clinic provides 3D CBCT digital diagnostics, flapless guided surgery, and long-lasting zirconia crowns to restore your smile with precision and comfort.",
+      "If you are searching for permanent dental implants in Bhubaneswar or looking for a trusted bhala dental implant doctor near me, specialist surgical care is available at CARE Hospital in Chandrasekharpur. Led by Maxillofacial Surgeon Dr. Sauvik Singha (MDS) and Prosthodontist Dr. Neha Mohanty (MDS), our clinic provides 3D CBCT digital diagnostics, flapless guided surgery, and certified titanium and zirconia implants to restore your smile with long-lasting comfort. Consultations are available in Odia, English, and Hindi (ଆପଣଙ୍କ ଭାଷାରେ ପରାମର୍ଶ) with transparent pricing.",
     quickAnswer:
-      "Patients seeking dental implants in Bhubaneswar receive direct care at CARE Hospital, Chandrasekharpur. The facility offers complete 3D CBCT diagnostic imaging, sterile surgical suites, and specialized treatment options for single tooth replacement, multi-implant bridges, and fixed full-arch All-on-4 or All-on-6 restorations.",
-    logisticsHeading: "Treatment Center Location & Accessibility in Bhubaneswar",
+      "Patients seeking trusted dental implants in Bhubaneswar receive direct care at CARE Hospital, Chandrasekharpur. Whether you need a single tooth replacement, a multi-implant bridge, or full-arch All-on-4 restorations, our qualified MDS dental implant doctors provide complete 3D CBCT diagnostics and hospital-grade surgical precision for patients across Chandrasekharpur, Patia, Nayapalli, Jayadev Vihar, Saheed Nagar, and all surrounding areas.",
+    logisticsHeading: "Treatment Center Location: Trusted Dental Implants Near Me at CARE Hospital, Bhubaneswar",
     logisticsIntro:
-      "Our surgical facility is located inside CARE Hospital on Prachi Enclave Road, Chandrasekharpur, offering convenient access for Bhubaneswar residents across all major neighborhoods.",
+      "Our surgical facility is located inside CARE Hospital on Prachi Enclave Road, Chandrasekharpur, offering convenient access for Bhubaneswar residents searching for a bhala dental implant doctor near them.",
     logisticsDetails: [
       "Address: CARE Hospital, Unit No. 42, Plot No. 324, Prachi Enclave Road, Rail Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751016.",
       "Travel Time from Railway Station: Approximately 15 minutes drive from Master Canteen / Bhubaneswar Railway Station.",
       "Travel Time from Airport: Approximately 25 minutes drive from Biju Patnaik International Airport (BBI).",
       "Major Arteries: Easily reachable via Nandankanan Road, Jaydev Vihar Flyover, and Cuttack-Puri Highway.",
     ],
-    planningSectionHeading: "How to Plan Your Dental Implant Treatment in Bhubaneswar",
+    planningSectionHeading: "How to Plan Your Dental Implants in Bhubaneswar: 4-Stage Pathway",
     planningSectionIntro:
-      "For Bhubaneswar residents, getting started with dental implants is straightforward with local same-day diagnostic scans and in-person consultations.",
+      "For Bhubaneswar residents, getting started with trusted dental implants is straightforward with local same-day diagnostic scans and specialist consultations in Odia or English.",
     planningSteps: [
       {
         step: "01",
-        title: "Initial Consultation & Clinical Exam",
-        desc: "Schedule your in-person visit or submit a WhatsApp pre-consultation request for a preliminary assessment of your missing teeth.",
+        title: "Initial Consultation & Specialist Exam",
+        desc: "Schedule your in-person visit or submit a WhatsApp pre-consultation request to speak with an experienced bhala dental implant doctor.",
       },
       {
         step: "02",
@@ -111,7 +115,7 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
       },
       {
         step: "03",
-        title: "Surgical Placement & Temporary Restoration",
+        title: "Hospital Surgical Placement",
         desc: "Implant placement is carried out under local anaesthesia using flapless guided techniques, followed by temporary crown fitting where suitable.",
       },
       {
@@ -121,26 +125,30 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
       },
     ],
     citySpecificTips: [
-      "Bhubaneswar residents can complete 3D CBCT imaging and clinical examination during a single morning appointment.",
+      "Bhubaneswar residents can complete 3D CBCT imaging and specialist clinical examination during a single morning appointment.",
       "Dedicated hospital parking, elevator access, and full emergency medical support are available on-site.",
       "Consultation hours are from 8:00 AM to 5:00 PM Monday through Saturday.",
     ],
     faqs: [
       {
-        q: "Where is the dental implant treatment center located in Bhubaneswar?",
-        a: "All consultations, 3D CBCT imaging, surgical placements, and restorative crown procedures are conducted at CARE Hospital, Prachi Enclave Road, Chandrasekharpur, Bhubaneswar 751016.",
+        q: "How do I find a bhala dental implant doctor near me in Bhubaneswar?",
+        a: "You can consult our experienced MDS specialists—Dr. Sauvik Singha (Maxillofacial Surgeon) and Dr. Neha Mohanty (Prosthodontist)—at CARE Hospital, Chandrasekharpur. We offer free preliminary online consultations in Odia, English, and Hindi so you can discuss your case with a trusted specialist before visiting.",
       },
       {
-        q: "Who performs the dental implant surgery in Bhubaneswar?",
-        a: "Surgeries are conducted by Dr. Sauvik Singha (MDS), Maxillofacial Surgeon & Dental Implant Specialist, along with a dedicated hospital dental team.",
+        q: "What makes dental implants in Bhubaneswar trusted and long-lasting?",
+        a: "Our center uses certified global titanium and zirconia implant systems backed by documented warranties and 3D CBCT digital precision. Surgeries take place inside hospital operating suites at CARE Hospital, ensuring strict sterile protocols and reliable, long-term outcomes for bhala dental implants.",
       },
       {
-        q: "Can I get a dental implant consultation on the same day as my CBCT scan?",
-        a: "Yes. Local Bhubaneswar patients can undergo 3D CBCT diagnostic imaging and clinical consultation during the same appointment visit.",
+        q: "Where is the treatment center for dental implants near me in Bhubaneswar?",
+        a: "All clinical examinations, 3D CBCT imaging, implant placements, and crown fittings take place at CARE Hospital, Unit No. 42, Plot No. 324, Prachi Enclave Road, Rail Vihar, Chandrasekharpur, Bhubaneswar 751016.",
       },
       {
-        q: "What implant treatment options are available in Bhubaneswar?",
-        a: "We offer single tooth dental implants, multiple tooth implant bridges, All-on-4 and All-on-6 full arch restorations, immediate implants, and bone grafting/sinus lift procedures.",
+        q: "Can I discuss my dental implant treatment in Odia or English?",
+        a: "Yes! (ହଁ, ଆପଣ ଓଡ଼ିଆରେ ପରାମର୍ଶ କରିପାରିବେ). Our doctors and patient coordinators speak fluent Odia, English, and Hindi, ensuring clear advice without communication barriers.",
+      },
+      {
+        q: "How much do dental implants cost in Bhubaneswar?",
+        a: "Cost depends on the number of missing teeth, implant system chosen, crown material (metal-ceramic vs. zirconia), and whether bone grafting is needed. We provide transparent estimates during consultation without hidden fees. Explore our detailed Dental Implant Cost Guide in Bhubaneswar for more information.",
       },
     ],
   },

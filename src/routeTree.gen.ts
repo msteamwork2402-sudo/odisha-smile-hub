@@ -43,6 +43,7 @@ import { Route as DentalImplantsSailashreeViharRouteImport } from './routes/dent
 import { Route as DentalImplantsSambalpurRouteImport } from './routes/dental-implants-sambalpur'
 import { Route as DentalImplantsSatyaNagarRouteImport } from './routes/dental-implants-satya-nagar'
 import { Route as DentalImplantsSundarpurRouteImport } from './routes/dental-implants-sundarpur'
+import { Route as DrSauvikSinghaRouteImport } from './routes/dr-sauvik-singha'
 import { Route as FlaplessGuidedDentalImplantsRouteImport } from './routes/flapless-guided-dental-implants'
 import { Route as FullMouthDentalImplantsRouteImport } from './routes/full-mouth-dental-implants'
 import { Route as ImmediateDentalImplantsRouteImport } from './routes/immediate-dental-implants'
@@ -241,6 +242,11 @@ const DentalImplantsSundarpurRoute = DentalImplantsSundarpurRouteImport.update({
   path: '/dental-implants-sundarpur',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DrSauvikSinghaRoute = DrSauvikSinghaRouteImport.update({
+  id: '/dr-sauvik-singha',
+  path: '/dr-sauvik-singha',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FlaplessGuidedDentalImplantsRoute =
   FlaplessGuidedDentalImplantsRouteImport.update({
     id: '/flapless-guided-dental-implants',
@@ -326,6 +332,7 @@ export interface FileRoutesByFullPath {
   '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
   '/dental-implants-satya-nagar': typeof DentalImplantsSatyaNagarRoute
   '/dental-implants-sundarpur': typeof DentalImplantsSundarpurRoute
+  '/dr-sauvik-singha': typeof DrSauvikSinghaRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -371,6 +378,7 @@ export interface FileRoutesByTo {
   '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
   '/dental-implants-satya-nagar': typeof DentalImplantsSatyaNagarRoute
   '/dental-implants-sundarpur': typeof DentalImplantsSundarpurRoute
+  '/dr-sauvik-singha': typeof DrSauvikSinghaRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -417,6 +425,7 @@ export interface FileRoutesById {
   '/dental-implants-sambalpur': typeof DentalImplantsSambalpurRoute
   '/dental-implants-satya-nagar': typeof DentalImplantsSatyaNagarRoute
   '/dental-implants-sundarpur': typeof DentalImplantsSundarpurRoute
+  '/dr-sauvik-singha': typeof DrSauvikSinghaRoute
   '/flapless-guided-dental-implants': typeof FlaplessGuidedDentalImplantsRoute
   '/full-mouth-dental-implants': typeof FullMouthDentalImplantsRoute
   '/immediate-dental-implants': typeof ImmediateDentalImplantsRoute
@@ -464,6 +473,7 @@ export interface FileRouteTypes {
     | '/dental-implants-sambalpur'
     | '/dental-implants-satya-nagar'
     | '/dental-implants-sundarpur'
+    | '/dr-sauvik-singha'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -509,6 +519,7 @@ export interface FileRouteTypes {
     | '/dental-implants-sambalpur'
     | '/dental-implants-satya-nagar'
     | '/dental-implants-sundarpur'
+    | '/dr-sauvik-singha'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -554,6 +565,7 @@ export interface FileRouteTypes {
     | '/dental-implants-sambalpur'
     | '/dental-implants-satya-nagar'
     | '/dental-implants-sundarpur'
+    | '/dr-sauvik-singha'
     | '/flapless-guided-dental-implants'
     | '/full-mouth-dental-implants'
     | '/immediate-dental-implants'
@@ -600,6 +612,7 @@ export interface RootRouteChildren {
   DentalImplantsSambalpurRoute: typeof DentalImplantsSambalpurRoute
   DentalImplantsSatyaNagarRoute: typeof DentalImplantsSatyaNagarRoute
   DentalImplantsSundarpurRoute: typeof DentalImplantsSundarpurRoute
+  DrSauvikSinghaRoute: typeof DrSauvikSinghaRoute
   FlaplessGuidedDentalImplantsRoute: typeof FlaplessGuidedDentalImplantsRoute
   FullMouthDentalImplantsRoute: typeof FullMouthDentalImplantsRoute
   ImmediateDentalImplantsRoute: typeof ImmediateDentalImplantsRoute
@@ -851,6 +864,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DentalImplantsSundarpurRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dr-sauvik-singha': {
+      id: '/dr-sauvik-singha'
+      path: '/dr-sauvik-singha'
+      fullPath: '/dr-sauvik-singha'
+      preLoaderRoute: typeof DrSauvikSinghaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/flapless-guided-dental-implants': {
       id: '/flapless-guided-dental-implants'
       path: '/flapless-guided-dental-implants'
@@ -952,6 +972,7 @@ const rootRouteChildren: RootRouteChildren = {
   DentalImplantsSambalpurRoute: DentalImplantsSambalpurRoute,
   DentalImplantsSatyaNagarRoute: DentalImplantsSatyaNagarRoute,
   DentalImplantsSundarpurRoute: DentalImplantsSundarpurRoute,
+  DrSauvikSinghaRoute: DrSauvikSinghaRoute,
   FlaplessGuidedDentalImplantsRoute: FlaplessGuidedDentalImplantsRoute,
   FullMouthDentalImplantsRoute: FullMouthDentalImplantsRoute,
   ImmediateDentalImplantsRoute: ImmediateDentalImplantsRoute,

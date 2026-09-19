@@ -127,7 +127,7 @@ export const REVIEWER = {
   role: "Maxillofacial Surgeon & Implant Specialist",
   reviewedOn: "2 September 2026",
   reviewedOnISO: "2026-09-02",
-  profileUrl: `${SITE}/#team`,
+  profileUrl: `${SITE}/dr-sauvik-singha/`,
   sameAs: [
     DR_SAUVIK_PROFILES.linkedin,
     DR_SAUVIK_PROFILES.apollo,
@@ -136,8 +136,9 @@ export const REVIEWER = {
 };
 
 export const DOCTOR_SCHEMA = {
+  "@context": "https://schema.org",
   "@type": ["Person", "Physician"],
-  "@id": `${SITE}/#dr-sauvik-singha`,
+  "@id": `${SITE}/dr-sauvik-singha/#person`,
   name: "Dr. Sauvik Singha, MDS",
   givenName: "Sauvik",
   familyName: "Singha",
@@ -146,10 +147,19 @@ export const DOCTOR_SCHEMA = {
   medicalSpecialty: ["Oral and Maxillofacial Surgery", "Implantology"],
   description:
     "Maxillofacial Surgeon and Dental Implant Specialist leading consultations, 3D CBCT digital diagnostics, and surgical implant placements at CARE Hospital, Bhubaneswar.",
+  url: `${SITE}/dr-sauvik-singha/`,
   worksFor: {
     "@type": "MedicalOrganization",
     name: "CARE Hospital, Bhubaneswar",
     url: CARE_HOSPITAL_URL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Unit No. 42, Plot No. 324, Prachi Enclave Road, Rail Vihar, Chandrasekharpur",
+      addressLocality: "Bhubaneswar",
+      addressRegion: "Odisha",
+      postalCode: "751016",
+      addressCountry: "IN",
+    },
   },
   affiliation: {
     "@type": "MedicalBusiness",

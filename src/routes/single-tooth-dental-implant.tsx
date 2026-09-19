@@ -31,14 +31,14 @@ import careHospital from "@/assets/care-hospital.png";
 
 const SITE = "https://odishadentalimplants.com";
 const URL = `${SITE}/single-tooth-dental-implant/`;
-const TITLE = "Single Tooth Dental Implant in Odisha | Treatment Guide";
+const TITLE = "Single Tooth Dental Implant | Trusted Doctor & Bhala Implant Care";
 const DESCRIPTION =
-  "Learn about single tooth implants in Odisha: procedure, suitability, recovery, implant versus bridge choices and cost factors for replacing one tooth.";
-const H1 = "Single Tooth Dental Implant in Odisha";
+  "Searching for a single tooth dental implant or a trusted implant doctor? Consult MDS specialists at CARE Hospital for affordable, bhala dental implant care in Odisha.";
+const H1 = "Single Tooth Dental Implant: Trusted Doctor & Specialist Care";
 const REVIEWED_ON = "2 September 2026";
 
 const QUICK_ANSWER =
-  "A single tooth dental implant replaces one missing tooth with an implant, connector and crown. Suitability and treatment stages depend on oral health, available bone and the clinical assessment. Patients across India can begin with an online consultation; examination and treatment take place in Bhubaneswar.";
+  "A single tooth dental implant replaces one missing tooth with a titanium root fixture, connecting abutment, and custom porcelain or zirconia crown. If you are asking about gotie danta paim bhala implant care, our MDS dental implant doctors at CARE Hospital, Bhubaneswar provide 3D CBCT diagnostics and affordable, transparent treatment options tailored to your jawbone condition without altering neighbouring healthy teeth.";
 
 const FAQ_ITEMS: Faq[] = [
   {
@@ -47,41 +47,56 @@ const FAQ_ITEMS: Faq[] = [
     a: <p>{QUICK_ANSWER}</p>,
   },
   {
-    q: "Can one missing tooth be replaced with a dental implant?",
+    q: "How do I find a trusted implant doctor for a single tooth dental implant in Bhubaneswar?",
     plain:
-      "Yes — a single implant can be used to replace one missing tooth when it is clinically appropriate. Suitability depends on your gum health, available bone, the position of the tooth and your overall dental condition, which are assessed during examination and planning.",
+      "You can consult qualified MDS implant specialists—Dr. Sauvik Singha (Maxillofacial Surgeon) and Dr. Neha Mohanty (Prosthodontist)—at CARE Hospital, Chandrasekharpur, Bhubaneswar. You can begin with a free online consultation in Odia, English, or Hindi before your clinical visit.",
     a: (
       <p>
-        Yes — a single implant can be used to replace one missing tooth when it is clinically appropriate.
-        Suitability depends on your gum health, available bone, the position of the tooth and your overall
-        dental condition, all of which are assessed during clinical examination and treatment planning.
+        You can consult qualified MDS implant specialists—Dr. Sauvik Singha (Maxillofacial Surgeon) and Dr. Neha Mohanty (Prosthodontist)—at CARE Hospital, Chandrasekharpur, Bhubaneswar. You can begin with a free online consultation in Odia, English, or Hindi before your clinical visit.
       </p>
     ),
   },
   {
-    q: "Is a dental implant better than a bridge for one missing tooth?",
+    q: "What makes a bhala dental implant better than a traditional dental bridge for one tooth?",
     plain:
-      "Neither option is universally better. An implant does not rely on adjacent teeth in the same way a conventional bridge does, but it involves surgery and healing. The decision depends on your dental condition, bone, bite and treatment goals.",
+      "A single tooth dental implant acts as an independent root foundation in your jawbone, preserving adjacent healthy teeth without grinding them down for bridge support. It provides long-lasting chewing strength, natural aesthetics, and jawbone preservation.",
     a: (
       <p>
-        Neither option is universally better. An implant does not rely on adjacent teeth in the same way a
-        conventional bridge does, but it involves surgery and healing stages. The decision depends on your
-        dental condition, bone, bite and treatment goals — compare{" "}
-        <a className="font-semibold text-primary underline" href="/implants-vs-bridge-vs-denture/">
-          implants, bridges and dentures
-        </a>
-        .
+        A single tooth dental implant acts as an independent root foundation in your jawbone, preserving adjacent healthy teeth without grinding them down for bridge support. It provides long-lasting chewing strength, natural aesthetics, and jawbone preservation.
       </p>
     ),
   },
   {
-    q: "Can I get an implant immediately after tooth extraction?",
+    q: "Is a single tooth dental implant affordable?",
     plain:
-      "Immediate implant placement may be possible in selected cases. It depends on the condition of the extraction site, surrounding tissues, bone and the overall treatment plan, so it cannot be promised in advance.",
+      "Yes. We offer transparent, affordable single tooth implant options with clear price estimates covering the titanium fixture, custom abutment, and final ceramic or zirconia crown. Explore our Dental Implant Cost Guide for itemized pricing breakdowns.",
     a: (
       <p>
-        Immediate placement may be possible in selected cases, depending on the condition of the extraction
-        site, surrounding tissues, bone and the overall treatment plan. Read more about{" "}
+        Yes. We offer transparent, affordable single tooth implant options with clear price estimates covering the titanium fixture, custom abutment, and final ceramic or zirconia crown. Explore our{" "}
+        <a className="font-semibold text-primary underline" href="/dental-implant-cost-bhubaneswar/">
+          Dental Implant Cost Guide in Bhubaneswar
+        </a>{" "}
+        for itemized pricing breakdowns.
+      </p>
+    ),
+  },
+  {
+    q: "Gotie missing tooth replace kariba paim consultation Odia re hoipariba ki? (Can I consult in Odia for a missing tooth?)",
+    plain:
+      "Yes! (ହଁ, ଆପଣ ଓଡ଼ିଆରେ ପରାମର୍ଶ କରିପାରିବେ). Our doctors and patient coordinators speak fluent Odia, English, and Hindi. You can comfortably explain your missing tooth concern and understand your treatment roadmap in your preferred language.",
+    a: (
+      <p>
+        Yes! (ହଁ, ଆପଣ ଓଡ଼ିଆରେ ପରାମର୍ଶ କରିପାରିବେ). Our doctors and patient coordinators speak fluent Odia, English, and Hindi. You can comfortably explain your missing tooth concern and understand your treatment roadmap in your preferred language.
+      </p>
+    ),
+  },
+  {
+    q: "Can I get a single tooth implant immediately after extraction?",
+    plain:
+      "Immediate implant placement may be possible in selected cases depending on socket bone health and tissue integrity. Read more about immediate dental implants.",
+    a: (
+      <p>
+        Immediate placement may be possible in selected cases depending on socket bone health and tissue integrity. Read more about{" "}
         <a className="font-semibold text-primary underline" href="/immediate-dental-implants/">
           immediate dental implants
         </a>
@@ -90,85 +105,36 @@ const FAQ_ITEMS: Faq[] = [
     ),
   },
   {
-    q: "What if I don't have enough bone for an implant?",
+    q: "What if I don't have enough jawbone for a single tooth implant?",
     plain:
-      "Assessment and appropriate imaging can identify whether bone augmentation is required. Where bone volume is insufficient, procedures such as bone grafting may be planned before or alongside implant placement. This is not required for every patient.",
+      "3D CBCT imaging will reveal your jawbone height and width. If bone volume is reduced, bone grafting or socket preservation can be performed before or during implant placement.",
     a: (
       <p>
-        Clinical assessment and appropriate imaging can identify whether bone augmentation is required. Where
-        bone volume is insufficient, procedures such as{" "}
+        3D CBCT imaging will reveal your jawbone height and width. If bone volume is reduced, procedures such as{" "}
         <a className="font-semibold text-primary underline" href="/bone-grafting-for-dental-implants/">
           bone grafting for dental implants
         </a>{" "}
-        may be planned before or alongside placement. This is not required for every patient.
+        can be performed before or during placement.
       </p>
     ),
   },
   {
-    q: "How long does a single tooth implant take?",
+    q: "How long does single tooth implant treatment take?",
     plain:
-      "Treatment duration varies between patients. It is influenced by bone condition, any additional procedures, implant stability, healing, the position of the tooth and the type of restoration planned.",
+      "Treatment duration varies between patients. Implant placement takes a single visit, followed by a 3 to 6 month osseointegration period before fitting the final zirconia or ceramic crown.",
     a: (
       <p>
-        Treatment duration varies between patients. It is influenced by bone condition, any additional
-        procedures required, implant stability, healing response, the position of the tooth and the type of
-        restoration planned. Your treatment plan will set out the expected stages for your case.
+        Treatment duration varies between patients. Implant placement takes a single visit, followed by a 3 to 6 month osseointegration period before fitting the final zirconia or ceramic crown.
       </p>
     ),
   },
   {
-    q: "Is single tooth implant surgery painful?",
+    q: "Can patients from Cuttack, Puri or other Odisha cities get treatment in Bhubaneswar?",
     plain:
-      "Implant placement is carried out using appropriate local anaesthesia or other clinically appropriate methods. Temporary soreness, swelling or tenderness can occur afterwards. Post-treatment instructions should be followed, and unexpected or severe symptoms should be reported to the dental team.",
+      "Yes. Patients across Odisha can start with a free online consultation and receive single tooth implant surgery at CARE Hospital, Bhubaneswar.",
     a: (
       <p>
-        Implant placement is carried out using appropriate local anaesthesia or other clinically appropriate
-        methods. Temporary soreness, swelling, tenderness or discomfort can occur afterwards. Post-treatment
-        instructions should be followed, and unexpected or severe symptoms should be reported to the dental
-        team promptly.
-      </p>
-    ),
-  },
-  {
-    q: "How much does a single tooth implant cost in Odisha?",
-    plain:
-      "Cost varies with the implant system, restoration, diagnostic requirements, bone condition and whether additional procedures are needed. A figure can only be given after clinical assessment and treatment planning.",
-    a: (
-      <p>
-        Cost varies with the implant system, the restoration, diagnostic requirements, bone condition and
-        whether additional procedures are needed. See the{" "}
-        <a className="font-semibold text-primary underline" href="/dental-implant-cost-odisha/">
-          dental implant cost in Odisha
-        </a>{" "}
-        guide for a full explanation.
-      </p>
-    ),
-  },
-  {
-    q: "How long can a dental implant last?",
-    plain:
-      "No specific lifespan can be promised. Implant longevity depends on factors including oral hygiene, gum health, bite loading, professional maintenance, general health and individual circumstances.",
-    a: (
-      <p>
-        No specific lifespan can be promised. Longevity depends on factors including oral hygiene, gum
-        health, how the implant is loaded by your bite, regular professional maintenance, general health and
-        individual circumstances. See{" "}
-        <a className="font-semibold text-primary underline" href="/dental-implant-maintenance-failure/">
-          implant maintenance and failure
-        </a>
-        .
-      </p>
-    ),
-  },
-  {
-    q: "Can patients from Cuttack, Puri or other Odisha cities get treatment?",
-    plain:
-      "Patients from across Odisha can contact the team to discuss a missing tooth and understand the next steps. Physical examination and implant treatment take place at CARE Hospital, Bhubaneswar, and the location is confirmed before any appointment.",
-    a: (
-      <p>
-        Patients from across Odisha can contact the team to discuss a missing tooth and understand the next
-        steps. Physical examination and implant treatment take place at {TREATMENT_LOCATION}, and the
-        treatment location is confirmed with you before any appointment is scheduled.
+        Yes. Patients across Odisha can start with a free online consultation and receive single tooth implant surgery at {TREATMENT_LOCATION}.
       </p>
     ),
   },
@@ -420,18 +386,18 @@ function SingleToothPage() {
       />
       <main className="pb-24 lg:pb-0">
         <ImplantHero
-          eyebrow="Single tooth dental implant"
+          eyebrow="Single Tooth Dental Implant Guide"
           title={H1}
-          copy="A single missing tooth can affect chewing, appearance and confidence. A dental implant can provide a stable foundation for replacing one missing tooth with an individual restoration, when clinically appropriate."
+          copy="Replacing a single missing tooth? Consult a trusted implant doctor for a bhala dental implant (reliable, natural-looking tooth replacement). Get a free preliminary roadmap in Odia, English, or Hindi before visiting our specialist team at CARE Hospital, Bhubaneswar."
           primaryCta={{ label: "Book an Implant Consultation", href: "/#contact" }}
           secondaryCta={{ label: "Discuss Your Missing Tooth", href: WHATSAPP_URL, external: true }}
-          trustLine="Clinical assessment • Individual treatment planning • Treatment at CARE Hospital, Bhubaneswar"
+          trustLine="MDS Implant Specialists • 3D CBCT Imaging • Care at CARE Hospital, Chandrasekharpur, Bhubaneswar"
           image={dentistConsult}
-          imageAlt="Dentist discussing dental implant treatment options with a patient during a consultation"
+          imageAlt="Trusted dental implant doctor reviewing a single tooth implant treatment plan with a patient in Bhubaneswar"
         />
 
         <Section>
-          <QuickAnswerBox question="What is a single tooth dental implant?" answer={QUICK_ANSWER} />
+          <QuickAnswerBox question="Gotie danta paim bhala implant — What is a single tooth dental implant?" answer={QUICK_ANSWER} />
         </Section>
 
         <Section tone="soft">
@@ -629,16 +595,24 @@ function SingleToothPage() {
 
         <Section>
           <SectionHeading
-            title="How Much Does a Single Tooth Implant Cost in Odisha?"
-            intro="The cost of replacing one tooth with an implant depends on the implant system, restoration, diagnostic requirements, bone condition and whether additional procedures are needed. The complete treatment plan — not just the implant component — should be considered when comparing costs."
+            title="Single Tooth Dental Implant Cost & Affordable Options in Odisha"
+            intro="The cost of replacing one missing tooth depends on the titanium/zirconia implant system, abutment type, diagnostic 3D CBCT requirements, and whether socket preservation bone grafting is needed."
           />
-          <a
-            href="/dental-implant-cost-odisha/"
-            data-analytics="cost_enquiry_cta"
-            className="cta-gradient shadow-soft mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
-          >
-            See the Complete Dental Implant Cost Guide →
-          </a>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <a
+              href="/dental-implant-cost-bhubaneswar/"
+              data-analytics="cost_enquiry_cta"
+              className="cta-gradient shadow-soft inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
+            >
+              View Bhubaneswar Dental Implant Cost Guide →
+            </a>
+            <a
+              href="/dental-implants-bhubaneswar/"
+              className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              Bhubaneswar Treatment Location Hub →
+            </a>
+          </div>
         </Section>
 
         <Section tone="soft">

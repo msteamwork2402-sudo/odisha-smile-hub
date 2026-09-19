@@ -275,7 +275,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="plain">
           <Reveal>
             <SectionHeading
-              title={`Dental Implant Treatment Options for Patients from ${city.cityName}`}
+              title={city.isPrimaryHub ? "Trusted Dental Implant Services & Procedures in Bhubaneswar" : `Dental Implant Treatment Options for Patients from ${city.cityName}`}
               intro={seo.serviceLinksIntro}
             />
 
@@ -297,17 +297,58 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
 
             <div className="mt-6 rounded-xl border border-border bg-secondary/20 p-4 text-center">
               <p className="text-xs text-muted-foreground sm:text-sm">
-                Unsure which procedure fits your situation? Learn about the differences in our guide on{" "}
+                Unsure which procedure fits your situation? Read our detailed guide on{" "}
+                <a href="/dental-implant-cost-bhubaneswar/" className="font-semibold text-primary underline">
+                  Dental Implant Cost in Bhubaneswar
+                </a>
+                , compare{" "}
                 <a href="/implants-vs-bridge-vs-denture/" className="font-semibold text-primary underline">
                   Implants vs Bridges vs Dentures
-                </a>{" "}
-                or return to the{" "}
+                </a>
+                , or return to the{" "}
                 <a href="/" className="font-semibold text-primary underline">
                   Odisha Dental Implants Homepage
                 </a>
                 .
               </p>
             </div>
+
+            {city.isPrimaryHub && (
+              <div className="mt-6 rounded-xl border border-border bg-card p-5 text-center shadow-sm">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Dental Implants Near Me — Bhubaneswar Localities &amp; Neighborhoods:
+                </h3>
+                <div className="mt-3 flex flex-wrap justify-center gap-2 text-xs">
+                  <Link to="/dental-implants-chandrasekharpur/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Chandrasekharpur
+                  </Link>
+                  <Link to="/dental-implants-patia/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Patia
+                  </Link>
+                  <Link to="/dental-implants-nayapalli/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Nayapalli
+                  </Link>
+                  <Link to="/dental-implants-jayadev-vihar/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Jayadev Vihar
+                  </Link>
+                  <Link to="/dental-implants-saheed-nagar/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Saheed Nagar
+                  </Link>
+                  <Link to="/dental-implants-kalinga-nagar/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Kalinga Nagar
+                  </Link>
+                  <Link to="/dental-implants-kharavela-nagar/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Kharavela Nagar
+                  </Link>
+                  <Link to="/dental-implants-pokhariput/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Pokhariput
+                  </Link>
+                  <Link to="/dental-implants-dumduma/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
+                    Dumduma
+                  </Link>
+                </div>
+              </div>
+            )}
           </Reveal>
         </Section>
 
@@ -315,8 +356,8 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="soft">
           <Reveal>
             <SectionHeading
-              title="Treatment Center & Facilities at CARE Hospital, Bhubaneswar"
-              intro="All in-person surgical placements, 3D CBCT imaging, and clinical procedures take place at CARE Hospital under Dr. Sauvik Singha (MDS)."
+              title="CARE Hospital Chandrasekharpur: Center for Dental Implants in Bhubaneswar"
+              intro="All in-person surgical placements, 3D CBCT imaging, and clinical procedures take place at CARE Hospital under Dr. Sauvik Singha (MDS) and Dr. Neha Mohanty (MDS)."
             />
             <div className="mt-6">
               <LocationTrustBlock
@@ -336,8 +377,8 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="plain">
           <Reveal>
             <SectionHeading
-              title={`Frequently Asked Questions About Dental Implants for ${city.cityName} Patients`}
-              intro={`Common queries from ${city.cityName} residents regarding travel, appointments, costs, and surgical care at CARE Hospital, Bhubaneswar.`}
+              title={city.isPrimaryHub ? "Frequently Asked Questions About Dental Implants in Bhubaneswar" : `Frequently Asked Questions About Dental Implants for ${city.cityName} Patients`}
+              intro={city.isPrimaryHub ? "Common queries from Bhubaneswar residents regarding doctors, treatment choices, costs, and hospital care." : `Common queries from ${city.cityName} residents regarding travel, appointments, costs, and surgical care at CARE Hospital, Bhubaneswar.`}
             />
             <FAQSection
               faqs={city.faqs.map((faq) => ({
