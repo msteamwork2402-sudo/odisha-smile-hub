@@ -51,7 +51,7 @@ import { Reveal, CountUp } from "@/components/site/Reveal";
 import { submitConsultation } from "@/lib/consultation.functions";
 import { Button } from "@/components/ui/button";
 
-const TITLE = "Dental Implants in Odisha | Free Online Consultation";
+const TITLE = "Dental Implants in Bhubaneswar, Odisha | Specialist Implant Team";
 const DESCRIPTION =
   "Explore dental implant options in Odisha. Start with a free online consultation, then receive care at CARE Hospital, Bhubaneswar.";
 
@@ -78,7 +78,7 @@ export const Route = createFileRoute("/")({
             {
               "@type": "MedicalBusiness",
               "@id": "https://odishadentalimplants.com/#organization",
-              name: "OdishaDentalImplants.com",
+              name: "Odisha Dental Implants",
               description: DESCRIPTION,
               medicalSpecialty: "Dentistry",
               areaServed: "Odisha, India",
@@ -318,7 +318,7 @@ function Hero() {
         <Reveal delay={150} className="relative">
           <img
             src={heroClinic}
-            alt="Modern dental implant treatment room at an i-Smile partner clinic in Odisha"
+            alt="Modern dental implant surgery room at CARE Hospital, Bhubaneswar, Odisha"
             width={1408}
             height={1008}
             className="shadow-lift w-full rounded-4xl object-cover"
@@ -391,7 +391,7 @@ function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Implant Services"
-          title="Complete implant care, from one tooth to a full arch"
+          title="Specialist Dental Implant Services in Bhubaneswar"
           text="Every case is reviewed by a qualified implantologist and treated at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -439,7 +439,7 @@ function Journey() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="How It Works"
-          title="Your care pathway, step by step"
+          title="How to Get Dental Implants: Your Journey"
           text="Patients anywhere in Odisha → FREE online consultation → Preliminary Treatment Roadmap → physical clinical assessment → final treatment plan → implant treatment at CARE Hospital, Bhubaneswar → follow-up care."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -472,7 +472,7 @@ function Team() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Implant Team"
-          title="The specialists and coordinators behind your care"
+          title="Your Dental Implant Specialists in Odisha"
           text="A surgical, prosthetic and coordination team that stays with you from your first online consultation through follow-up."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -484,7 +484,7 @@ function Team() {
                 <article className="card-premium zoom-frame h-full overflow-hidden p-0">
                   <img
                     src={m.img}
-                    alt={`Portrait of ${m.name}, ${m.role}`}
+                    alt={`Expert ${m.role} ${m.name} providing dental implants in Bhubaneswar`}
                     width={768}
                     height={960}
                     loading="lazy"
@@ -589,7 +589,7 @@ function Location() {
           <h3 className="mt-5 text-lg font-semibold">Where you are treated</h3>
           <img
             src={careHospital}
-            alt="CARE Hospital building in Bhubaneswar, Odisha"
+            alt="CARE Hospital building, the center for dental implants in Bhubaneswar, Odisha"
             loading="lazy"
             className="mt-4 aspect-[16/10] w-full rounded-2xl object-cover"
           />
@@ -641,7 +641,7 @@ function WhyUs() {
           <div className="zoom-frame shadow-soft rounded-3xl">
             <img
               src={dentistConsult}
-              alt="Implantologist reviewing a treatment plan with a patient"
+              alt="Dental implant specialist in Bhubaneswar reviewing a treatment plan with a patient"
               width={1200}
               height={912}
               loading="lazy"
@@ -651,7 +651,7 @@ function WhyUs() {
           <div className="zoom-frame shadow-soft mt-0 rounded-3xl sm:mt-10">
             <img
               src={implantDetail}
-              alt="Titanium dental implant model showing the implant fixture and ceramic crown"
+              alt="High-quality titanium dental implant and ceramic crown restoration model"
               width={1200}
               height={800}
               loading="lazy"
@@ -692,7 +692,7 @@ function AcrossOdisha() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Across Odisha"
-          title="Dental Implant Care for Patients Across Odisha"
+          title="Dental Implants in <span className="text-gradient-brand">Bhubaneswar, Odisha</span>"
           text="Patients from any part of Odisha can begin with a free online consultation and are subsequently guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
