@@ -139,6 +139,10 @@ const SERVICES = [
     text: "Already have a treatment plan or quote? Our team reviews your X-ray and explains your options clearly.",
     href: "/dental-implant-second-opinion/" as const,
   },
+  {
+    q: "What is the success rate of dental implants?",
+    a: "Dental implants have a high success rate, typically over 95% to 98%. Our specialists use 3D CBCT digital planning to ensure precise placement and long-term stability.",
+  },
 ];
 
 const JOURNEY = [
@@ -227,6 +231,10 @@ const FAQS = [
   {
     q: "I live outside Bhubaneswar. Can I still be treated?",
     a: "Yes. Patients from any part of Odisha can begin with a free online consultation and are then guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar.",
+  },,
+  {
+    q: "What is the success rate of dental implants?",
+    a: "Dental implants have a high success rate, typically over 95% to 98%. Our specialists use 3D CBCT digital planning to ensure precise placement and long-term stability.",
   },
 ];
 
@@ -270,9 +278,7 @@ function Hero() {
           </Reveal>
           <Reveal delay={180}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Start with a free online consultation with an experienced implantologist and receive a
-              preliminary treatment roadmap. Your final treatment plan is confirmed after clinical
-              examination, with implant treatment at {TREATMENT_LOCATION}.
+              Looking for a dental implant specialist near you in Odisha? Start with a free online consultation and receive a preliminary roadmap. High-quality, affordable care at CARE Hospital, Bhubaneswar.
             </p>
           </Reveal>
           <Reveal delay={270}>
@@ -336,6 +342,23 @@ function Hero() {
           </div>
         </Reveal>
 
+
+        <div className="mt-16 border-t border-border/50 pt-10">
+          <p className="text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Specialist Consultations for Patients In:
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm font-medium">
+            <Link to="/dental-implants-cuttack/" className="hover:text-primary">Cuttack</Link>
+            <Link to="/dental-implants-puri/" className="hover:text-primary">Puri</Link>
+            <Link to="/dental-implants-berhampur/" className="hover:text-primary">Berhampur</Link>
+            <Link to="/dental-implants-sambalpur/" className="hover:text-primary">Sambalpur</Link>
+            <Link to="/dental-implants-rourkela/" className="hover:text-primary">Rourkela</Link>
+            <Link to="/dental-implants-balasore/" className="hover:text-primary">Balasore</Link>
+            <Link to="/dental-implants-jharsuguda/" className="hover:text-primary">Jharsuguda</Link>
+            <Link to="/dental-implants-baripada/" className="hover:text-primary">Baripada</Link>
+            <Link to="/dental-implants-angul/" className="hover:text-primary">Angul</Link>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -692,7 +715,7 @@ function AcrossOdisha() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Across Odisha"
-          title="Dental Implants in <span className="text-gradient-brand">Bhubaneswar, Odisha</span>"
+          title="Trusted Dental Implant Care Across Odisha"
           text="Patients from any part of Odisha can begin with a free online consultation and are subsequently guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
