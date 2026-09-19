@@ -231,7 +231,7 @@ const FAQS = [
   {
     q: "I live outside Bhubaneswar. Can I still be treated?",
     a: "Yes. Patients from any part of Odisha can begin with a free online consultation and are then guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar.",
-  },,
+  },
   {
     q: "What is the success rate of dental implants?",
     a: "Dental implants have a high success rate, typically over 95% to 98%. Our specialists use 3D CBCT digital planning to ensure precise placement and long-term stability.",
@@ -272,8 +272,8 @@ function Hero() {
           </Reveal>
           <Reveal delay={90}>
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
-              Dental Implant Care for{" "}
-              <span className="text-gradient-brand">Patients Across Odisha</span>
+              Dental Implants in
+              <span className="text-gradient-brand"> Bhubaneswar, Odisha</span>
             </h1>
           </Reveal>
           <Reveal delay={180}>
@@ -324,7 +324,7 @@ function Hero() {
         <Reveal delay={150} className="relative">
           <img
             src={heroClinic}
-            alt="Modern dental implant surgery room at CARE Hospital, Bhubaneswar, Odisha"
+            alt="Modern dental implant surgery room at CARE Hospital, Bhubaneswar - Specialist clinic"
             width={1408}
             height={1008}
             className="shadow-lift w-full rounded-4xl object-cover"
