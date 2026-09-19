@@ -36,7 +36,12 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
-import { DOCTOR_SCHEMA, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
+import {
+  CARE_HOSPITAL_URL,
+  DOCTOR_SCHEMA,
+  DR_SAUVIK_PROFILES,
+  SITE,
+} from "@/lib/implant-cluster";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
@@ -51,9 +56,9 @@ import { Reveal, CountUp } from "@/components/site/Reveal";
 import { submitConsultation } from "@/lib/consultation.functions";
 import { Button } from "@/components/ui/button";
 
-const TITLE = "Dental Implants in Bhubaneswar, Odisha | Specialist Implant Team";
+const TITLE = "Dental Implants in Bhubaneswar | Implant Specialist";
 const DESCRIPTION =
-  "Explore dental implant options in Odisha. Start with a free online consultation, then receive care at CARE Hospital, Bhubaneswar.";
+  "Consult a dental implant specialist in Bhubaneswar for trusted, cost-conscious implant care at CARE Hospital. Online consultation across Odisha.";
 
 export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
@@ -79,11 +84,13 @@ export const Route = createFileRoute("/")({
               "@type": "MedicalBusiness",
               "@id": "https://odishadentalimplants.com/#organization",
               name: "Odisha Dental Implants",
+              url: SITE,
               description: DESCRIPTION,
               medicalSpecialty: "Dentistry",
               areaServed: "Odisha, India",
               telephone: PHONE_TEL,
               email: EMAIL,
+              sameAs: [CARE_HOSPITAL_URL, DR_SAUVIK_PROFILES.googleMaps],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: `CARE Hospital, ${TREATMENT_ADDRESS}`,
@@ -94,6 +101,14 @@ export const Route = createFileRoute("/")({
               },
             },
             DOCTOR_SCHEMA,
+            {
+              "@type": "FAQPage",
+              mainEntity: FAQS.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: { "@type": "Answer", text: faq.a },
+              })),
+            },
           ],
         }),
       },
@@ -205,6 +220,18 @@ const TEAM = [
 
 const FAQS = [
   {
+    q: "Where can I consult a dental implant specialist near me in Bhubaneswar?",
+    a: "Dental implant consultations, clinical examination and treatment are provided at CARE Hospital, Chandrasekharpur, Bhubaneswar. Patients elsewhere in Odisha can first speak with the implant team online before planning their visit.",
+  },
+  {
+    q: "Are affordable dental implants available in Bhubaneswar?",
+    a: "Implant cost depends on the number of missing teeth, bone condition, implant system, restoration and any additional procedure needed. The team explains suitable options and an itemised treatment plan after assessment, helping you compare cost without choosing on price alone.",
+  },
+  {
+    q: "Bhubaneswar re dental implant kouthi karibi?",
+    a: "You can begin with an online consultation in Odia, Hindi or English. Clinical assessment and dental implant treatment take place at CARE Hospital, Chandrasekharpur, Bhubaneswar.",
+  },
+  {
     q: "Is the online consultation really free?",
     a: "Yes. The first online consultation — case review, specialist call and a preliminary treatment roadmap — is free. You only pay once you decide to begin treatment.",
   },
@@ -231,10 +258,6 @@ const FAQS = [
   {
     q: "I live outside Bhubaneswar. Can I still be treated?",
     a: "Yes. Patients from any part of Odisha can begin with a free online consultation and are then guided for physical evaluation and treatment at CARE Hospital, Bhubaneswar.",
-  },
-  {
-    q: "What is the success rate of dental implants?",
-    a: "Dental implants have a high success rate, typically over 95% to 98%. Our specialists use 3D CBCT digital planning to ensure precise placement and long-term stability.",
   },
 ];
 
@@ -278,7 +301,11 @@ function Hero() {
           </Reveal>
           <Reveal delay={180}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Looking for a dental implant specialist near you in Odisha? Start with a free online consultation and receive a preliminary roadmap. High-quality, affordable care at CARE Hospital, Bhubaneswar.
+              Consult a dental implant specialist in Bhubaneswar for single-tooth, multiple-tooth or
+              full-mouth implant options. Start with a free online consultation in Odia, Hindi or
+              English and receive a preliminary treatment roadmap. After clinical examination, the
+              team explains suitable, cost-conscious options and confirms your final plan. All dental
+              implant treatment is provided at {TREATMENT_LOCATION}.
             </p>
           </Reveal>
           <Reveal delay={270}>
@@ -414,8 +441,8 @@ function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Implant Services"
-          title="Specialist Dental Implant Services in Bhubaneswar"
-          text="Every case is reviewed by a qualified implantologist and treated at CARE Hospital, Bhubaneswar."
+          title="Dental Implant Services in Bhubaneswar"
+          text="Explore single-tooth, multiple-tooth and full-mouth options. Every case is reviewed by a qualified dental implant specialist and treated at CARE Hospital, Bhubaneswar."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
@@ -495,7 +522,7 @@ function Team() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Implant Team"
-          title="Your Dental Implant Specialists in Odisha"
+          title="Meet Your Dental Implant Specialists in Bhubaneswar"
           text="A surgical, prosthetic and coordination team that stays with you from your first online consultation through follow-up."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -653,7 +680,7 @@ function Location() {
 function WhyUs() {
   const points = [
     "Consultations led by implantologists, never by sales staff",
-    "Only globally certified implant systems with documented warranties",
+    "Implant systems and restorations selected according to the clinical plan",
     "Digital planning with CBCT review before any surgery is scheduled",
     "One coordinator stays with you from first call to final crown",
   ];
@@ -687,12 +714,21 @@ function WhyUs() {
             Why Patients Choose Us
           </span>
           <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-            Clinical judgement first. Everything else follows.
+            Trusted, Cost-Conscious Dental Implant Care
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            OdishaDentalImplants.com exists so that patients across the state can get an honest,
-            specialist opinion before committing to implant surgery — and then have that treatment
-            delivered at {TREATMENT_LOCATION}.
+            OdishaDentalImplants.com, powered by i-Smile, helps patients across the state get a clear
+            specialist opinion before committing to implant surgery. Affordable care means comparing
+            clinically suitable options, inclusions and stages—not choosing an unsupported one-price
+            promise. Treatment is delivered at {TREATMENT_LOCATION}. Review the{" "}
+            <Link className="font-semibold text-primary underline" to="/dental-implant-cost-odisha/">
+              dental implant cost guide
+            </Link>{" "}
+            or request a{" "}
+            <Link className="font-semibold text-primary underline" to="/dental-implant-second-opinion/">
+              dental implant second opinion
+            </Link>
+            .
           </p>
           <ul className="mt-8 space-y-4">
             {points.map((p) => (
@@ -774,7 +810,10 @@ function Faqs() {
   return (
     <section id="faqs" className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <SectionHeading eyebrow="FAQs" title="Questions patients ask us most" />
+        <SectionHeading
+          eyebrow="FAQs"
+          title="Dental Implant Questions from Bhubaneswar and Odisha"
+        />
         <div className="mt-12 space-y-3">
           {FAQS.map((f, i) => {
             const isOpen = open === i;
