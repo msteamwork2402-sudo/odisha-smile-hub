@@ -228,7 +228,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
                      Patients who contact us from {city.cityName} often live in:
                   </h3>
                   <p className="mt-1.5 text-xs leading-relaxed text-foreground/80">
-                    {city.localAreas.join(" • ")} and surrounding localities. Online enquiries are coordinated from these areas; treatment is not provided at a local branch.
+                     {city.localAreas.join(" • ")} and surrounding localities. {city.isPrimaryHub ? "Appointments and treatment take place at CARE Hospital in Chandrasekharpur." : "Online enquiries are coordinated from these areas; treatment is not provided at a local branch."}
                   </p>
                 </div>
               )}
@@ -275,7 +275,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="plain">
           <Reveal>
             <SectionHeading
-              title={city.isPrimaryHub ? "Trusted Dental Implant Services & Procedures in Bhubaneswar" : `Dental Implant Treatment Options for Patients from ${city.cityName}`}
+              title={city.isPrimaryHub ? "Dental Implant Options in Bhubaneswar" : `Dental Implant Treatment Options for Patients from ${city.cityName}`}
               intro={seo.serviceLinksIntro}
             />
 
@@ -316,7 +316,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
             {city.isPrimaryHub && (
               <div className="mt-6 rounded-xl border border-border bg-card p-5 text-center shadow-sm">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Dental Implants Near Me — Bhubaneswar Localities &amp; Neighborhoods:
+                   Explore Dental Implant Care by Bhubaneswar Neighbourhood
                 </h3>
                 <div className="mt-3 flex flex-wrap justify-center gap-2 text-xs">
                   <Link to="/dental-implants-chandrasekharpur/" className="rounded-full border border-border bg-secondary/50 px-3 py-1 font-medium text-foreground transition-colors hover:border-primary hover:text-primary">
@@ -356,8 +356,8 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
         <Section tone="soft">
           <Reveal>
             <SectionHeading
-              title="CARE Hospital Chandrasekharpur: Center for Dental Implants in Bhubaneswar"
-              intro="All in-person surgical placements, 3D CBCT imaging, and clinical procedures take place at CARE Hospital under Dr. Sauvik Singha (MDS) and Dr. Neha Mohanty (MDS)."
+              title={city.isPrimaryHub ? "Dental Implant Treatment at CARE Hospital, Bhubaneswar" : "CARE Hospital Chandrasekharpur: Center for Dental Implants in Bhubaneswar"}
+              intro={city.isPrimaryHub ? "In-person assessment, indicated imaging, implant placement and restoration are coordinated at CARE Hospital in Chandrasekharpur. Your clinician will explain which steps apply to your case." : "All in-person surgical placements, 3D CBCT imaging, and clinical procedures take place at CARE Hospital under Dr. Sauvik Singha (MDS) and Dr. Neha Mohanty (MDS)."}
             />
             <div className="mt-6">
               <LocationTrustBlock
