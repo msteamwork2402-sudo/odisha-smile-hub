@@ -10,10 +10,10 @@ export interface LocationSeoContent {
 
 export const LOCATION_SEO: Record<CityKey, LocationSeoContent> = {
   bhubaneswar: {
-    heroImageAlt: "Dental implant specialist Dr. Sauvik Singha (MDS) reviewing a 3D CBCT scan with a patient for dental implants in Bhubaneswar at CARE Hospital",
-    localPatientHeading: "Planning Trusted Dental Implants Near Me in Bhubaneswar",
-    localPatientInfo: "Patients in Bhubaneswar can attend their clinical examination, indicated 3D CBCT diagnostic imaging, surgical implant placement, and restorative crown fittings at CARE Hospital in Chandrasekharpur. Led by qualified MDS specialists Dr. Sauvik Singha and Dr. Neha Mohanty, care is provided in a sterile, hospital-grade surgical environment with full medical support.",
-    serviceLinksIntro: "Compare trusted dental implant services before scheduling your consultation with an experienced bhala dental implant doctor in Bhubaneswar. Procedure selection is confirmed following in-person examination and 3D CBCT diagnostic scan.",
+    heroImageAlt: "Dentist with a patient in a consultation room, with a dental X-ray visible nearby",
+    localPatientHeading: "Planning an Implant Assessment in Chandrasekharpur",
+    localPatientInfo: "For Bhubaneswar patients travelling from Patia, Nayapalli or other neighbourhoods, the clinical visit takes place at CARE Hospital in Chandrasekharpur. Bring any recent dental X-rays and a list of medicines or health conditions. The team can discuss whether imaging, preparatory care or follow-up appointments are needed before confirming an implant plan.",
+    serviceLinksIntro: "Compare guides to single-tooth, multiple-tooth and full-arch replacement, then discuss your own options at a dental implant consultation in Bhubaneswar. If you are looking for 'bhala dental implants' in Bhubaneswar, ask about clinical suitability, alternatives, risks and follow-up care rather than relying on a generic promise.",
     servicePageKeys: ["single", "multiple", "allon", "fullmouth", "cost"],
   },
   cuttack: {
