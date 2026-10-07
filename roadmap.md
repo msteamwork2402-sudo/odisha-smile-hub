@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Optimize and verify the existing Bhubaneswar implant cost page for local price intent without unsupported prices or guarantees
+
 - [x] Optimize the existing Bhubaneswar location page's title, opening copy, headings, FAQs, links, and image descriptions without technical or design changes
 - [ ] Optimize homepage SEO content and trust signals without changing technical SEO or design
 - [ ] Verify the homepage metadata, headings, links, schema, and rendering
