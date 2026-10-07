@@ -35,82 +35,29 @@ import {
 import {
   CARE_HOSPITAL_URL,
   CLUSTER,
-  DOCTOR_SCHEMA,
   DR_SAUVIK_PROFILES,
   ODISHA_SERVICE_CITIES,
   SITE,
 } from "@/lib/implant-cluster";
 
+import { DOCTOR_AFFILIATIONS, DOCTOR_AWARDS, DOCTOR_PROFILE_SCHEMA, DOCTOR_PUBLICATIONS, DOCTOR_QUALIFICATIONS, ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
+
 import teamSauvik from "@/assets/team-sauvik-real.jpg";
 import careHospital from "@/assets/care-hospital.png";
 
 const PAGE_URL = `${SITE}/dr-sauvik-singha/`;
-const PAGE_TITLE = "Dr. Sauvik Singha (MDS) | Dental Implant Specialist in Bhubaneswar";
+const PAGE_TITLE = "Dr. Sauvik Singha | Implant Surgeon, CARE Bhubaneswar";
 const PAGE_DESC =
-  "Consult Dr. Sauvik Singha, MDS (Maxillofacial Surgeon & Dental Implant Specialist) at CARE Hospital Bhubaneswar. Expertise in 3D CBCT guided implants, All-on-4/6 & bhala doctor care.";
+  "Dr. Sauvik Singha, BDS, MDS, PGDMLS, PGDMLE: implant consultation at CARE Hospital, Bhubaneswar, and preliminary online consultation across Odisha.";
 
 const FAQS: Faq[] = [
-  {
-    q: "Who is Dr. Sauvik Singha?",
-    plain:
-      "Dr. Sauvik Singha, MDS, is a qualified Maxillofacial Surgeon and Dental Implant Specialist in Bhubaneswar, Odisha. He specializes in 3D CBCT computer-guided dental implant placement, bone grafting, and full-arch fixed teeth restorations.",
-    a: (
-      <p>
-        Dr. Sauvik Singha, MDS, is a qualified Maxillofacial Surgeon and Dental Implant Specialist in Bhubaneswar, Odisha. He leads surgical implant care and digital diagnostics at CARE Hospital, Chandrasekharpur, specializing in 3D CBCT flapless implants, bone grafting, and fixed full arch restorations.
-      </p>
-    ),
-  },
-  {
-    q: "Kouthi Dr. Sauvik Singha nka dental implant consultation paipari?",
-    plain:
-      "Patients can book a preliminary online consultation via WhatsApp or phone. In-person clinical examinations and 3D CBCT diagnostics take place at CARE Hospital, Chandrasekharpur, Bhubaneswar.",
-    a: (
-      <p>
-        Aapanankara preliminary consultation online WhatsApp (<a className="font-semibold text-primary underline" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">{PHONE_DISPLAY}</a>) re karipari. In-person clinical examination, 3D CBCT scan, and surgical procedures are conducted at CARE Hospital, Chandrasekharpur, Bhubaneswar.
-      </p>
-    ),
-  },
-  {
-    q: "Dr. Sauvik Singha kouthi dental implant surgery karanti?",
-    plain:
-      "All dental implant surgeries are conducted inside the sterile hospital operating suites of CARE Hospital, Chandrasekharpur, Bhubaneswar.",
-    a: (
-      <p>
-        All implant surgical procedures are performed inside the sterile, hospital-grade surgical suites of CARE Hospital Chandrasekharpur, Bhubaneswar, equipped with complete medical support and advanced digital CBCT imaging.
-      </p>
-    ),
-  },
-  {
-    q: "What implant procedures does Dr. Sauvik Singha specialize in?",
-    plain:
-      "Dr. Sauvik Singha specializes in single tooth implants, multiple implant bridges, All-on-4 and All-on-6 full mouth restorations, 3D flapless guided implants, immediate extraction implants, sinus lifts, and bone grafting.",
-    a: (
-      <p>
-        Dr. Sauvik Singha specializes in a complete spectrum of dental implantology, including <a className="font-semibold text-primary underline" href="/single-tooth-dental-implant/">single tooth implants</a>, <a className="font-semibold text-primary underline" href="/multiple-dental-implants/">multiple teeth bridges</a>, <a className="font-semibold text-primary underline" href="/all-on-4-all-on-6-odisha/">All-on-4 & All-on-6 fixed teeth</a>, <a className="font-semibold text-primary underline" href="/full-mouth-dental-implants/">full mouth rehabilitation</a>, <a className="font-semibold text-primary underline" href="/flapless-guided-dental-implants/">flapless keyhole guided surgery</a>, and <a className="font-semibold text-primary underline" href="/bone-grafting-for-dental-implants/">bone grafting</a>.
-      </p>
-    ),
-  },
-  {
-    q: "How can outstation patients across Odisha consult Dr. Sauvik Singha?",
-    plain:
-      "Patients from Cuttack, Puri, Berhampur, Sambalpur, Rourkela, Balasore, and other districts can start with an online WhatsApp pre-screening, send past X-rays, and receive a structured treatment visit plan before traveling to Bhubaneswar.",
-    a: (
-      <p>
-        Outstation patients from across Odisha can initiate a free WhatsApp consultation (<a className="font-semibold text-primary underline" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">{PHONE_DISPLAY}</a>) by sharing photographs or existing X-rays. Treatment appointments at CARE Hospital Bhubaneswar are coordinated to minimize travel trips.
-      </p>
-    ),
-  },
-  {
-    q: "Dr. Sauvik Singha nka dental implant treatment cost kete?",
-    plain:
-      "Dental implant costs depend on the number of implant posts, brand, bone condition, and restoration type. Itemized, transparent cost estimates are provided after initial 3D CBCT diagnostic assessment.",
-    a: (
-      <p>
-        Dental implant cost is determined after a 3D CBCT evaluation of jawbone density. Detailed transparent pricing for single tooth implants, bridges, and full-arch procedures can be reviewed in our <a className="font-semibold text-primary underline" href="/dental-implant-cost-bhubaneswar/">dental implant cost in Bhubaneswar guide</a>.
-      </p>
-    ),
-  },
-];
+  { q: "What qualifications does Dr. Sauvik Singha hold?", plain: "His client-supplied CV lists BDS, MDS in Oral & Maxillofacial Surgery, PGDMLS and PGDMLE, alongside an Advanced Course in Implantology (OSTEEM)." },
+  { q: "What are his roles at CARE Hospitals and i-Smile?", plain: "The CV lists Dr. Sauvik Singha as Senior Consultant in the Department of Oral & Maxillofacial Surgery at CARE Hospitals and Director of i-Smile Dental Clinic Chain, both since 2019." },
+  { q: "Where does implant treatment arranged through this website take place?", plain: "In-person assessment and implant treatment take place at CARE Hospital, Chandrasekharpur, Bhubaneswar. Patients across Odisha can begin with a preliminary online consultation." },
+  { q: "Which implant treatment options can I discuss?", plain: "His documented areas of expertise include implantology and full-mouth rehabilitation. Patients can discuss single-tooth replacement, implant-supported bridges and full-arch options. Guided placement, immediate placement or bone augmentation require individual clinical assessment and confirmation." },
+  { q: "Can an online consultation confirm my final implant plan or cost?", plain: "No. An online consultation offers preliminary guidance and helps plan an in-person visit. A final treatment plan and individual estimate depend on clinical examination and diagnostic imaging when indicated." },
+  { q: "Does immediate loading suit every patient?", plain: "No. Immediate loading is a topic listed among his publications, not a promise of same-day teeth. Suitability depends on implant stability, bone condition, bite and other clinical factors." },
+].map((item) => ({ ...item, a: <p>{item.plain}</p> }));
 
 export const Route = createFileRoute("/dr-sauvik-singha")({
   staticData: { sitemap: true },
@@ -139,8 +86,7 @@ export const Route = createFileRoute("/dr-sauvik-singha")({
                 { "@type": "ListItem", position: 3, name: "Dr. Sauvik Singha, MDS", item: PAGE_URL },
               ],
             },
-            DOCTOR_SCHEMA,
-            {
+                      {
               "@type": "FAQPage",
               mainEntity: FAQS.map((f) => ({
                 "@type": "Question",
@@ -177,19 +123,19 @@ function DrSauvikSinghaPage() {
                   <Stethoscope className="h-3.5 w-3.5" /> Maxillofacial Surgeon &amp; Dental Implantologist
                 </span>
                 <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                  Dr. Sauvik Singha (MDS)
+                  Dr. Sauvik Singha
                 </h1>
                 <p className="mt-2 text-lg font-semibold text-primary">
-                  Trusted Dental Implant Specialist in Bhubaneswar, Odisha
+                  BDS, MDS (Oral &amp; Maxillofacial Surgery), PGDMLS, PGDMLE
                 </p>
                 <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                  Dr. Sauvik Singha, MDS, is a leading Maxillofacial Surgeon and Dental Implantologist performing precision 3D CBCT guided keyhole implant placement, bone grafting, and full-mouth rehabilitation at CARE Hospital, Chandrasekharpur, Bhubaneswar.
+                  Dr. Sauvik Singha is an Oral &amp; Maxillofacial Surgeon with expertise in implantology and full-mouth rehabilitation. He is Senior Consultant in the Department of Oral &amp; Maxillofacial Surgery at CARE Hospitals and Director of i-Smile Dental Clinic Chain. For patients using OdishaDentalImplants.com, in-person implant assessment and treatment take place at CARE Hospital, Chandrasekharpur, Bhubaneswar. Patients across Odisha can begin with an online consultation; the final treatment plan is confirmed after clinical examination and any necessary imaging.
                 </p>
 
                 {/* Verified Profiles Bar */}
                 <div className="mt-6 border-y border-border/70 py-4">
                   <span className="block text-xs font-bold uppercase tracking-wider text-foreground">
-                    Verified Practitioner Profiles &amp; Ratings:
+                    Professional Profiles &amp; Location:
                   </span>
                   <div className="mt-3 flex flex-wrap gap-2.5">
                     <a
@@ -206,7 +152,7 @@ function DrSauvikSinghaPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3.5 py-1.5 text-xs font-semibold text-foreground transition-all hover:border-primary hover:text-primary hover:shadow-sm"
                     >
-                      Apollo 24|7 Verified <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                      Apollo 24|7 Profile <ExternalLink className="h-3 w-3" aria-hidden="true" />
                     </a>
                     <a
                       href={DR_SAUVIK_PROFILES.googleMaps}
@@ -241,7 +187,7 @@ function DrSauvikSinghaPage() {
                 <div className="card-premium overflow-hidden p-0 shadow-soft">
                   <img
                     src={teamSauvik}
-                    alt="Dental implant specialist Dr. Sauvik Singha (MDS) at CARE Hospital Bhubaneswar Odisha"
+                    alt="Portrait of Dr. Sauvik Singha, Oral and Maxillofacial Surgeon and implant consultant in Bhubaneswar"
                     width={768}
                     height={960}
                     className="aspect-[4/5] w-full object-cover"
@@ -265,37 +211,65 @@ function DrSauvikSinghaPage() {
         {/* Credentials & Entity Trust Section */}
         <Section tone="plain">
           <SectionHeading
-            title="Verified Professional Credentials & Clinical Background"
-            intro="Dr. Sauvik Singha combines advanced surgical qualification with state-of-the-art digital implant technology to provide comfortable, long-lasting tooth replacement."
+            title="Qualifications, Implantology Expertise & Professional Roles"
+            intro="His client-supplied CV documents surgical qualifications, implantology training, clinical leadership and academic experience."
           />
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="card-premium p-6">
               <Award className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 text-base font-bold text-foreground">MDS Specialty Qualification</h3>
+              <h3 className="mt-4 text-base font-bold text-foreground">BDS & MDS Qualifications</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Master of Dental Surgery (MDS) in Oral and Maxillofacial Surgery, specializing in jaw surgery, bone augmentation, and implantology.
+                BDS — KIIT University (2014); MDS in Oral &amp; Maxillofacial Surgery — MP State Medical University (2019). Both qualifications are listed as First Class, Order of Merit in his CV.
               </p>
             </div>
             <div className="card-premium p-6">
               <ShieldCheck className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 text-base font-bold text-foreground">Hospital Surgical Privilege</h3>
+              <h3 className="mt-4 text-base font-bold text-foreground">Senior Consultant — CARE Hospitals</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Performs all surgical implant placements inside the sterile, hospital-grade operating suites of CARE Hospital, Bhubaneswar.
+                Senior Consultant, Department of Oral &amp; Maxillofacial Surgery, CARE Hospitals (2019–present). This website coordinates implant treatment at CARE Hospital, Chandrasekharpur, Bhubaneswar.
               </p>
             </div>
             <div className="card-premium p-6">
               <UserCheck className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 text-base font-bold text-foreground">Multi-Lingual Consultations</h3>
+              <h3 className="mt-4 text-base font-bold text-foreground">Director — i-Smile Dental Clinic Chain</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Provides direct patient consultations in Odia (ଆପଣଙ୍କ ଭାଷାରେ ପରାମର୍ଶ), English, and Hindi for comfortable, transparent understanding.
+                Director of i-Smile Dental Clinic Chain (2019–present), with clinical administration experience. This role is separate from the CARE Hospital treatment location provided on this website.
               </p>
             </div>
             <div className="card-premium p-6">
               <Stethoscope className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 text-base font-bold text-foreground">3D Digital Guided Surgery</h3>
+              <h3 className="mt-4 text-base font-bold text-foreground">Implantology & Medico-Legal Training</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Utilizes high-precision 3D CBCT scanning and computer-guided keyhole techniques for flapless, minimal-discomfort implant placement.
+                Advanced Course in Implantology (OSTEEM), PGDMLS — Symbiosis, Pune (2020), and PGDMLE — National Law University, Bangalore (2022), as listed in his CV.
               </p>
+            </div>
+          </div>
+        </Section>
+
+        <Section tone="plain">
+          <SectionHeading title="Academic Experience, Publications & Professional Affiliations" intro="Selected professional information from Dr. Singha's client-supplied CV." />
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            His CV also lists Senior Lecturer at Kalinga Institute of Dental Sciences (2024–present) and Visiting Consultant in Maxillofacial Surgery at Neelachal Hospitals (2019–present). His clinical interests include maxillofacial trauma, minor oral surgery, maxillofacial pathology and full-mouth rehabilitation. Learn more about <a className="font-semibold text-primary underline" href={ISMILE_PROFILE_URL} target="_blank" rel="noopener noreferrer">i-Smile Dental Clinic</a>; implant treatment coordinated here remains at CARE Hospital, Bhubaneswar.
+          </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <div>
+              <h3 className="text-lg font-bold text-foreground">Selected Publications</h3>
+              <p className="mt-2 text-sm text-muted-foreground">The CV reports more than ten national and international publications. Titles and journal details below are reproduced as supplied.</p>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {DOCTOR_PUBLICATIONS.map((publication) => <li key={publication.title}><span className="font-semibold text-foreground">{publication.title}</span> — {publication.journal}, {publication.year}.</li>)}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-foreground">Awards & Recognition</h3>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {DOCTOR_AWARDS.map((award) => <li key={award}>{award}</li>)}
+              </ul>
+              <h3 className="mt-8 text-lg font-bold text-foreground">Professional Affiliations</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{DOCTOR_AFFILIATIONS.join(", ")} — as listed in the CV.</p>
+              <h3 className="mt-8 text-lg font-bold text-foreground">Qualifications</h3>
+              <ul className="mt-3 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {DOCTOR_QUALIFICATIONS.map((qualification) => <li key={qualification.name}><span className="font-semibold text-foreground">{qualification.name}</span> — {qualification.detail}.</li>)}
+              </ul>
             </div>
           </div>
         </Section>
@@ -303,8 +277,8 @@ function DrSauvikSinghaPage() {
         {/* Treatment Specializations */}
         <Section tone="soft">
           <SectionHeading
-            title="Specialized Dental Implant Treatments by Dr. Sauvik Singha"
-            intro="From single tooth restoration to complete full-arch rehabilitation, Dr. Sauvik Singha offers evidence-based implant solutions tailored to your jaw structure."
+            title="Dental Implant Services & Treatment Planning"
+            intro="His documented expertise includes implantology and full-mouth rehabilitation. Explore the implant services described on this website; the approach suitable for you depends on examination, bone condition, bite and medical history."
           />
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="card-premium p-6">
@@ -320,7 +294,7 @@ function DrSauvikSinghaPage() {
             <div className="card-premium p-6">
               <h3 className="text-base font-bold text-foreground">Multiple Teeth &amp; Implant Bridges</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Implant-supported bridges replacing 2 to 5 adjacent missing teeth efficiently, providing fixed chewing stability and preserving jawbone structure.
+                Implant-supported bridges can replace several missing teeth. The number and positions of implants depend on the span, available bone and bite forces.
               </p>
               <a href="/multiple-dental-implants/" className="mt-4 inline-block text-xs font-semibold text-primary">
                 Multiple Implants Guide →
@@ -330,7 +304,7 @@ function DrSauvikSinghaPage() {
             <div className="card-premium p-6">
               <h3 className="text-base font-bold text-foreground">All-on-4 &amp; All-on-6 Fixed Teeth</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Full arch fixed teeth restoration using 4 or 6 strategically angled implants, restoring full chewing power for denture wearers or missing arches.
+                Full-arch fixed tooth replacement may use four or six implants in selected patients. Suitability, loading time and restoration design require individual assessment.
               </p>
               <a href="/all-on-4-all-on-6-odisha/" className="mt-4 inline-block text-xs font-semibold text-primary">
                 All-on-4 / All-on-6 Guide →
@@ -340,7 +314,7 @@ function DrSauvikSinghaPage() {
             <div className="card-premium p-6">
               <h3 className="text-base font-bold text-foreground">Full Mouth Implant Rehabilitation</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Comprehensive dual-arch rebuilds combining fixed implant bridges or snap-on overdentures with 3D CBCT digital bite alignment.
+                Full-mouth rehabilitation involves planning tooth replacement for extensive tooth loss. Fixed bridges or implant-supported removable options may be discussed after assessment.
               </p>
               <a href="/full-mouth-dental-implants/" className="mt-4 inline-block text-xs font-semibold text-primary">
                 Full Mouth Rehabilitation Guide →
@@ -350,7 +324,7 @@ function DrSauvikSinghaPage() {
             <div className="card-premium p-6">
               <h3 className="text-base font-bold text-foreground">3D CBCT Flapless Guided Surgery</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Keyhole implant surgery planned on 3D computer software, minimizing surgical incisions, reducing swelling, and speeding up post-op recovery.
+                Digital imaging and guides may assist implant planning when indicated. A flapless approach is not appropriate for every patient and does not guarantee a particular recovery time.
               </p>
               <a href="/flapless-guided-dental-implants/" className="mt-4 inline-block text-xs font-semibold text-primary">
                 Guided Implants Guide →
@@ -360,7 +334,7 @@ function DrSauvikSinghaPage() {
             <div className="card-premium p-6">
               <h3 className="text-base font-bold text-foreground">Bone Grafting &amp; Sinus Lifts</h3>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                Advanced jawbone reconstruction procedures carried out by Maxillofacial Surgeon Dr. Sauvik Singha when natural bone height or width is reduced.
+                Bone augmentation or sinus-lift planning may be considered when available bone is insufficient. The need, technique and staging are determined through clinical assessment.
               </p>
               <a href="/bone-grafting-for-dental-implants/" className="mt-4 inline-block text-xs font-semibold text-primary">
                 Bone Grafting Guide →
@@ -372,26 +346,26 @@ function DrSauvikSinghaPage() {
         {/* Why Choose Dr. Sauvik Singha (Bhala Implant Doctor) */}
         <Section tone="plain">
           <SectionHeading
-            title="Why Patients Trust Dr. Sauvik Singha for Dental Implants in Odisha"
-            intro="Combining compassionate patient care, hospital surgical standards, and transparent fee structures."
+            title="Planning Dental Implant Care with Dr. Sauvik Singha"
+            intro="Discuss your clinical findings, suitable alternatives, treatment stages and follow-up before deciding on implant care."
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
               {
-                title: "Hospital-Grade Sterile Operation Theatre",
-                desc: "Unlike small clinic setups, all implant placements are conducted in the sterile operating rooms of CARE Hospital Chandrasekharpur with complete emergency medical back-up.",
+                title: "CARE Hospital Treatment Location",
+                desc: "In-person clinical assessment and implant treatment arranged through this website take place at CARE Hospital, Chandrasekharpur, Bhubaneswar.",
               },
               {
-                title: "3D CBCT Computer Digital Diagnostics",
-                desc: "3D volumetric scanning ensures precise nerve mapping, exact bone density measurement, and accurate sub-millimeter implant positioning.",
+                title: "Imaging When Clinically Indicated",
+                desc: "Imaging, including CBCT when indicated, helps evaluate bone and nearby anatomical structures. It informs planning but cannot guarantee a surgical outcome.",
               },
               {
-                title: "Transparent & Affordable Cost Guidance",
-                desc: "Itemized treatment plans with clear pricing are shared after diagnostic scanning. Explore our dental implant cost in Bhubaneswar guide for details.",
+                title: "Individual Cost Guidance",
+                desc: "Request an itemized estimate after clinical assessment. Ask what is included for the implant, restoration, preparatory treatment and follow-up.",
               },
               {
-                title: "Odia Language Comfort (ଆପଣଙ୍କ ଭାଷାରେ ପରାମର୍ଶ)",
-                desc: "Dr. Sauvik Singha and our clinical coordination team converse fluently in Odia, English, and Hindi so you can express your concerns with confidence.",
+                title: "Preliminary Online Consultation Across Odisha",
+                desc: "Patients across Odisha can share concerns and existing reports online before travelling to Bhubaneswar. An online discussion does not replace the in-person examination.",
               },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5">
@@ -412,7 +386,10 @@ function DrSauvikSinghaPage() {
             intro="Dr. Sauvik Singha welcomes patients from across Bhubaneswar and all districts of Odisha for specialized implant care."
           />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Patients commonly travel for treatment from {ODISHA_SERVICE_CITIES.join(", ")} and surrounding regions across Odisha. Initial pre-screening consultations can be held online, with in-person examination and surgery conducted at CARE Hospital, Chandrasekharpur, Bhubaneswar.
+            Patients from {ODISHA_SERVICE_CITIES.join(", ")} and other districts of Odisha can begin with a preliminary online consultation. In-person examination and treatment take place at CARE Hospital, Chandrasekharpur, Bhubaneswar. Online consultation does not imply a treatment branch in another city.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Treatment address: {TREATMENT_ADDRESS}. Explore <a className="font-semibold text-primary underline" href="/dental-implants-bhubaneswar/">dental implants in Bhubaneswar</a> or our <a className="font-semibold text-primary underline" href="/dental-implant-cost-bhubaneswar/">implant cost guide</a>, and <a className="font-semibold text-primary underline" href="/#contact">request an online consultation</a> before arranging your visit.
           </p>
           <div className="mt-8">
             <LocationTrustBlock
@@ -437,7 +414,7 @@ function DrSauvikSinghaPage() {
         <Section tone="soft">
           <ImplantCTA
             title="Book a Consultation with Dr. Sauvik Singha (MDS)"
-            copy="Speak to Dr. Sauvik Singha and our implant team about your missing teeth, 3D CBCT diagnostic planning, and personalized treatment options."
+            copy="Discuss missing teeth, implant suitability, alternatives and treatment stages with Dr. Sauvik Singha and the team. Begin online across Odisha; attend CARE Hospital, Bhubaneswar, for clinical examination."
             primary={{ label: "Book FREE Online Consultation", href: "/#contact" }}
             secondary={{ label: "WhatsApp Specialist Team", href: WHATSAPP_URL, external: true }}
             footnote={`Direct phone consultations available at ${PHONE_DISPLAY} during regular clinic hours.`}
@@ -457,7 +434,7 @@ function DrSauvikSinghaPage() {
               {
                 title: "Dental Implant Cost in Bhubaneswar",
                 href: "/dental-implant-cost-bhubaneswar/",
-                text: "Transparent price breakdowns for single, multiple, and full arch implants.",
+                text: "Understand the factors affecting an individual implant treatment estimate.",
               },
               {
                 title: CLUSTER.single.title,
@@ -487,9 +464,9 @@ function DrSauvikSinghaPage() {
         <Section tone="soft">
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="card-premium p-6">
-              <h2 className="text-lg font-bold text-foreground">Verified External Profiles</h2>
+              <h2 className="text-lg font-bold text-foreground">Professional References</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                You can view Dr. Sauvik Singha's verified professional profiles on{" "}
+                You can view Dr. Sauvik Singha's professional profiles on{" "}
                 <a className="font-semibold text-primary underline" href={DR_SAUVIK_PROFILES.linkedin} target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
@@ -511,7 +488,7 @@ function DrSauvikSinghaPage() {
             <div className="rounded-3xl border border-border bg-secondary/50 p-6">
               <h2 className="text-lg font-bold text-foreground">Medical Disclaimer</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Information on this page is for educational purposes. Implant suitability, surgical requirements, and exact pricing depend on individual clinical examination and 3D CBCT diagnostic findings.
+                Information on this page is for educational purposes. Implant suitability, surgical requirements and pricing depend on individual clinical examination and imaging when indicated. Qualifications, roles, awards and publication descriptions on this page are drawn from the client-supplied CV.
               </p>
             </div>
           </div>
