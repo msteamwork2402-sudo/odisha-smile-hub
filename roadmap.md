@@ -1,5 +1,6 @@
 # Roadmap
 
+- [ ] Strengthen homepage and Bhubaneswar page with CV-supported doctor credentials, affiliations, services, links and concise FAQs; verify and publish
 - [x] Fix the root error-handler TypeScript type and confirm compilation (automatic build OK; preview HTTP 200)
 - [ ] Strengthen Dr. Sauvik Singha's existing profile using the client-supplied CV and i-Smile reference, preserving design and technical settings
 - [ ] Verify profile content, structured data, links and rendering; publish and confirm the live profile
