@@ -1,5 +1,6 @@
 # Roadmap
 
+- [ ] Fix the root error-handler TypeScript type and confirm compilation
 - [ ] Strengthen Dr. Sauvik Singha's existing profile using the client-supplied CV and i-Smile reference, preserving design and technical settings
 - [ ] Verify profile content, structured data, links and rendering; publish and confirm the live profile
 
