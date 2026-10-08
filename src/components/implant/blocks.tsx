@@ -1,6 +1,7 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronRight, CheckCircle2, HelpCircle, MapPin, Phone, Clock, Building2, ArrowRight, ExternalLink } from "lucide-react";
+import { ChevronRight, CheckCircle2, HelpCircle, MapPin, Phone, Clock, Building2, ArrowRight, ExternalLink, Star, Quote } from "lucide-react";
+import type { Testimonial } from "@/lib/testimonials";
 import { Reveal } from "@/components/site/Reveal";
 import { DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 
@@ -754,3 +755,120 @@ export function Callout({ title, text }: { title: string; text: ReactNode }) {
     </div>
   );
 }
+
+/* ------------------------------- video section ------------------------------- */
+
+export function YouTubeVideoSection({
+  title,
+  intro,
+  videoId,
+  videoTitle,
+  caption,
+  links,
+}: {
+  title: string;
+  intro?: string;
+  videoId: string;
+  videoTitle: string;
+  caption: ReactNode;
+  links?: { label: string; href: string }[];
+}) {
+  return (
+    <div className="card-premium overflow-hidden p-6 sm:p-8">
+      <SectionHeading title={title} {...(intro ? { intro } : {})} />
+      <div className="mt-6">
+        <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-black/5 shadow-soft">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+            title={videoTitle}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="h-full w-full border-0"
+          />
+        </div>
+        <div className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          {caption}
+        </div>
+        {links && links.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-3 text-xs font-semibold">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="inline-flex items-center gap-1 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-primary transition-colors hover:bg-primary/20"
+              >
+                {link.label} →
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ----------------------------- testimonials ------------------------------- */
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = t.text.length > 180;
+  const displayText = isLong && !expanded ? `${t.text.slice(0, 160)}…` : t.text;
+
+  return (
+    <article className="card-premium flex h-full flex-col justify-between p-6 shadow-soft transition-all hover:shadow-md">
+      <div>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1 text-amber-500">
+            {Array.from({ length: t.rating }).map((_, starIdx) => (
+              <Star key={starIdx} className="h-4 w-4 fill-current" aria-hidden="true" />
+            ))}
+          </div>
+          <Quote className="h-5 w-5 text-primary/30" aria-hidden="true" />
+        </div>
+        <div className="mt-4 text-sm leading-relaxed text-muted-foreground font-normal">
+          “{displayText}”
+          {isLong && (
+            <button
+              type="button"
+              onClick={() => setExpanded(!expanded)}
+              className="ml-1.5 inline-block text-xs font-semibold text-primary underline hover:text-primary/80"
+            >
+              {expanded ? "Show less" : "Read more"}
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="mt-6 border-t border-border/60 pt-4 flex items-center justify-between">
+        <span className="text-sm font-bold text-foreground">{t.name}</span>
+        <span className="text-xs font-semibold text-primary/80 bg-primary/10 rounded-full px-2.5 py-0.5">
+          Patient Testimonial
+        </span>
+      </div>
+    </article>
+  );
+}
+
+export function TestimonialsSection({
+  title = "What Our Patients Say",
+  intro = "Read genuine feedback and experiences shared by our patients.",
+  testimonials,
+}: {
+  title?: string;
+  intro?: string;
+  testimonials: Testimonial[];
+}) {
+  return (
+    <div>
+      <SectionHeading title={title} {...(intro ? { intro } : {})} />
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {testimonials.map((t, i) => (
+          <Reveal key={t.id} delay={i * 70}>
+            <TestimonialCard t={t} />
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+

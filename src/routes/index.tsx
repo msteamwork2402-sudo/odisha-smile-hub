@@ -48,7 +48,15 @@ import teamMonika from "@/assets/team-monika-real.jpg";
 import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png";
+import clinicalCase1 from "@/assets/clinical-case-1.png";
+import clinicalCase2 from "@/assets/clinical-case-2.png";
+import clinicalCase3 from "@/assets/clinical-case-3.png";
+import clinicalCase4 from "@/assets/clinical-case-4.png";
+import clinicalCase5 from "@/assets/clinical-case-5.png";
+import clinicalCase6 from "@/assets/clinical-case-6.png";
 import { Reveal, CountUp } from "@/components/site/Reveal";
+import { TestimonialsSection, YouTubeVideoSection } from "@/components/implant/blocks";
+import { TESTIMONIALS } from "@/lib/testimonials";
 import { submitConsultation } from "@/lib/consultation.functions";
 import { Button } from "@/components/ui/button";
 
@@ -262,12 +270,15 @@ function Home() {
       <Header />
       <main>
         <Hero />
+        <PatientVideo />
         <TrustBar />
         <Services />
         <Journey />
         <Team />
+        <ClinicalResultsSection />
         <Location />
         <WhyUs />
+        <PatientTestimonialsSection />
         <AcrossOdisha />
         <Faqs />
         <Contact />
@@ -510,6 +521,47 @@ function Journey() {
   );
 }
 
+function PatientVideo() {
+  return (
+    <section id="patient-story" className="bg-background py-16 lg:py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <Reveal>
+          <YouTubeVideoSection
+            title="Patient Success Story"
+            intro="Watch real patient feedback and treatment experience at CARE Hospital, Bhubaneswar."
+            videoId="XC69A01k04U"
+            videoTitle="Patient Success Story - Dental Implants at CARE Hospital, Bhubaneswar"
+            caption={
+              <p>
+                In this video, a patient shares their experience undergoing dental implant treatment at CARE Hospital, Bhubaneswar with our specialist team. Learn how individual clinical assessment, 3D CBCT diagnostic imaging, and precise surgical planning contribute to restoring function, aesthetics, and chewing confidence.
+              </p>
+            }
+            links={[
+              { label: "Dental Implants in Bhubaneswar", href: "/dental-implants-bhubaneswar/" },
+              { label: "Dr. Sauvik Singha Profile", href: "/dr-sauvik-singha/" },
+              { label: "Dental Implant Cost Guide", href: "/dental-implant-cost-bhubaneswar/" },
+            ]}
+          />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function PatientTestimonialsSection() {
+  return (
+    <section id="testimonials" className="bg-background py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <TestimonialsSection
+          title="What Our Patients Say"
+          intro="Read genuine feedback and dental care experiences shared by our patients."
+          testimonials={TESTIMONIALS}
+        />
+      </div>
+    </section>
+  );
+}
+
 function Team() {
   return (
     <section id="team" className="bg-background py-20 lg:py-28">
@@ -609,6 +661,97 @@ function Team() {
               </Reveal>
             );
           })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClinicalResultsSection() {
+  const cases = [
+    {
+      id: "case-1",
+      title: "Full-Arch Rehabilitation",
+      description: "Complete edentulous arch rehabilitation restoring full smile aesthetics and functional bite alignment.",
+      image: clinicalCase1,
+      alt: "Before and After clinical photo of full-arch smile rehabilitation",
+    },
+    {
+      id: "case-2",
+      title: "Anterior Tooth Restoration",
+      description: "Targeted restoration of upper front teeth restoring natural contour, symmetry, and smile aesthetics.",
+      image: clinicalCase2,
+      alt: "Before and After clinical photo of anterior tooth restoration",
+    },
+    {
+      id: "case-3",
+      title: "Upper Arch Fixed Restoration",
+      description: "Fixed prosthetic rehabilitation of severely worn upper arch restoring full tooth form and chewing stability.",
+      image: clinicalCase3,
+      alt: "Before and After clinical photo of upper arch fixed restoration",
+    },
+    {
+      id: "case-4",
+      title: "Oral Mucosal Pathology Management",
+      description: "Diagnosis and surgical management of oral soft tissue lesion with complete post-treatment mucosal healing.",
+      image: clinicalCase4,
+      alt: "Before and After clinical photo of oral soft tissue lesion management",
+    },
+    {
+      id: "case-5",
+      title: "Minor Oral Surgery & Mucocele Excision",
+      description: "Precision excision of labial mucosal nodule with clean, surgical recovery and healthy tissue contour.",
+      image: clinicalCase5,
+      alt: "Before and After clinical photo of labial nodule excision",
+    },
+    {
+      id: "case-6",
+      title: "Professional Scaling & Oral Prophylaxis",
+      description: "Ultrasonic scaling and stain removal restoring clean tooth surfaces and healthy gingival margins.",
+      image: clinicalCase6,
+      alt: "Before and After clinical photo of professional scaling and calculus removal",
+    },
+  ];
+
+  return (
+    <section id="clinical-results" className="bg-background py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <SectionHeading
+          eyebrow="Clinical Results"
+          title="Before & After Clinical Results"
+          text="Explore genuine clinical transformations achieved for our patients through individualized diagnosis and precision dental care."
+        />
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {cases.map((c, i) => (
+            <Reveal key={c.id} delay={(i % 3) * 80}>
+              <article className="card-premium zoom-frame flex h-full flex-col justify-between overflow-hidden p-0 shadow-soft">
+                <div className="relative overflow-hidden bg-secondary/30">
+                  <img
+                    src={c.image}
+                    alt={c.alt}
+                    width={1000}
+                    height={562}
+                    loading="lazy"
+                    className="w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                    Clinical Treatment Result
+                  </span>
+                  <h3 className="mt-3 text-lg font-bold text-foreground">{c.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-border/80 bg-secondary/40 p-5 text-center">
+          <p className="text-xs text-muted-foreground sm:text-sm">
+            <strong className="text-foreground">Clinical Note:</strong> All images above represent real clinical treatment results achieved for actual patients. Individual clinical outcomes depend on personal oral health conditions, bone structure, and treatment requirements.
+          </p>
         </div>
       </div>
     </section>

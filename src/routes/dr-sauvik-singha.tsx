@@ -22,8 +22,12 @@ import {
   RelatedServices,
   Section,
   SectionHeading,
+  TestimonialsSection,
+  YouTubeVideoSection,
   type Faq,
 } from "@/components/implant/blocks";
+import { TESTIMONIALS } from "@/lib/testimonials";
+import { Reveal } from "@/components/site/Reveal";
 import {
   CONSULTATION_HOURS,
   PHONE_DISPLAY,
@@ -246,6 +250,28 @@ function DrSauvikSinghaPage() {
           </div>
         </Section>
 
+        {/* Doctor Video Section */}
+        <Section tone="soft">
+          <Reveal>
+            <YouTubeVideoSection
+              title="Dr. Sauvik Singha — Profile & Clinical Overview"
+              intro="Watch Dr. Sauvik Singha discuss specialist dental implant care and surgical evaluation at CARE Hospital, Bhubaneswar."
+              videoId="V-qGvwFA-Xw"
+              videoTitle="Dr. Sauvik Singha Profile & Clinical Overview - CARE Hospital Bhubaneswar"
+              caption={
+                <p>
+                  In this video, Dr. Sauvik Singha (BDS, MDS in Oral &amp; Maxillofacial Surgery), Senior Consultant at CARE Hospitals and Director of i-Smile Dental Clinic Chain, introduces specialist dental implant care and treatment planning in Bhubaneswar. Learn how clinical evaluation, diagnostic imaging, and tailored treatment pathways are coordinated for patients across Odisha.
+                </p>
+              }
+              links={[
+                { label: "Dental Implants in Bhubaneswar", href: "/dental-implants-bhubaneswar/" },
+                { label: "Full-Mouth Dental Implants", href: "/full-mouth-dental-implants/" },
+                { label: "Dental Implant Cost Guide", href: "/dental-implant-cost-bhubaneswar/" },
+              ]}
+            />
+          </Reveal>
+        </Section>
+
         <Section tone="plain">
           <SectionHeading title="Academic Experience, Publications & Professional Affiliations" intro="Selected professional information from Dr. Singha's client-supplied CV." />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -377,6 +403,17 @@ function DrSauvikSinghaPage() {
               </div>
             ))}
           </div>
+        </Section>
+
+        {/* Patient Testimonials Section */}
+        <Section tone="soft">
+          <TestimonialsSection
+            title="What Patients Say About Dr. Sauvik Singha & Team"
+            intro="Genuine patient feedback regarding clinical treatment, guidance, and post-procedure care."
+            testimonials={TESTIMONIALS.filter((t) =>
+              ["sucharita-c", "bhaswati-ghosh", "komalprit-kaur", "rajashree-nayak"].includes(t.id)
+            )}
+          />
         </Section>
 
         {/* Hospital Location & Outstation Journey */}

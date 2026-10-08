@@ -35,7 +35,10 @@ import {
   RelatedServices,
   Section,
   SectionHeading,
+  TestimonialsSection,
+  YouTubeVideoSection,
 } from "@/components/implant/blocks";
+import { TESTIMONIALS } from "@/lib/testimonials";
 import { LOCATION_PAGES, type CityKey } from "@/lib/location-data";
 import { LOCATION_SEO } from "@/lib/location-seo";
 import { CARE_HOSPITAL_URL, CLUSTER, REVIEWER } from "@/lib/implant-cluster";
@@ -264,7 +267,6 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
               title={city.planningSectionHeading}
               intro={city.planningSectionIntro}
             />
-
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {city.planningSteps.map((item) => (
                 <div key={item.step} className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:shadow-md">
@@ -276,6 +278,54 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
             </div>
           </Reveal>
         </Section>
+
+        {/* Patient Success Story Video Section for Bhubaneswar */}
+        {cityKey === "bhubaneswar" && (
+          <Section tone="plain">
+            <Reveal>
+              <YouTubeVideoSection
+                title="Patient Success Story: Dental Implants in Bhubaneswar"
+                intro="Hear directly from a patient who received dental implant treatment at CARE Hospital, Bhubaneswar."
+                videoId="XC69A01k04U"
+                videoTitle="Patient Success Story - Dental Implants in Bhubaneswar"
+                caption={
+                  <p>
+                    Watch this video to learn about a patient's treatment journey and experience receiving dental implants at CARE Hospital, Chandrasekharpur, Bhubaneswar. For detailed surgeon credentials, review our{" "}
+                    <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline">
+                      Dr. Sauvik Singha profile
+                    </Link>
+                    , view our transparent{" "}
+                    <Link to="/dental-implant-cost-bhubaneswar/" className="font-semibold text-primary underline">
+                      Dental Implant Cost Guide
+                    </Link>
+                    , or compare treatment choices with our{" "}
+                    <Link to="/implants-vs-bridge-vs-denture/" className="font-semibold text-primary underline">
+                      Implants vs Bridges vs Dentures guide
+                    </Link>
+                    .
+                  </p>
+                }
+                links={[
+                  { label: "Dr. Sauvik Singha Profile", href: "/dr-sauvik-singha/" },
+                  { label: "Dental Implant Cost Guide", href: "/dental-implant-cost-bhubaneswar/" },
+                  { label: "Implants vs Bridge vs Denture", href: "/implants-vs-bridge-vs-denture/" },
+                ]}
+              />
+            </Reveal>
+          </Section>
+        )}
+        {/* Testimonials Section for Bhubaneswar */}
+        {cityKey === "bhubaneswar" && (
+          <Section tone="soft">
+            <Reveal>
+              <TestimonialsSection
+                title="What Our Patients Say"
+                intro="Genuine feedback and dental care experiences shared by patients treated in Bhubaneswar."
+                testimonials={TESTIMONIALS.filter((t) => ["sucharita-c", "komalprit-kaur", "rajashree-nayak"].includes(t.id))}
+              />
+            </Reveal>
+          </Section>
+        )}
 
         {/* Implant Services Interlinking Section */}
         <Section tone="plain">
