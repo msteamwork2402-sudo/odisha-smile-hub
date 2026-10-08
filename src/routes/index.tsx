@@ -36,7 +36,8 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
-import { DOCTOR_SCHEMA, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
+import { CARE_HOSPITAL_URL, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
+import { DOCTOR_PROFILE_SCHEMA, ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
@@ -58,15 +59,19 @@ const DESCRIPTION =
 const FAQS = [
   {
     q: "How do I find an experienced dental implant specialist near me in Bhubaneswar?",
-    a: "You can consult our team of qualified MDS implant specialists (Maxillofacial Surgeon & Prosthodontist) directly at CARE Hospital, Chandrasekharpur, Bhubaneswar. You can start with a free online consultation from home before visiting the clinic in person.",
+    a: "Dr. Sauvik Singha holds BDS, MDS in Oral & Maxillofacial Surgery, PGDMLS and PGDMLE. He is Senior Consultant at CARE Hospitals and Director of i-Smile Dental Clinic Chain. Start with an online consultation; in-person assessment and implant treatment take place at CARE Hospital, Chandrasekharpur, Bhubaneswar.",
+  },
+  {
+    q: "What implant treatment options can I discuss with Dr. Sauvik Singha?",
+    a: "His documented expertise includes implantology and full-mouth rehabilitation. Discuss single-tooth implants, implant-supported bridges and full-arch options with the team. The appropriate approach, including any guided placement or bone augmentation, is confirmed after clinical assessment.",
   },
   {
     q: "Can I discuss my implant treatment in Odia or English?",
     a: "Yes! (ହଁ, ଆପଣ ଓଡ଼ିଆରେ ପରାମର୍ଶ କରିପାରିବେ). Our specialists and patient coordinators speak fluent Odia, English, and Hindi. You can comfortably explain your dental issues, ask questions, and understand your treatment plan in your preferred language.",
   },
   {
-    q: "Are dental implants in Bhubaneswar affordable and long-lasting?",
-    a: "Yes. We offer transparent, tiered implant treatment options using certified titanium and zirconia systems suited to different clinical needs and budgets. During your preliminary consultation, we provide an indicative cost range without hidden charges, ensuring affordable, hospital-grade care.",
+    q: "How should I compare implant treatment costs and aftercare?",
+    a: "Ask for an itemized estimate covering the implant, restoration, any preparatory treatment and follow-up. Costs and maintenance needs depend on your clinical situation; affordability or a particular implant lifespan cannot be guaranteed.",
   },
   {
     q: "Is the online consultation really free?",
@@ -74,7 +79,7 @@ const FAQS = [
   },
   {
     q: "What is a Preliminary Treatment Roadmap?",
-    a: "It is an indicative outline of your treatment options, estimated timeline, and price range based on the details or dental X-rays you share online. Your final treatment plan is confirmed after physical clinical examination and diagnostic 3D CBCT scanning.",
+    a: "It is preliminary guidance based on your concerns and available dental records. Your final treatment plan, timing and individual estimate are confirmed after clinical examination and imaging when indicated at CARE Hospital, Bhubaneswar.",
   },
   {
     q: "How much does a dental implant cost in Bhubaneswar?",
@@ -82,11 +87,11 @@ const FAQS = [
   },
   {
     q: "Is implant surgery painful?",
-    a: "Implant placement is performed under local anesthesia in a sterile hospital operating suite, making it virtually painless. Post-operative discomfort is generally mild—similar to a minor extraction—and easily managed with standard prescribed medication.",
+    a: "Anaesthesia is used to manage discomfort during implant placement. Pain and recovery vary with the procedure and individual health; your clinician will explain pain management, expected symptoms and when to seek advice.",
   },
   {
     q: "I was told I don't have enough bone. Can I still get implants?",
-    a: "In most cases, yes. Advanced bone grafting, ridge augmentation, and sinus lift techniques allow us to rebuild bone structure so implants can be safely placed. We frequently review second opinions for patients previously told they weren't candidates.",
+    a: "Bone grafting or sinus augmentation may be considered in selected cases. Examination and imaging when indicated are needed to assess your options, risks and alternatives; not every patient will be suitable for implants.",
   },
   {
     q: "I live outside Bhubaneswar in Odisha. How does consultation work?",
@@ -132,7 +137,7 @@ export const Route = createFileRoute("/")({
                 addressCountry: "IN",
               },
             },
-            DOCTOR_SCHEMA,
+             ...DOCTOR_PROFILE_SCHEMA,
             {
               "@type": "FAQPage",
               mainEntity: FAQS.map((faq) => ({
@@ -226,8 +231,8 @@ const JOURNEY = [
 
 const TEAM = [
   {
-    name: "Dr. Sauvik Singha, MDS",
-    role: "Maxillofacial Surgeon & Implant Specialist",
+    name: "Dr. Sauvik Singha",
+    role: "Oral & Maxillofacial Surgeon • Implantology",
     img: teamSauvik,
   },
   {
@@ -512,7 +517,7 @@ function Team() {
         <SectionHeading
           eyebrow="Specialist Team"
           title="Meet Our Experienced Dental Implant Specialists in Bhubaneswar"
-          text="A surgical, prosthetic, and clinical coordination team providing trusted care in Odia, English, and Hindi from initial consultation through post-treatment recovery."
+          text="Surgical, prosthetic and clinical coordination care at CARE Hospital, Chandrasekharpur, Bhubaneswar, with preliminary online consultation for patients across Odisha."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TEAM.map((m, i) => {
@@ -555,9 +560,15 @@ function Team() {
                     <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
 
                     {isSauvik && (
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        BDS, MDS (Oral &amp; Maxillofacial Surgery), PGDMLS, PGDMLE. Senior Consultant, CARE Hospitals; Director, i-Smile Dental Clinic Chain. His CV documents implantology training and full-mouth rehabilitation expertise.
+                      </p>
+                    )}
+
+                    {isSauvik && (
                       <div className="mt-4 border-t border-border/80 pt-3">
                         <span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                          Verified Profiles &amp; Location:
+                          Professional Profiles &amp; Location:
                         </span>
                         <div className="mt-2 flex flex-wrap gap-2 text-xs">
                           <Link
@@ -696,10 +707,10 @@ function Location() {
 
 function WhyUs() {
   const points = [
-    "Consultations led directly by MDS implant specialists, never by sales reps",
-    "Certified global titanium & zirconia implant systems with clear warranties",
-    "Digital 3D CBCT scan review before any treatment plan is finalized",
-    "Dedicated coordinator for Odia, English, and Hindi speaking patients",
+    "Dr. Sauvik Singha: BDS, MDS in Oral & Maxillofacial Surgery, PGDMLS and PGDMLE",
+    "Documented implantology training and full-mouth rehabilitation expertise",
+    "Clinical examination and imaging when indicated before confirming an implant plan",
+    "Online consultation across Odisha; treatment at CARE Hospital, Chandrasekharpur",
   ];
   return (
     <section className="bg-background py-20 lg:py-28">
@@ -734,8 +745,10 @@ function WhyUs() {
             Why Patients Choose Our Dental Implant Specialists in Bhubaneswar
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            OdishaDentalImplants.com connects patients across Bhubaneswar and Odisha with trusted,
-            specialist advice before committing to tooth replacement surgery — providing transparent guidance and hospital-grade care at {TREATMENT_LOCATION}.
+            <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline">Dr. Sauvik Singha</Link> is Senior Consultant in Oral &amp; Maxillofacial Surgery at <a href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">CARE Hospitals</a> and Director of <a href={ISMILE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">i-Smile Dental Clinic Chain</a>. These roles are documented in his client-supplied CV. Treatment arranged through this website takes place at {TREATMENT_LOCATION}, not at a branch in another city.
+          </p>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            Explore <Link to="/single-tooth-dental-implant/" className="font-semibold text-primary underline">single-tooth implants</Link>, <Link to="/multiple-dental-implants/" className="font-semibold text-primary underline">implant-supported bridges</Link> and <Link to="/full-mouth-dental-implants/" className="font-semibold text-primary underline">full-mouth rehabilitation</Link>, or plan your <Link to="/dental-implants-bhubaneswar/" className="font-semibold text-primary underline">implant consultation in Bhubaneswar</Link>. Clinical suitability and the final plan require an in-person examination.
           </p>
           <ul className="mt-8 space-y-4">
             {points.map((p) => (

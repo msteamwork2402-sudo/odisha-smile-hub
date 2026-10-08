@@ -39,6 +39,7 @@ import {
 import { LOCATION_PAGES, type CityKey } from "@/lib/location-data";
 import { LOCATION_SEO } from "@/lib/location-seo";
 import { CARE_HOSPITAL_URL, CLUSTER, REVIEWER } from "@/lib/implant-cluster";
+import { ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
 import { CONSULTATION_HOURS, PHONE_DISPLAY, PHONE_TEL, TREATMENT_ADDRESS, TREATMENT_LOCATION, WHATSAPP_URL } from "@/lib/site";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import heroClinic from "@/assets/hero-clinic.jpg";
@@ -219,6 +220,11 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
               <div className="mt-6 border-l-4 border-primary pl-4 sm:pl-5">
                 <h3 className="text-lg font-semibold text-foreground">{seo.localPatientHeading}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{seo.localPatientInfo}</p>
+                {cityKey === "bhubaneswar" && (
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline">Dr. Sauvik Singha</Link>, BDS, MDS (Oral &amp; Maxillofacial Surgery), PGDMLS, PGDMLE, is Senior Consultant at <a href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">CARE Hospitals</a> and Director of <a href={ISMILE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">i-Smile Dental Clinic Chain</a>. His client-supplied CV documents implantology training and full-mouth rehabilitation expertise. Review his profile for qualifications, publications and professional affiliations; these roles do not imply treatment branches outside Bhubaneswar.
+                  </p>
+                )}
               </div>
 
               {/* Local Neighborhoods served */}

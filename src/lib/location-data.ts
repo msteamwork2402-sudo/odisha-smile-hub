@@ -87,7 +87,7 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
       "Infocity",
     ],
     intro:
-      "Considering dental implants in Bhubaneswar for one missing tooth, several teeth or a full arch? Consult Dr. Sauvik Singha (MDS) and Dr. Neha Mohanty (MDS) at CARE Hospital in Chandrasekharpur. An in-person examination, with 3D CBCT imaging when indicated, helps the team assess your gums and jawbone before recommending a treatment plan. If you searched for a dental implant doctor in Bhubaneswar or dental implants near me, you can start with an online enquiry and arrange your clinical appointment here. Implant suitability, steps and cost are confirmed after assessment, not promised online.",
+      "Considering dental implants in Bhubaneswar for one missing tooth, several teeth or a full arch? Dr. Sauvik Singha holds BDS, MDS in Oral & Maxillofacial Surgery, PGDMLS and PGDMLE, with documented implantology and full-mouth rehabilitation expertise. He is Senior Consultant at CARE Hospitals and Director of i-Smile Dental Clinic Chain. Consult the implant team, including Dr. Neha Mohanty (MDS), at CARE Hospital, Chandrasekharpur. Patients across Odisha can begin online; in-person assessment and treatment take place in Bhubaneswar. Clinical examination and imaging when indicated determine your options, treatment stages and individual estimate.",
     quickAnswer:
       "Dental implant consultations and treatment take place at CARE Hospital in Chandrasekharpur, Bhubaneswar. The team can assess whether a single-tooth implant, implant-supported bridge or full-arch treatment is appropriate. Clinical examination and imaging when indicated determine the options, number of visits and estimated cost.",
     logisticsHeading: "Where to Find Dental Implant Care in Bhubaneswar",
@@ -132,7 +132,15 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
     faqs: [
       {
         q: "Where can I consult a dental implant doctor in Bhubaneswar?",
-        a: "You can request a preliminary online consultation with the team and arrange an in-person assessment with Dr. Sauvik Singha (MDS) and Dr. Neha Mohanty (MDS) at CARE Hospital in Chandrasekharpur. An online discussion cannot confirm implant suitability.",
+        a: "Request a preliminary online consultation and arrange an in-person assessment with the implant team at CARE Hospital, Chandrasekharpur. Dr. Sauvik Singha is Senior Consultant at CARE Hospitals, with expertise in implantology and full-mouth rehabilitation.",
+      },
+      {
+        q: "What are Dr. Sauvik Singha's qualifications and affiliations?",
+        a: "His client-supplied CV lists BDS, MDS in Oral & Maxillofacial Surgery, PGDMLS and PGDMLE. It documents his roles as Senior Consultant at CARE Hospitals and Director of i-Smile Dental Clinic Chain. Implant treatment arranged here remains at CARE Hospital, Bhubaneswar.",
+      },
+      {
+        q: "Which implant services can I discuss at CARE Hospital?",
+        a: "Discuss single-tooth implants, implant-supported bridges and full-arch rehabilitation, including All-on-4 or All-on-6 planning in suitable cases. Any guided placement, immediate placement or bone augmentation must be assessed and confirmed individually; no technique or outcome is guaranteed.",
       },
       {
         q: "What should I check when comparing dental implant options in Bhubaneswar?",
@@ -140,7 +148,7 @@ export const LOCATION_PAGES: Record<CityKey, CityInfo> = {
       },
       {
         q: "Where does dental implant treatment take place in Bhubaneswar?",
-        a: "All clinical examinations, 3D CBCT imaging, implant placements, and crown fittings take place at CARE Hospital, Unit No. 42, Plot No. 324, Prachi Enclave Road, Rail Vihar, Chandrasekharpur, Bhubaneswar 751016.",
+        a: "In-person assessment and implant treatment take place at CARE Hospital, Unit No. 42, Plot No. 324, Prachi Enclave Road, Rail Vihar, Chandrasekharpur, Bhubaneswar 751016. Imaging is arranged when clinically indicated.",
       },
       {
         q: "Can I ask about treatment before visiting CARE Hospital?",
