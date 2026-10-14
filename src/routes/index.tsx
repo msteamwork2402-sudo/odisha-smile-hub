@@ -300,9 +300,6 @@ function Hero() {
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
                 <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile | Odia &amp; English Support
               </span>
-              <a href="#contact" aria-label="Book your free first consultation" className="block w-80 max-w-full rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-96">
-                <img src={consultationStamp.url} alt="First consultation is free — complimentary offer" width={492} height={482} className="h-auto w-full rounded-full object-contain" loading="eager" />
-              </a>
             </div>
           </Reveal>
           <Reveal delay={90}>
@@ -366,6 +363,13 @@ function Hero() {
             height={1008}
             className="shadow-lift w-full rounded-4xl object-cover"
           />
+          <a
+            href="#contact"
+            aria-label="Book your free first consultation"
+            className="absolute right-4 top-4 block w-44 rotate-12 rounded-full mix-blend-multiply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-64 lg:w-72"
+          >
+            <img src={consultationStamp.url} alt="First consultation is free — complimentary offer" width={492} height={482} className="h-auto w-full rounded-full object-contain" loading="eager" />
+          </a>
           <div className="card-premium absolute -bottom-6 left-4 hidden max-w-[15rem] p-5 sm:block">
             <div className="flex items-center gap-1 text-primary">
               {Array.from({ length: 5 }).map((_, i) => (
