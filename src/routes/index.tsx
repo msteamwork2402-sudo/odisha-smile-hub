@@ -300,8 +300,8 @@ function Hero() {
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
                 <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile | Odia &amp; English Support
               </span>
-              <a href="#contact" aria-label="Book your free first consultation" className="block shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-                <img src={consultationStamp.url} alt="First consultation free — complimentary offer" width={1406} height={768} className="h-auto w-40 object-contain" loading="eager" />
+              <a href="#contact" aria-label="Book your free first consultation" className="block w-80 max-w-full rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-96">
+                <img src={consultationStamp.url} alt="First consultation free — complimentary offer" width={1406} height={768} className="h-auto w-full object-contain" loading="eager" />
               </a>
             </div>
           </Reveal>
