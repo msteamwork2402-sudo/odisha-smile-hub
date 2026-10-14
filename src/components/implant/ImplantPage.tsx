@@ -278,7 +278,11 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
              intro="Patients across India can begin with an online consultation and receive a preliminary treatment roadmap. Clinical examination, final planning and treatment take place at CARE Hospital, Bhubaneswar."
           />
           <p className="mt-6 text-sm text-muted-foreground">
-            {ODISHA_CITIES} Physical examination and implant treatment take place at {TREATMENT_LOCATION}.
+            {ODISHA_CITIES} Physical examination and implant treatment take place at {TREATMENT_LOCATION}. For local details, see our guide to{" "}
+            <a className="font-semibold text-primary underline" href="/dental-implants-bhubaneswar/">
+              dental implants in Bhubaneswar
+            </a>
+            .
           </p>
           <div className="mt-8">
             <LocationTrustBlock

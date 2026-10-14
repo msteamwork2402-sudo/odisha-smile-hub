@@ -1,5 +1,6 @@
 # Roadmap
 
+- [ ] Strengthen contextual links to the Bhubaneswar location page from the homepage, doctor profile, cost guides and relevant implant service pages; verify and publish
 - [x] Strengthen homepage and Bhubaneswar page with CV-supported doctor credentials, affiliations, services, links and concise FAQs; preview verified and publication requested
 - [ ] Confirm the updated homepage and Bhubaneswar content live after the scheduled deployment completes
 - [x] Fix the root error-handler TypeScript type and confirm compilation (automatic build OK; preview HTTP 200)
