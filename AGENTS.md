@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep client-CV profile facts in a dedicated browser-safe data module and compose the doctor page's Person and Physician entities locally; this avoids altering shared service-page schema.
+- Keep WhatsApp button colors and consultation-word emphasis in global semantic styles, with shared label rendering for implant CTAs; this preserves consistent styling without changing destinations or copy.

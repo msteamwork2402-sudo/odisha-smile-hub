@@ -318,7 +318,7 @@ function Hero() {
                 href="#contact"
                 className="cta-gradient shadow-lift rounded-full px-7 py-3.5 text-sm font-semibold text-brand-foreground"
               >
-                Book FREE Online Consultation
+                Book <span className="consultation-free">FREE</span> Online Consultation
               </a>
               <a
                 href={WHATSAPP_URL}
@@ -791,7 +791,7 @@ function Location() {
               href="#contact"
               className="cta-gradient shadow-soft rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground"
             >
-              Book FREE Online Consultation
+              Book <span className="consultation-free">FREE</span> Online Consultation
             </a>
             <a
               href={WHATSAPP_URL}
@@ -1189,7 +1189,7 @@ function Contact() {
                 disabled={submitting}
                 className="cta-gradient shadow-soft h-auto w-full rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
               >
-                {submitting ? "Sending request…" : "Book FREE Online Consultation"}
+                {submitting ? "Sending request…" : <>Book <span className="consultation-free">FREE</span> Online Consultation</>}
               </Button>
               {submitError && (
                 <p role="alert" className="text-center text-sm font-medium text-destructive">

@@ -96,6 +96,11 @@
   --brand: oklch(0.5 0.21 285);
   --brand-foreground: oklch(0.99 0.005 260);
   --surface: oklch(0.98 0.012 268);
+  --whatsapp: oklch(0.48 0.14 151);
+  --whatsapp-hover: oklch(0.42 0.12 151);
+  --whatsapp-foreground: oklch(1 0 0);
+  --consultation-highlight: oklch(0.93 0.16 95);
+  --consultation-highlight-foreground: oklch(0.25 0.04 95);
 
   --gradient-brand: linear-gradient(100deg, var(--royal), var(--purple));
   --gradient-soft: linear-gradient(160deg, oklch(0.98 0.02 268), oklch(0.98 0.02 305));
@@ -180,6 +185,31 @@
 
 @utility gradient-brand {
   background-image: var(--gradient-brand);
+}
+
+/* Apply consistently to existing WhatsApp buttons without changing their links. */
+a[href^="https://wa.me/"][class*="rounded"] {
+  background: var(--whatsapp);
+  border-color: var(--whatsapp);
+  color: var(--whatsapp-foreground);
+
+  &:hover {
+    background: var(--whatsapp-hover);
+    border-color: var(--whatsapp-hover);
+    color: var(--whatsapp-foreground);
+  }
+
+  & svg {
+    color: currentColor;
+  }
+}
+
+.consultation-free {
+  background: var(--consultation-highlight);
+  color: var(--consultation-highlight-foreground);
+  border-radius: 3px;
+  padding: 0.05em 0.25em;
+  font-weight: 800;
 }
 
 @utility gradient-soft {

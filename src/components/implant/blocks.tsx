@@ -7,6 +7,12 @@ import { DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 
 /* ---------------------------------- utils --------------------------------- */
 
+function ConsultationLabel({ label }: { label: string }) {
+  return <span>{label.split(/(\bfree\b)/i).map((part, index) =>
+    /^free$/i.test(part) ? <span key={index} className="consultation-free">{part}</span> : part,
+  )}</span>;
+}
+
 export function Section({
   id,
   tone = "plain",
@@ -112,7 +118,7 @@ export function ImplantHero({
               data-analytics="implant_consultation_cta"
               className="cta-gradient shadow-soft inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
             >
-              {primaryCta.label}
+              <ConsultationLabel label={primaryCta.label} />
             </a>
             <a
               href={secondaryCta.href}
@@ -526,7 +532,7 @@ export function ImplantCTA({
           data-analytics="implant_consultation_cta"
           className="shadow-soft inline-flex items-center justify-center rounded-full bg-background px-6 py-3.5 text-sm font-semibold text-foreground"
         >
-          {primary.label}
+          <ConsultationLabel label={primary.label} />
         </a>
         <a
           href={secondary.href}

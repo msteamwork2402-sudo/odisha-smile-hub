@@ -174,7 +174,7 @@ function DrSauvikSinghaPage() {
                     href="/#contact"
                     className="cta-gradient shadow-soft rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground transition-transform hover:scale-[1.02]"
                   >
-                    Book FREE Consultation with Dr. Sauvik
+                    Book <span className="consultation-free">FREE</span> Consultation with Dr. Sauvik
                   </a>
                   <a
                     href={WHATSAPP_URL}

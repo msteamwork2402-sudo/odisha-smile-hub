@@ -42,7 +42,7 @@ export function MobileCtaBar() {
         >
 
           <CalendarCheck className="h-4 w-4" />
-          FREE Consultation
+          <span><span className="consultation-free">FREE</span> Consultation</span>
         </a>
       </div>
     </div>

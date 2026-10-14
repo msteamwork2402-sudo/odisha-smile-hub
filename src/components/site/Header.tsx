@@ -90,7 +90,7 @@ export function Header() {
             href="/#contact"
             className="cta-gradient shadow-soft whitespace-nowrap rounded-full px-4 py-2 text-[13px] font-semibold text-brand-foreground"
           >
-            Book FREE Consultation
+            Book <span className="consultation-free">FREE</span> Consultation
           </a>
         </nav>
 
@@ -141,7 +141,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="cta-gradient mt-2 rounded-full px-5 py-3 text-center text-sm font-semibold text-brand-foreground"
             >
-              Book FREE Online Consultation
+              Book <span className="consultation-free">FREE</span> Online Consultation
             </a>
             <a
               href={WHATSAPP_URL}
