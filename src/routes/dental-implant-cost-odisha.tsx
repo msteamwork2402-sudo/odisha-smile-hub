@@ -365,7 +365,11 @@ function CostPage() {
             intro="We welcome patients from across Odisha. The pathway is designed to be efficient, requiring travel only for essential clinical steps."
           />
           <p className="mt-6 text-sm text-muted-foreground">
-            {LOCATION_TRUTH.consultation} {LOCATION_TRUTH.treatment}
+            {LOCATION_TRUTH.consultation} {LOCATION_TRUTH.treatment} Read our guide to{" "}
+            <a className="font-semibold text-primary underline" href="/dental-implants-bhubaneswar/">
+              dental implants in Bhubaneswar
+            </a>{" "}
+            for local treatment and consultation details.
           </p>
           <div className="mt-8">
             <LocationTrustBlock
