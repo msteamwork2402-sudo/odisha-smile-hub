@@ -39,7 +39,7 @@ import {
 import { CARE_HOSPITAL_URL, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 import { DOCTOR_PROFILE_SCHEMA, ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
 import heroClinic from "@/assets/hero-clinic.jpg";
-import consultationStamp from "@/assets/free-consultation-stamp.png.asset.json";
+import consultationStamp from "@/assets/consultation-stamp-cropped.png.asset.json";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
 import teamSauvik from "@/assets/team-sauvik-real.jpg";
@@ -301,7 +301,7 @@ function Hero() {
                 <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile | Odia &amp; English Support
               </span>
               <a href="#contact" aria-label="Book your free first consultation" className="block w-80 max-w-full rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-96">
-                <img src={consultationStamp.url} alt="First consultation free — complimentary offer" width={1406} height={768} className="h-auto w-full object-contain" loading="eager" />
+                <img src={consultationStamp.url} alt="First consultation is free — complimentary offer" width={492} height={482} className="h-auto w-full rounded-full object-contain" loading="eager" />
               </a>
             </div>
           </Reveal>
