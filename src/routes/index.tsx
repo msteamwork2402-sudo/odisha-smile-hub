@@ -39,6 +39,7 @@ import {
 import { CARE_HOSPITAL_URL, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 import { DOCTOR_PROFILE_SCHEMA, ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
 import heroClinic from "@/assets/hero-clinic.jpg";
+import consultationStamp from "@/assets/free-consultation-stamp.png.asset.json";
 import dentistConsult from "@/assets/dentist-consult.jpg";
 import implantDetail from "@/assets/implant-detail.jpg";
 import teamSauvik from "@/assets/team-sauvik-real.jpg";
@@ -295,9 +296,14 @@ function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
         <div>
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
-              <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile | Odia &amp; English Support
-            </span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+                <ShieldCheck className="h-3.5 w-3.5" /> Powered by i-Smile | Odia &amp; English Support
+              </span>
+              <a href="#contact" aria-label="Book your free first consultation" className="block shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                <img src={consultationStamp.url} alt="First consultation free — complimentary offer" width={1406} height={768} className="h-auto w-40 object-contain" loading="eager" />
+              </a>
+            </div>
           </Reveal>
           <Reveal delay={90}>
             <h1 className="mt-6 text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
