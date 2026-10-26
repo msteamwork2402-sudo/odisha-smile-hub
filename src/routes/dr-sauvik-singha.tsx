@@ -440,6 +440,20 @@ function DrSauvikSinghaPage() {
               hospitalHref={CARE_HOSPITAL_URL}
             />
           </div>
+          <Reveal delay={100} className="mt-6 text-center">
+            <a
+              href={CARE_APPOINTMENT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-analytics="care_appointment_cta"
+              className="cta-gradient shadow-soft inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold text-brand-foreground"
+            >
+              Book Appointment at CARE Hospital
+            </a>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Opens the CARE Hospitals booking portal with the Dental speciality and Dr. Sauvik Singha already selected — choose your preferred appointment date.
+            </p>
+          </Reveal>
         </Section>
 
         {/* FAQs */}
