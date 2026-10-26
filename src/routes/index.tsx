@@ -36,7 +36,7 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
-import { CARE_HOSPITAL_URL, DR_NEHA_PROFILES, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
+import { CARE_APPOINTMENT_URL, CARE_HOSPITAL_URL, DR_NEHA_PROFILES, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 import { DOCTOR_PROFILE_SCHEMA, ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import consultationStamp from "@/assets/consultation-stamp-cropped.png.asset.json";
@@ -849,6 +849,20 @@ function Location() {
             loading="lazy"
             className="mt-4 aspect-[16/10] w-full rounded-2xl object-cover"
           />
+          <div className="mt-4">
+            <a
+              href={CARE_APPOINTMENT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-analytics="care_appointment_cta"
+              className="cta-gradient shadow-soft inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-brand-foreground"
+            >
+              Book Appointment at CARE Hospital
+            </a>
+            <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+              Opens the CARE Hospitals booking portal with the Dental speciality and Dr. Sauvik Singha already selected — choose your preferred appointment date.
+            </p>
+          </div>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             CARE Hospital
             <br />
