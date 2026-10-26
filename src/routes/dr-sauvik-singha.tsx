@@ -37,6 +37,7 @@ import {
   WHATSAPP_URL,
 } from "@/lib/site";
 import {
+  CARE_APPOINTMENT_URL,
   CARE_HOSPITAL_URL,
   CLUSTER,
   DR_SAUVIK_PROFILES,
