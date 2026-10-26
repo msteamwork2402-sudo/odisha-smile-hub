@@ -36,7 +36,7 @@ import {
   TREATMENT_LOCATION,
   WHATSAPP_URL,
 } from "@/lib/site";
-import { CARE_HOSPITAL_URL, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
+import { CARE_HOSPITAL_URL, DR_NEHA_PROFILES, DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
 import { DOCTOR_PROFILE_SCHEMA, ISMILE_PROFILE_URL } from "@/lib/dr-sauvik-profile";
 import heroClinic from "@/assets/hero-clinic.jpg";
 import consultationStamp from "@/assets/consultation-stamp-cropped.png.asset.json";
@@ -584,6 +584,7 @@ function Team() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TEAM.map((m, i) => {
             const isSauvik = m.name.includes("Sauvik");
+            const isNeha = m.name.includes("Neha");
 
             return (
               <Reveal key={m.name} delay={(i % 3) * 100}>
@@ -663,10 +664,28 @@ function Team() {
                           >
                             Google Maps <ExternalLink className="h-3 w-3" />
                           </a>
-                        </div>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
+
+                  {isNeha && (
+                    <div className="mt-4 border-t border-border/80 pt-3">
+                      <span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        Professional Profiles &amp; Location:
+                      </span>
+                      <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                        <a
+                          href={DR_NEHA_PROFILES.apollo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground hover:border-primary/50 hover:text-primary"
+                        >
+                          Apollo 24|7 <ExternalLink className="h-3 w-3" />
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 </article>
               </Reveal>
             );
