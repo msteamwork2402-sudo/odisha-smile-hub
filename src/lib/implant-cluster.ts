@@ -118,6 +118,10 @@ export const DR_SAUVIK_PROFILES = {
   googleMaps: "https://maps.app.goo.gl/boCc4sAHYoLP2jge7",
 } as const;
 
+export const DR_NEHA_PROFILES = {
+  apollo: "https://www.apollo247.com/doctors/dr-neha-mohanty-f907877d-3eca-4c4b-97d5-09a34d06284a",
+} as const;
+
 export const CARE_HOSPITAL_URL =
   "https://www.carehospitals.com/contact-us/care-super-specialty-hospital-bhubaneswar";
 
