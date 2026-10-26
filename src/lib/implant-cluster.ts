@@ -125,6 +125,13 @@ export const DR_NEHA_PROFILES = {
 export const CARE_HOSPITAL_URL =
   "https://www.carehospitals.com/contact-us/care-super-specialty-hospital-bhubaneswar";
 
+// CARE booking portal (verified): facilityID=8 pre-selects CARE Hospital
+// Bhubaneswar; DoctorID=5723 pre-selects Dr SAUVIK SINGHA, which makes the
+// portal auto-select the DENTAL speciality. The portal itself defaults the
+// appointment date to the current day; patients can change it in the form.
+export const CARE_APPOINTMENT_URL =
+  "https://appointment.carehospitals.com/?facilityID=8&DoctorID=5723";
+
 export const REVIEWER = {
   writtenBy: "Dental Content Team",
   name: "Dr. Sauvik Singha, MDS",
