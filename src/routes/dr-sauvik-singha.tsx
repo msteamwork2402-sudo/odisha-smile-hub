@@ -534,6 +534,10 @@ function DrSauvikSinghaPage() {
                 <a className="font-semibold text-primary underline" href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer">
                   CARE Hospital Bhubaneswar site
                 </a>
+                , or{" "}
+                <a className="font-semibold text-primary underline" href={CARE_APPOINTMENT_URL} target="_blank" rel="noopener noreferrer">
+                  book an appointment with Dr. Sauvik Singha at CARE Hospital
+                </a>
                 .
               </p>
             </div>
