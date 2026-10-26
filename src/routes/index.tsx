@@ -628,6 +628,12 @@ function Team() {
                       </p>
                     )}
 
+                    {isNeha && (
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        Dr. Neha Mohanty is a Dentist at i-Smile Dental Clinic and Health Point in Khorda. Holding BDS and MDS, she specializes in diagnosing and treating a wide range of dental conditions. She has over 6 years of experience and is fluent in English, Hindi, Bengali, Assamese, Oriya and Sanskrit.
+                      </p>
+                    )}
+
                     {isSauvik && (
                       <div className="mt-4 border-t border-border/80 pt-3">
                         <span className="block text-xs font-semibold uppercase tracking-wider text-muted-foreground">

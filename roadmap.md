@@ -18,4 +18,6 @@
 - [ ] Optimize city-specific titles, descriptions, headings, opening copy, links, CTAs, and image alt text
 - [ ] Add selective contextual links from existing treatment pages
 - [ ] Verify metadata, schema, links, and rendering across representative pages
+- [x] Add Dr. Neha Mohanty's Apollo 24/7 profile link and bio to her team card; preview verified
+- [ ] Publish and confirm the live homepage with Dr. Neha Mohanty's updated card
 - [ ] Publish and confirm the live pages
