@@ -982,11 +982,11 @@ function Location() {
                 </span>
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                    Full-Mouth Implants
+                    Internationally Sourced
                   </span>
                   <h3 className="mt-2 text-2xl font-bold sm:text-3xl">Dental Instruments &amp; Equipment</h3>
                   <p className="mt-2 text-base font-semibold text-gradient-brand sm:text-lg">
-                    Equipment &amp; Materials Included in Your Treatment
+                    Instruments &amp; Equipment Imported from South East Asia
                   </p>
                 </div>
               </div>
@@ -996,11 +996,12 @@ function Location() {
             </div>
           </div>
           <div className="px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
-            <h4 className="text-lg font-bold sm:text-xl">What a Full-Mouth Implant Patient Pays For</h4>
+            <h4 className="text-lg font-bold sm:text-xl">Equipment Imported from South East Asia</h4>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Patients do not buy hospital tools such as surgical drills or torque wrenches — those belong to the
-              facility. A full-mouth (All-on-4 / All-on-6 or full-arch) treatment estimate is usually made up of these
-              five parts. Exact items depend on each patient&apos;s clinical evaluation.
+              The instruments and equipment used during full-mouth (All-on-4 / All-on-6 or full-arch) implant treatment
+              are imported from selected suppliers in South East Asia. iSmile coordinates international sourcing so the
+              treatment team has access to products suited to each stage of the procedure. The exact items used depend
+              on each patient&apos;s clinical evaluation.
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -1008,55 +1009,55 @@ function Location() {
                   no: "01",
                   img: fmDiagnostics,
                   alt: "CBCT 3D jaw scan on a monitor with an intraoral scanner and 3D-printed surgical guide",
-                  title: "Diagnostic & Digital Planning",
+                  title: "Diagnostic & Digital Planning Equipment",
                   items: [
-                    "Full-arch 3D CBCT scan of bone, nerves and sinus",
-                    "Intraoral 3D digital scans of both jaws and bite",
-                    "Computer-guided 3D-printed surgical guide (if advised)",
+                    "3D CBCT imaging for full-arch bone, nerve and sinus assessment",
+                    "Intraoral 3D scanner for digital jaw and bite records",
+                    "3D printing setup for computer-guided surgical guides",
                   ],
                 },
                 {
                   no: "02",
                   img: fmImplants,
                   alt: "Titanium dental implant fixtures, angled multi-unit abutments and prosthetic screws on a sterile tray",
-                  title: "Implant Hardware",
+                  title: "Implant Placement Instruments & Hardware",
                   items: [
-                    "Implant fixtures — usually 4 to 6 per arch",
-                    "Multi-unit abutments (straight or angled)",
-                    "Prosthetic screws and healing caps",
+                    "Implant fixtures and placement instruments — usually 4 to 6 per arch",
+                    "Multi-unit abutments (straight or angled) and prosthetic screws",
+                    "Torque-controlled drivers, healing caps and surgical accessories",
                   ],
                 },
                 {
                   no: "03",
                   img: fmBonegraft,
                   alt: "Bone graft granules in a sterile dish beside a resorbable collagen membrane",
-                  title: "Bone Grafting Materials (only if needed)",
+                  title: "Bone Grafting & Membrane Materials (only if needed)",
                   items: [
                     "Bone graft granules where the jaw bone has thinned",
-                    "Resorbable collagen membranes / PRF",
-                    "Sinus lift materials for the upper jaw, if required",
+                    "Resorbable collagen membranes and PRF preparation kits",
+                    "Sinus lift instruments and materials for the upper jaw, if required",
                   ],
                 },
                 {
                   no: "04",
                   img: fmBridge,
                   alt: "Full-arch zirconia implant bridge on a jaw model next to a temporary acrylic bridge",
-                  title: "Temporary & Final Teeth",
+                  title: "Prosthetic & Bridge-Making Equipment",
                   items: [
-                    "Immediate temporary bridge, often within 24–72 hours",
-                    "Final zirconia or titanium-bar hybrid bridge after 3–6 months",
-                    "Laboratory components used to make the bridge",
+                    "Temporary bridge materials for early fitting after surgery",
+                    "Zirconia and titanium-bar hybrid bridge components",
+                    "Laboratory instruments for fabrication, finishing and fitting",
                   ],
                 },
                 {
                   no: "05",
                   img: fmHospital,
                   alt: "Sterile hospital dental operating theatre with surgical light and sterilised instrument packs",
-                  title: "Hospital & Clinical Charges",
+                  title: "Hospital & Clinical Instrument Sets",
                   items: [
-                    "Operation theatre / daycare facility and sterilisation",
-                    "Sedation or anaesthesia, if chosen",
-                    "Post-operative kit, sutures and medicines",
+                    "Sterile surgical instrument sets and sterilisation equipment",
+                    "Operation theatre / daycare facility fittings and disposables",
+                    "Post-operative kits, sutures and dispensing instruments",
                   ],
                 },
               ].map((c) => (
@@ -1081,6 +1082,9 @@ function Location() {
                       </span>
                       <p className="text-base font-semibold text-foreground">{c.title}</p>
                     </div>
+                    <p className="mt-3 flex w-fit items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1 text-[11px] font-semibold text-muted-foreground">
+                      <MapPin className="h-3.5 w-3.5 text-primary" /> Imported from South East Asia
+                    </p>
                     <ul className="mt-4 space-y-2">
                       {c.items.map((i) => (
                         <li key={i} className="flex items-start gap-2">
@@ -1093,25 +1097,26 @@ function Location() {
                 </div>
               ))}
               <div className="gradient-soft flex flex-col justify-center rounded-3xl border border-border/70 p-6">
-                <h4 className="text-lg font-bold">Your Quote Checklist</h4>
-                <ol className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  <li>1. Implants &amp; abutments (brand and number)</li>
-                  <li>2. Bone grafting materials (only if required)</li>
-                  <li>3. Temporary bridge</li>
-                  <li>4. Final zirconia / titanium bridge</li>
-                  <li>5. Hospital, scans &amp; procedure fees</li>
-                </ol>
+                <h4 className="text-lg font-bold">Our Sourcing Priorities</h4>
+                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                  <li>1. International supplier coordination.</li>
+                  <li>2. Product quality and specification checks.</li>
+                  <li>3. Clear product information and traceability.</li>
+                  <li>4. Attention to applicable Indian import and regulatory requirements.</li>
+                  <li>5. Professional support for dental clinics, laboratories and distributors.</li>
+                </ul>
                 <a
                   href="#contact"
                   className="cta-gradient mt-6 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-brand-foreground"
                 >
-                  Ask for Your Itemised Estimate
+                  Ask About Our Equipment Sourcing
                 </a>
               </div>
             </div>
             <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-              Final items and costs are confirmed only after clinical evaluation. Dental implant treatment is carried out
-              at CARE Hospital, Chandrasekharpur, Bhubaneswar; i-Smile Dental Laboratory supports bridge fabrication.
+              Dental implant treatment is carried out at CARE Hospital, Chandrasekharpur, Bhubaneswar; i-Smile Dental
+              Laboratory supports bridge fabrication. iSmile — International Sourcing. Professional Standards. Dental
+              Industry Support.
             </p>
           </div>
         </Reveal>
