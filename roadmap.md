@@ -23,3 +23,5 @@
 - [ ] Publish and confirm the live pages
 - [x] Add a dedicated "About iSmile Dental Clinic, Mancheswar" card below the CARE Hospital facility card on the homepage, with the clinic photo and the client-approved copy; preview verified
 - [ ] Publish and confirm the live homepage with the iSmile Mancheswar card
+- [x] Add a dedicated "Dental Instruments & Equipment" card below the iSmile Mancheswar card, with the client-approved copy and a generated instruments photo; preview verified
+- [ ] Publish and confirm the live homepage with the dental instruments card
