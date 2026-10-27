@@ -1006,7 +1006,7 @@ function Location() {
                 </p>
               ))}
             </div>
-            <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,380px)_1fr] lg:items-start">
+            <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,380px)_1fr] lg:items-center">
               <figure className="rounded-3xl border border-border/70 bg-background p-3 shadow-soft">
                 <div className="zoom-frame rounded-2xl">
                   <img
@@ -1060,16 +1060,22 @@ function Location() {
                     <div
                       key={c.no}
                       className={`rounded-2xl border border-border/70 bg-background p-5 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lift ${
-                        c.wide ? "sm:col-span-2" : ""
+                        c.wide ? "sm:col-span-2 sm:flex sm:items-center sm:gap-6" : ""
                       }`}
                     >
-                      <div className="flex items-center gap-3">
+                      <div className={`flex items-center gap-3 ${c.wide ? "sm:w-64 sm:shrink-0" : ""}`}>
                         <span className="gradient-brand grid h-8 w-8 shrink-0 place-items-center rounded-xl text-xs font-bold text-brand-foreground">
                           {c.no}
                         </span>
                         <p className="text-sm font-semibold text-foreground">{c.title}</p>
                       </div>
-                      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c.text}</p>
+                      <p
+                        className={`text-xs leading-relaxed text-muted-foreground ${
+                          c.wide ? "sm:mt-0" : "mt-3"
+                        }`}
+                      >
+                        {c.text}
+                      </p>
                     </div>
                   ))}
                 </div>
