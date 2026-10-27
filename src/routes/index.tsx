@@ -1006,7 +1006,7 @@ function Location() {
                 </p>
               ))}
             </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr] lg:items-start lg:gap-x-8 lg:gap-y-10">
+            <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,460px)_1fr] lg:items-start lg:gap-x-8 lg:gap-y-10">
               <figure className="rounded-3xl border border-border/70 bg-background p-3 shadow-soft lg:col-start-1 lg:row-start-1">
                 <div className="zoom-frame rounded-2xl">
                   <img
@@ -1059,7 +1059,7 @@ function Location() {
                   ].map((c) => (
                     <div
                       key={c.no}
-                      className={`rounded-2xl border border-border/70 bg-background p-5 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lift ${
+                      className={`rounded-2xl border border-border/70 bg-background p-4 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lift ${
                         c.wide ? "sm:col-span-2 sm:w-[calc(50%-0.5rem)] sm:justify-self-center" : ""
                       }`}
                     >
@@ -1069,19 +1069,19 @@ function Location() {
                         </span>
                         <p className="text-sm font-semibold text-foreground">{c.title}</p>
                       </div>
-                      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c.text}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{c.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="gradient-soft rounded-3xl border border-border/70 p-6 lg:col-start-1 lg:row-start-2 lg:h-full">
+              <div className="gradient-soft rounded-3xl border border-border/70 p-6 lg:col-span-2 lg:col-start-1">
                 <h4 className="text-lg font-bold">Our Sourcing Approach</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   We aim to develop reliable supplier relationships, evaluate product suitability and maintain
                   appropriate documentation for products sourced internationally.
                 </p>
                 <p className="mt-4 text-sm font-semibold text-foreground">Our priorities include:</p>
-                <ul className="mt-3 space-y-3">
+                <ul className="mt-3 grid gap-3 sm:grid-cols-2">
                   {[
                     "International supplier coordination.",
                     "Product quality and specification checks.",
@@ -1096,7 +1096,7 @@ function Location() {
                   ))}
                 </ul>
               </div>
-              <div className="flex flex-col justify-between rounded-3xl border border-border/70 bg-background p-6 shadow-soft lg:col-start-2 lg:row-start-2 lg:h-full">
+              <div className="rounded-3xl border border-border/70 bg-background p-6 shadow-soft lg:col-span-2 lg:col-start-1 lg:flex lg:items-center lg:gap-8">
                 <div>
                   <h4 className="text-lg font-bold">Supporting the Dental Industry</h4>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -1105,7 +1105,7 @@ function Location() {
                     and equipment.
                   </p>
                 </div>
-                <p className="gradient-brand shadow-soft mt-6 rounded-2xl px-5 py-4 text-center text-sm font-semibold text-brand-foreground">
+                <p className="gradient-brand shadow-soft mt-6 rounded-2xl px-5 py-4 text-center text-sm font-semibold text-brand-foreground lg:mt-0 lg:w-[420px] lg:shrink-0">
                   iSmile — International Sourcing. Professional Standards. Dental Industry Support.
                 </p>
               </div>
