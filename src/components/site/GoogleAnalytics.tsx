@@ -28,7 +28,7 @@ export function GoogleAnalytics() {
     const onClick = (event: MouseEvent) => {
       const origin = event.target instanceof Element ? event.target : null;
       const el = origin?.closest<HTMLElement>("[data-analytics]");
-      const name = el?.dataset.analytics;
+      const name = el?.dataset["analytics"];
       if (!el || !name) return;
 
       window.gtag?.("event", name, {
