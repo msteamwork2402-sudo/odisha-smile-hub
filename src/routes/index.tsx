@@ -597,7 +597,11 @@ function Team() {
               <Reveal key={m.name} delay={(i % 3) * 100}>
                 <article className="card-premium zoom-frame h-full overflow-hidden p-0">
                   {isSauvik ? (
-                    <Link to="/dr-sauvik-singha/" aria-label={`View profile of ${m.name}`}>
+                    <Link
+                      to="/dr-sauvik-singha/"
+                      aria-label={`View profile of ${m.name}`}
+                      data-analytics="doctor_profile_cta"
+                    >
                       <img
                         src={m.img}
                         alt={`${m.name} - Dental Implant Specialist in Bhubaneswar (${m.role})`}
@@ -620,7 +624,11 @@ function Team() {
                   <div className="p-6">
                     <h3 className="text-lg font-semibold">
                       {isSauvik ? (
-                        <Link to="/dr-sauvik-singha/" className="transition-colors hover:text-primary">
+                        <Link
+                          to="/dr-sauvik-singha/"
+                          className="transition-colors hover:text-primary"
+                          data-analytics="doctor_profile_cta"
+                        >
                           {m.name}
                         </Link>
                       ) : (
@@ -650,6 +658,7 @@ function Team() {
                           <Link
                             to="/dr-sauvik-singha/"
                             className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/20"
+                            data-analytics="doctor_profile_cta"
                           >
                             Doctor Profile →
                           </Link>
