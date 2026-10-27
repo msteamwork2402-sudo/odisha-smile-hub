@@ -49,6 +49,7 @@ import teamMonika from "@/assets/team-monika-real.jpg";
 import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png";
+import ismileMancheswar from "@/assets/ismile-mancheswar-clinic.png.asset.json";
 import clinicalCase1 from "@/assets/clinical-case-1.png";
 import clinicalCase2 from "@/assets/clinical-case-2.png";
 import clinicalCase3 from "@/assets/clinical-case-3.png";
@@ -892,6 +893,78 @@ function Location() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="mx-auto mt-12 max-w-7xl px-4 sm:px-6">
+        <Reveal className="card-premium p-8 lg:p-10">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,360px)_1fr] lg:items-start">
+            <div>
+              <img
+                src={ismileMancheswar.url}
+                alt="iSmile Dental Clinic treatment room in Mancheswar, Bhubaneswar"
+                width={1086}
+                height={1448}
+                loading="lazy"
+                className="h-auto w-full rounded-2xl object-cover"
+              />
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                iSmile Dental Clinic, Mancheswar — dental laboratory work and dental product sourcing for
+                professionals.
+              </p>
+            </div>
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                Our Dental Laboratory
+              </span>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">About iSmile Dental Clinic, Mancheswar</h3>
+              <p className="mt-2 text-lg font-semibold text-primary">
+                Precision, Quality and Innovation in Dental Care
+              </p>
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  iSmile Dental Clinic, located in Mancheswar, Bhubaneswar, is focused on supporting the dental
+                  industry through quality-driven dental services and laboratory solutions.
+                </p>
+                <p>
+                  With an emphasis on precision, attention to detail and professional standards, iSmile aims to
+                  support dentists, dental clinics and dental professionals with reliable dental laboratory work and
+                  access to essential dental products.
+                </p>
+                <p>
+                  Our approach combines technical expertise, careful material selection and a commitment to quality.
+                  We understand that dental restorations and laboratory work require accuracy, consistency and
+                  collaboration between dental professionals and laboratory technicians.
+                </p>
+                <p>
+                  At iSmile, our goal is to contribute to better dental outcomes by supporting the professionals who
+                  care for patients.
+                </p>
+              </div>
+              <h4 className="mt-7 text-base font-semibold text-foreground">Our Commitment</h4>
+              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Precision-focused dental laboratory work.",
+                  "Quality-conscious material selection.",
+                  "Professional collaboration with dental practitioners.",
+                  "Reliable service and communication.",
+                  "Continuous improvement through modern dental techniques and technologies.",
+                ].map((p) => (
+                  <li key={p} className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">{p}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-sm font-semibold text-foreground">
+                iSmile — Supporting Dental Professionals Through Quality and Precision.
+              </p>
+              <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+                iSmile Mancheswar supports dental professionals with laboratory work and dental products. Dental
+                implant treatment for patients arranged through this website is carried out at CARE Hospital,
+                Chandrasekharpur, Bhubaneswar.
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

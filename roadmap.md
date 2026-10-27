@@ -21,3 +21,5 @@
 - [x] Add Dr. Neha Mohanty's Apollo 24/7 profile link and bio to her team card; preview verified
 - [ ] Publish and confirm the live homepage with Dr. Neha Mohanty's updated card
 - [ ] Publish and confirm the live pages
+- [x] Add a dedicated "About iSmile Dental Clinic, Mancheswar" card below the CARE Hospital facility card on the homepage, with the clinic photo and the client-approved copy; preview verified
+- [ ] Publish and confirm the live homepage with the iSmile Mancheswar card
