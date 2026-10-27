@@ -982,16 +982,16 @@ function Location() {
                 </span>
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-                    For Dental Professionals
+                    Full-Mouth Implants
                   </span>
                   <h3 className="mt-2 text-2xl font-bold sm:text-3xl">Dental Instruments &amp; Equipment</h3>
                   <p className="mt-2 text-base font-semibold text-gradient-brand sm:text-lg">
-                    Connecting Dental Professionals with Internationally Sourced Products
+                    Equipment &amp; Materials Included in Your Treatment
                   </p>
                 </div>
               </div>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-xs font-semibold text-muted-foreground">
-                <MapPin className="h-4 w-4 text-primary" /> Sourced from South East Asia
+                <MapPin className="h-4 w-4 text-primary" /> Instruments imported from South East Asia
               </span>
             </div>
           </div>
