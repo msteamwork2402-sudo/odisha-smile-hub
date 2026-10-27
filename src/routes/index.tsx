@@ -355,7 +355,7 @@ function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={150} className="relative mt-16 sm:mt-24 lg:mt-0">
+        <Reveal delay={150} className="relative mt-44 sm:mt-24 lg:mt-0">
           <img
             src={heroClinic}
             alt="Modern dental implant treatment suite and 3D CBCT diagnostic room at CARE Hospital Bhubaneswar"
@@ -366,7 +366,7 @@ function Hero() {
           <a
             href="#contact"
             aria-label="Book your free first consultation"
-            className="absolute right-4 top-0 block w-44 -translate-y-1/2 rotate-12 rounded-full mix-blend-multiply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-64 sm:-translate-y-[64%] lg:w-72"
+            className="absolute right-4 top-0 block w-44 -translate-y-full rotate-12 rounded-full mix-blend-multiply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-64 sm:-translate-y-[64%] lg:w-72"
           >
             <img src={consultationStamp.url} alt="First consultation is free — complimentary offer" width={492} height={482} className="h-auto w-full rounded-full object-contain" loading="eager" />
           </a>
