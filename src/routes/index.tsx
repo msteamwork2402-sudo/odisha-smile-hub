@@ -966,6 +966,115 @@ function Location() {
           </div>
         </Reveal>
       </div>
+      <div className="mx-auto mt-8 max-w-7xl px-4 sm:px-6">
+        <Reveal className="card-premium p-8 lg:p-10">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,360px)_1fr] lg:items-start">
+            <div>
+              <img
+                src={dentalInstruments.url}
+                alt="Stainless steel dental hand instruments, rotary burs and a dental handpiece arranged for professional use"
+                width={1200}
+                height={912}
+                loading="lazy"
+                className="h-auto w-full rounded-2xl object-cover"
+              />
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                Dental instruments and equipment sourced from selected suppliers in Southeast Asia for clinics,
+                laboratories and distributors.
+              </p>
+            </div>
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+                For Dental Professionals
+              </span>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">Dental Instruments &amp; Equipment</h3>
+              <p className="mt-2 text-lg font-semibold text-primary">
+                Connecting Dental Professionals with Internationally Sourced Products
+              </p>
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  iSmile aims to support dental professionals by providing access to dental instruments and equipment
+                  sourced from selected suppliers in Southeast Asia.
+                </p>
+                <p>
+                  By developing international sourcing relationships, the business seeks to help dental clinics,
+                  laboratories and healthcare professionals access products suited to their operational requirements.
+                </p>
+                <p>
+                  Our focus is on product quality, supplier coordination and dependable sourcing, with attention to the
+                  requirements of dental professionals and the Indian dental market.
+                </p>
+              </div>
+              <h4 className="mt-7 text-base font-semibold text-foreground">Product Categories</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Depending on the products imported and distributed, our portfolio may include:
+              </p>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    title: "1. Dental Hand Instruments",
+                    text: "Essential instruments used by dental professionals for examinations, restorative procedures and other dental applications.",
+                  },
+                  {
+                    title: "2. Dental Laboratory Instruments",
+                    text: "Tools and equipment used in dental laboratories for restoration fabrication, finishing and related technical work.",
+                  },
+                  {
+                    title: "3. Dental Rotary Instruments and Accessories",
+                    text: "Selected rotary instruments, burs, handpiece accessories and related products, subject to the available catalogue.",
+                  },
+                  {
+                    title: "4. Dental Equipment and Accessories",
+                    text: "Selected equipment and accessories intended to support dental clinic and laboratory operations.",
+                  },
+                  {
+                    title: "5. Dental Consumables",
+                    text: "Dental materials and consumable products sourced according to product availability, intended use and applicable regulatory requirements.",
+                  },
+                ].map((c) => (
+                  <div key={c.title} className="rounded-2xl border border-border/70 bg-secondary/30 p-4">
+                    <p className="text-sm font-semibold text-foreground">{c.title}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{c.text}</p>
+                  </div>
+                ))}
+              </div>
+              <h4 className="mt-7 text-base font-semibold text-foreground">Our Sourcing Approach</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                We aim to develop reliable supplier relationships, evaluate product suitability and maintain
+                appropriate documentation for products sourced internationally.
+              </p>
+              <p className="mt-3 text-sm font-medium text-foreground">Our priorities include:</p>
+              <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+                {[
+                  "International supplier coordination.",
+                  "Product quality and specification checks.",
+                  "Clear product information and traceability.",
+                  "Attention to applicable Indian import and regulatory requirements.",
+                  "Professional support for dental clinics, laboratories and distributors.",
+                ].map((p) => (
+                  <li key={p} className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                    <span className="text-sm text-muted-foreground">{p}</span>
+                  </li>
+                ))}
+              </ul>
+              <h4 className="mt-7 text-base font-semibold text-foreground">Supporting the Dental Industry</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Whether you operate a dental clinic, manage a dental laboratory or distribute dental products, iSmile
+                aims to build professional relationships that support access to suitable dental instruments and
+                equipment.
+              </p>
+              <p className="mt-6 text-sm font-semibold text-foreground">
+                iSmile — International Sourcing. Professional Standards. Dental Industry Support.
+              </p>
+              <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+                This information is for dental professionals and is not a treatment offer. Dental implant treatment for
+                patients arranged through this website is carried out at CARE Hospital, Chandrasekharpur, Bhubaneswar.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }
