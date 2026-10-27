@@ -225,7 +225,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{seo.localPatientInfo}</p>
                 {cityKey === "bhubaneswar" && (
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline">Dr. Sauvik Singha</Link>, BDS, MDS (Oral &amp; Maxillofacial Surgery), PGDMLS, PGDMLE, is Senior Consultant at <a href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">CARE Hospitals</a> and Director of <a href={ISMILE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">i-Smile Dental Clinic Chain</a>. His client-supplied CV documents implantology training and full-mouth rehabilitation expertise. Review his profile for qualifications, publications and professional affiliations; these roles do not imply treatment branches outside Bhubaneswar.
+                    <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline" data-analytics="doctor_profile_cta">Dr. Sauvik Singha</Link>, BDS, MDS (Oral &amp; Maxillofacial Surgery), PGDMLS, PGDMLE, is Senior Consultant at <a href={CARE_HOSPITAL_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">CARE Hospitals</a> and Director of <a href={ISMILE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline">i-Smile Dental Clinic Chain</a>. His client-supplied CV documents implantology training and full-mouth rehabilitation expertise. Review his profile for qualifications, publications and professional affiliations; these roles do not imply treatment branches outside Bhubaneswar.
                   </p>
                 )}
               </div>
@@ -291,7 +291,7 @@ export function LocationPageTemplate({ cityKey }: LocationPageProps) {
                 caption={
                   <p>
                     Watch this video to learn about a patient's treatment journey and experience receiving dental implants at CARE Hospital, Chandrasekharpur, Bhubaneswar. For detailed surgeon credentials, review our{" "}
-                    <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline">
+                    <Link to="/dr-sauvik-singha/" className="font-semibold text-primary underline" data-analytics="doctor_profile_cta">
                       Dr. Sauvik Singha profile
                     </Link>
                     , view our transparent{" "}

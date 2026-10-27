@@ -25,4 +25,5 @@
 - [ ] Publish and confirm the live homepage with the iSmile Mancheswar card
 - [x] Add a dedicated "Dental Instruments & Equipment" card below the iSmile Mancheswar card; preview verified
 - [x] Rework that card's copy so the equipment is presented as imported from South East Asia, keeping the five photos; preview verified on desktop and phone
+- [x] Record clicks on the CARE Hospital booking buttons and Dr. Sauvik Singha profile links as analytics events; preview verified
 - [ ] Publish and confirm the live homepage with the dental instruments card
