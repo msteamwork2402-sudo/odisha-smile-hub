@@ -1006,8 +1006,8 @@ function Location() {
                 </p>
               ))}
             </div>
-            <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,420px)_1fr] lg:items-center">
-              <figure className="rounded-3xl border border-border/70 bg-background p-3 shadow-soft">
+            <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,420px)_1fr] lg:items-start lg:gap-x-8 lg:gap-y-10">
+              <figure className="rounded-3xl border border-border/70 bg-background p-3 shadow-soft lg:col-start-1 lg:row-start-1">
                 <div className="zoom-frame rounded-2xl">
                   <img
                     src={dentalInstruments.url}
@@ -1023,7 +1023,7 @@ function Location() {
                   laboratories and distributors.
                 </figcaption>
               </figure>
-              <div>
+              <div className="lg:col-start-2 lg:row-start-1">
                 <h4 className="text-lg font-bold sm:text-xl">Product Categories</h4>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   Depending on the products imported and distributed, our portfolio may include:
@@ -1074,9 +1074,7 @@ function Location() {
                   ))}
                 </div>
               </div>
-            </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
-              <div className="gradient-soft rounded-3xl border border-border/70 p-6">
+              <div className="gradient-soft rounded-3xl border border-border/70 p-6 lg:col-start-1 lg:row-start-2 lg:h-full">
                 <h4 className="text-lg font-bold">Our Sourcing Approach</h4>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   We aim to develop reliable supplier relationships, evaluate product suitability and maintain
@@ -1098,7 +1096,7 @@ function Location() {
                   ))}
                 </ul>
               </div>
-              <div className="flex flex-col justify-between rounded-3xl border border-border/70 bg-background p-6 shadow-soft">
+              <div className="flex flex-col justify-between rounded-3xl border border-border/70 bg-background p-6 shadow-soft lg:col-start-2 lg:row-start-2 lg:h-full">
                 <div>
                   <h4 className="text-lg font-bold">Supporting the Dental Industry</h4>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
