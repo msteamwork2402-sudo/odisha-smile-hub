@@ -51,7 +51,11 @@ import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png";
 import ismileMancheswar from "@/assets/ismile-mancheswar-clinic.png.asset.json";
-import dentalInstruments from "@/assets/dental-instruments.jpg.asset.json";
+import fmDiagnostics from "@/assets/fm-diagnostics.jpg";
+import fmImplants from "@/assets/fm-implants.jpg";
+import fmBonegraft from "@/assets/fm-bonegraft.jpg";
+import fmBridge from "@/assets/fm-bridge.jpg";
+import fmHospital from "@/assets/fm-hospital.jpg";
 import clinicalCase1 from "@/assets/clinical-case-1.png";
 import clinicalCase2 from "@/assets/clinical-case-2.png";
 import clinicalCase3 from "@/assets/clinical-case-3.png";
@@ -992,127 +996,122 @@ function Location() {
             </div>
           </div>
           <div className="px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
-            <div className="grid gap-4 sm:grid-cols-3">
+            <h4 className="text-lg font-bold sm:text-xl">What a Full-Mouth Implant Patient Pays For</h4>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+              Patients do not buy hospital tools such as surgical drills or torque wrenches — those belong to the
+              facility. A full-mouth (All-on-4 / All-on-6 or full-arch) treatment estimate is usually made up of these
+              five parts. Exact items depend on each patient&apos;s clinical evaluation.
+            </p>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
-                "iSmile aims to support dental professionals by providing access to dental instruments and equipment sourced from selected suppliers in Southeast Asia.",
-                "By developing international sourcing relationships, the business seeks to help dental clinics, laboratories and healthcare professionals access products suited to their operational requirements.",
-                "Our focus is on product quality, supplier coordination and dependable sourcing, with attention to the requirements of dental professionals and the Indian dental market.",
-              ].map((t) => (
-                <p
-                  key={t}
-                  className="rounded-2xl border border-border/70 bg-secondary/25 p-5 text-sm leading-relaxed text-muted-foreground"
+                {
+                  no: "01",
+                  img: fmDiagnostics,
+                  alt: "CBCT 3D jaw scan on a monitor with an intraoral scanner and 3D-printed surgical guide",
+                  title: "Diagnostic & Digital Planning",
+                  items: [
+                    "Full-arch 3D CBCT scan of bone, nerves and sinus",
+                    "Intraoral 3D digital scans of both jaws and bite",
+                    "Computer-guided 3D-printed surgical guide (if advised)",
+                  ],
+                },
+                {
+                  no: "02",
+                  img: fmImplants,
+                  alt: "Titanium dental implant fixtures, angled multi-unit abutments and prosthetic screws on a sterile tray",
+                  title: "Implant Hardware",
+                  items: [
+                    "Implant fixtures — usually 4 to 6 per arch",
+                    "Multi-unit abutments (straight or angled)",
+                    "Prosthetic screws and healing caps",
+                  ],
+                },
+                {
+                  no: "03",
+                  img: fmBonegraft,
+                  alt: "Bone graft granules in a sterile dish beside a resorbable collagen membrane",
+                  title: "Bone Grafting Materials (only if needed)",
+                  items: [
+                    "Bone graft granules where the jaw bone has thinned",
+                    "Resorbable collagen membranes / PRF",
+                    "Sinus lift materials for the upper jaw, if required",
+                  ],
+                },
+                {
+                  no: "04",
+                  img: fmBridge,
+                  alt: "Full-arch zirconia implant bridge on a jaw model next to a temporary acrylic bridge",
+                  title: "Temporary & Final Teeth",
+                  items: [
+                    "Immediate temporary bridge, often within 24–72 hours",
+                    "Final zirconia or titanium-bar hybrid bridge after 3–6 months",
+                    "Laboratory components used to make the bridge",
+                  ],
+                },
+                {
+                  no: "05",
+                  img: fmHospital,
+                  alt: "Sterile hospital dental operating theatre with surgical light and sterilised instrument packs",
+                  title: "Hospital & Clinical Charges",
+                  items: [
+                    "Operation theatre / daycare facility and sterilisation",
+                    "Sedation or anaesthesia, if chosen",
+                    "Post-operative kit, sutures and medicines",
+                  ],
+                },
+              ].map((c) => (
+                <div
+                  key={c.no}
+                  className="overflow-hidden rounded-3xl border border-border/70 bg-background shadow-soft transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lift"
                 >
-                  {t}
-                </p>
-              ))}
-            </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,460px)_1fr] lg:items-start lg:gap-x-8 lg:gap-y-10">
-              <figure className="rounded-3xl border border-border/70 bg-background p-3 shadow-soft lg:col-start-1 lg:row-start-1">
-                <div className="zoom-frame aspect-[5/4] rounded-2xl">
-                  <img
-                    src={dentalInstruments.url}
-                    alt="Stainless steel dental hand instruments, rotary burs and a dental handpiece arranged for professional use"
-                    width={1200}
-                    height={912}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <figcaption className="px-2 pb-1 pt-3 text-xs leading-relaxed text-muted-foreground">
-                  Dental instruments and equipment sourced from selected suppliers in Southeast Asia for clinics,
-                  laboratories and distributors.
-                </figcaption>
-              </figure>
-              <div className="lg:col-start-2 lg:row-start-1">
-                <h4 className="text-lg font-bold sm:text-xl">Product Categories</h4>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Depending on the products imported and distributed, our portfolio may include:
-                </p>
-                <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                  {[
-                    {
-                      no: "01",
-                      title: "Dental Hand Instruments",
-                      text: "Essential instruments used by dental professionals for examinations, restorative procedures and other dental applications.",
-                    },
-                    {
-                      no: "02",
-                      title: "Dental Laboratory Instruments",
-                      text: "Tools and equipment used in dental laboratories for restoration fabrication, finishing and related technical work.",
-                    },
-                    {
-                      no: "03",
-                      title: "Dental Rotary Instruments and Accessories",
-                      text: "Selected rotary instruments, burs, handpiece accessories and related products, subject to the available catalogue.",
-                    },
-                    {
-                      no: "04",
-                      title: "Dental Equipment and Accessories",
-                      text: "Selected equipment and accessories intended to support dental clinic and laboratory operations.",
-                    },
-                    {
-                      no: "05",
-                      title: "Dental Consumables",
-                      text: "Dental materials and consumable products sourced according to product availability, intended use and applicable regulatory requirements.",
-                      wide: true,
-                    },
-                  ].map((c) => (
-                    <div
-                      key={c.no}
-                      className={`rounded-2xl border border-border/70 bg-background p-4 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lift ${
-                        c.wide ? "sm:col-span-2 sm:w-[calc(50%-0.5rem)] sm:justify-self-center" : ""
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="gradient-brand grid h-8 w-8 shrink-0 place-items-center rounded-xl text-xs font-bold text-brand-foreground">
-                          {c.no}
-                        </span>
-                        <p className="text-sm font-semibold text-foreground">{c.title}</p>
-                      </div>
-                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{c.text}</p>
+                  <div className="zoom-frame aspect-[4/3]">
+                    <img
+                      src={c.img}
+                      alt={c.alt}
+                      width={944}
+                      height={720}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="flex items-center gap-3">
+                      <span className="gradient-brand grid h-8 w-8 shrink-0 place-items-center rounded-xl text-xs font-bold text-brand-foreground">
+                        {c.no}
+                      </span>
+                      <p className="text-base font-semibold text-foreground">{c.title}</p>
                     </div>
-                  ))}
+                    <ul className="mt-4 space-y-2">
+                      {c.items.map((i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                          <span className="text-sm leading-relaxed text-muted-foreground">{i}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="gradient-soft rounded-3xl border border-border/70 p-6 lg:col-span-2 lg:col-start-1">
-                <h4 className="text-lg font-bold">Our Sourcing Approach</h4>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  We aim to develop reliable supplier relationships, evaluate product suitability and maintain
-                  appropriate documentation for products sourced internationally.
-                </p>
-                <p className="mt-4 text-sm font-semibold text-foreground">Our priorities include:</p>
-                <ul className="mt-3 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "International supplier coordination.",
-                    "Product quality and specification checks.",
-                    "Clear product information and traceability.",
-                    "Attention to applicable Indian import and regulatory requirements.",
-                    "Professional support for dental clinics, laboratories and distributors.",
-                  ].map((p) => (
-                    <li key={p} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                      <span className="text-sm text-muted-foreground">{p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="rounded-3xl border border-border/70 bg-background p-6 shadow-soft lg:col-span-2 lg:col-start-1 lg:flex lg:items-center lg:gap-8">
-                <div>
-                  <h4 className="text-lg font-bold">Supporting the Dental Industry</h4>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    Whether you operate a dental clinic, manage a dental laboratory or distribute dental products,
-                    iSmile aims to build professional relationships that support access to suitable dental instruments
-                    and equipment.
-                  </p>
-                </div>
-                <p className="gradient-brand shadow-soft mt-6 rounded-2xl px-5 py-4 text-center text-sm font-semibold text-brand-foreground lg:mt-0 lg:w-[420px] lg:shrink-0">
-                  iSmile — International Sourcing. Professional Standards. Dental Industry Support.
-                </p>
+              ))}
+              <div className="gradient-soft flex flex-col justify-center rounded-3xl border border-border/70 p-6">
+                <h4 className="text-lg font-bold">Your Quote Checklist</h4>
+                <ol className="mt-4 space-y-2 text-sm text-muted-foreground">
+                  <li>1. Implants &amp; abutments (brand and number)</li>
+                  <li>2. Bone grafting materials (only if required)</li>
+                  <li>3. Temporary bridge</li>
+                  <li>4. Final zirconia / titanium bridge</li>
+                  <li>5. Hospital, scans &amp; procedure fees</li>
+                </ol>
+                <a
+                  href="#contact"
+                  className="cta-gradient mt-6 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-brand-foreground"
+                >
+                  Ask for Your Itemised Estimate
+                </a>
               </div>
             </div>
             <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-              This information is for dental professionals and is not a treatment offer. Dental implant treatment for
-              patients arranged through this website is carried out at CARE Hospital, Chandrasekharpur, Bhubaneswar.
+              Final items and costs are confirmed only after clinical evaluation. Dental implant treatment is carried out
+              at CARE Hospital, Chandrasekharpur, Bhubaneswar; i-Smile Dental Laboratory supports bridge fabrication.
             </p>
           </div>
         </Reveal>
