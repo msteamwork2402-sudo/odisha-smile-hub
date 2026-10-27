@@ -50,6 +50,7 @@ import teamAnu from "@/assets/team-anu-real.jpg";
 import teamBarsha from "@/assets/team-barsha-real.jpg";
 import careHospital from "@/assets/care-hospital.png";
 import ismileMancheswar from "@/assets/ismile-mancheswar-clinic.png.asset.json";
+import dentalInstruments from "@/assets/dental-instruments.jpg.asset.json";
 import clinicalCase1 from "@/assets/clinical-case-1.png";
 import clinicalCase2 from "@/assets/clinical-case-2.png";
 import clinicalCase3 from "@/assets/clinical-case-3.png";
