@@ -903,6 +903,8 @@ function WhyUs() {
     "Documented implantology training and full-mouth rehabilitation expertise",
     "Clinical examination and imaging when indicated before confirming an implant plan",
     "Online consultation across Odisha; treatment at CARE Hospital, Chandrasekharpur",
+    "Dedicated dental laboratory support for OdishaDentalImplants at i-Smile Dental Clinic, Mancheswar, Bhubaneswar",
+    "Dental instruments imported from South East Asia for precision implant work",
   ];
   return (
     <section className="bg-background py-20 lg:py-28">
