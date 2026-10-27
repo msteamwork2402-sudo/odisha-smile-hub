@@ -1008,7 +1008,7 @@ function Location() {
             </div>
             <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,460px)_1fr] lg:items-start lg:gap-x-8 lg:gap-y-10">
               <figure className="rounded-3xl border border-border/70 bg-background p-3 shadow-soft lg:col-start-1 lg:row-start-1">
-                <div className="zoom-frame rounded-2xl">
+                <div className="zoom-frame aspect-[5/4] rounded-2xl">
                   <img
                     src={dentalInstruments.url}
                     alt="Stainless steel dental hand instruments, rotary burs and a dental handpiece arranged for professional use"
