@@ -24,7 +24,7 @@ const FAQS: Faq[] = [
   { q: "Which languages does she speak?", plain: "English, Hindi and Odia fluently, and conversational Bengali, as listed in her CV." },
 ].map((item) => ({ ...item, a: <p>{item.plain}</p> }));
 
-export const Route = createFileRoute("/dr-neha-mohanty/")({
+export const Route = createFileRoute("/dr-neha-mohanty")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
