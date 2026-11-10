@@ -119,6 +119,7 @@ export const DR_SAUVIK_PROFILES = {
 } as const;
 
 export const DR_NEHA_PROFILES = {
+  linkedin: "https://www.linkedin.com/in/neha-mohanty-39a538422",
   apollo: "https://www.apollo247.com/doctors/dr-neha-mohanty-f907877d-3eca-4c4b-97d5-09a34d06284a",
 } as const;
 

@@ -596,9 +596,9 @@ function Team() {
             return (
               <Reveal key={m.name} delay={(i % 3) * 100}>
                 <article className="card-premium zoom-frame h-full overflow-hidden p-0">
-                  {isSauvik ? (
+                  {isSauvik || isNeha ? (
                     <Link
-                      to="/dr-sauvik-singha/"
+                      to={isSauvik ? "/dr-sauvik-singha/" : "/dr-neha-mohanty/"}
                       aria-label={`View profile of ${m.name}`}
                       data-analytics="doctor_profile_cta"
                     >
@@ -623,9 +623,9 @@ function Team() {
                   )}
                   <div className="p-6">
                     <h3 className="text-lg font-semibold">
-                      {isSauvik ? (
+                      {isSauvik || isNeha ? (
                         <Link
-                          to="/dr-sauvik-singha/"
+                          to={isSauvik ? "/dr-sauvik-singha/" : "/dr-neha-mohanty/"}
                           className="transition-colors hover:text-primary"
                           data-analytics="doctor_profile_cta"
                         >
@@ -696,6 +696,21 @@ function Team() {
                         Professional Profiles &amp; Location:
                       </span>
                       <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                        <Link
+                          to="/dr-neha-mohanty/"
+                          className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/20"
+                          data-analytics="doctor_profile_cta"
+                        >
+                          Doctor Profile →
+                        </Link>
+                        <a
+                          href={DR_NEHA_PROFILES.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground hover:border-primary/50 hover:text-primary"
+                        >
+                          LinkedIn <ExternalLink className="h-3 w-3" />
+                        </a>
                         <a
                           href={DR_NEHA_PROFILES.apollo}
                           target="_blank"
