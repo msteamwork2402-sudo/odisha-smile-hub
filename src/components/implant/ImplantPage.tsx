@@ -266,7 +266,7 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
 
         <Section>
           <SectionHeading title="How Much Does This Treatment Cost?" intro={cfg.costIntro} />
-          {PAGE_PRICES[cfg.key] && <PriceTable ids={PAGE_PRICES[cfg.key]} />}
+          {(() => { const ids = PAGE_PRICES[cfg.key]; return ids ? <PriceTable ids={ids} /> : null; })()}
           <a
             href={CLUSTER.cost.href}
             data-analytics="cost_enquiry_cta"
