@@ -1,3 +1,4 @@
+import { IMPLANT_PRICES, CROWN_PRICES } from "@/lib/pricing";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Layers,
@@ -20,6 +21,7 @@ import {
   ImplantCTA,
   ImplantHero,
   LocationTrustBlock,
+  PriceTable,
   QuickAnswerBox,
   RelatedServices,
   Section,
@@ -41,16 +43,16 @@ const H1 = "Dental Implant Cost in Odisha: 2026 Patient Guide";
 const REVIEWED_ON = "2 September 2026";
 
 const QUICK_ANSWER =
-  "Dental implant cost in Odisha varies from patient to patient. The final cost depends on the number of implants required, implant system, type of crown or full-arch restoration, available bone, and whether procedures such as bone grafting or sinus lifting are needed. A dental implant consultation, clinical examination and appropriate diagnostic evaluation are required to confirm the treatment plan and exact cost.";
+  "Dental implant cost in Odisha ranges from about ₹20,600 to ₹34,300 per implant, with crowns from ₹4,110 (PFM) to ₹13,800 (zirconia) per tooth. The final cost depends on the number of implants required, implant system, type of crown or full-arch restoration, available bone, and whether procedures such as bone grafting or sinus lifting are needed. A dental implant consultation, clinical examination and appropriate diagnostic evaluation are required to confirm the treatment plan and exact cost.";
 
 const FAQ_ITEMS: Faq[] = [
   {
     q: "How much does a dental implant cost in Odisha?",
     plain:
-      "There is no single price. Cost depends on the treatment plan — how many implants are placed, the implant system used, the crown or prosthesis chosen, your bone condition, and whether additional procedures are required. An exact figure can only be given after clinical examination and diagnostic assessment.",
+      "A single implant ranges from about ₹20,600 to ₹34,300; All-on-4 from ₹82,400 to ₹1,37,200 per arch. Cost depends on the treatment plan — how many implants are placed, the implant system used, the crown or prosthesis chosen, your bone condition, and whether additional procedures are required. An exact figure can only be given after clinical examination and diagnostic assessment.",
     a: (
       <p>
-        There is no single price. Cost depends on the treatment plan — how many implants are placed, the
+        A single implant ranges from about ₹20,600 to ₹34,300; All-on-4 from ₹82,400 to ₹1,37,200 per arch. Cost depends on the treatment plan — how many implants are placed, the
         implant system used, the crown or prosthesis chosen, your bone condition, and whether additional
         procedures are required. An exact figure can only be given after clinical examination and
         diagnostic assessment.
@@ -306,6 +308,16 @@ function CostPage() {
 
         <Section>
           <QuickAnswerBox question="How much does a dental implant cost in Odisha?" answer={QUICK_ANSWER} />
+        </Section>
+
+        <Section id="price-list" tone="soft">
+          <SectionHeading
+            title="Dental Implant & Crown Price List"
+            intro="Indicative price ranges for implant procedures and crowns at CARE Hospital, Bhubaneswar."
+          />
+          <PriceTable items={IMPLANT_PRICES} />
+          <h3 className="mt-10 text-lg font-bold text-foreground">Crowns (price per tooth)</h3>
+          <PriceTable items={CROWN_PRICES} />
         </Section>
 
         <Section>

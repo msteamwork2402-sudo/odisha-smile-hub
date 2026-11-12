@@ -4,6 +4,7 @@ import { ChevronRight, CheckCircle2, HelpCircle, MapPin, Phone, Clock, Building2
 import type { Testimonial } from "@/lib/testimonials";
 import { Reveal } from "@/components/site/Reveal";
 import { DR_SAUVIK_PROFILES } from "@/lib/implant-cluster";
+import { ALL_PRICES, PRICE_NOTE, type PriceItem } from "@/lib/pricing";
 
 /* ---------------------------------- utils --------------------------------- */
 
@@ -878,3 +879,36 @@ export function TestimonialsSection({
 }
 
 
+
+/* ------------------------------- price table ------------------------------ */
+
+
+export function PriceTable({ ids, items }: { ids?: string[]; items?: PriceItem[] }) {
+  const rows = items ?? (ids ? ids.map((id) => ALL_PRICES.find((p) => p.id === id)!).filter(Boolean) : ALL_PRICES);
+  return (
+    <div className="mt-8">
+      <div className="card-premium overflow-hidden">
+        <div className="gradient-soft flex items-center justify-between px-5 py-3 text-xs font-semibold uppercase tracking-wider text-primary sm:px-6">
+          <span>Procedure</span>
+          <span>Price range</span>
+        </div>
+        <ul className="divide-y divide-border">
+          {rows.map((p) => (
+            <li key={p.id} className="flex flex-col gap-1 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+              <div>
+                {p.href ? (
+                  <a href={p.href} className="font-semibold text-foreground hover:text-primary">{p.name}</a>
+                ) : (
+                  <span className="font-semibold text-foreground">{p.name}</span>
+                )}
+                <p className="text-sm text-muted-foreground">{p.unit}</p>
+              </div>
+              <span className="text-lg font-bold text-gradient-brand sm:text-xl">{p.range}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p className="mt-4 text-sm text-muted-foreground">{PRICE_NOTE}</p>
+    </div>
+  );
+}

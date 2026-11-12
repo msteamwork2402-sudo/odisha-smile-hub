@@ -90,6 +90,9 @@ export type ImplantPageConfig = {
   procedureHowPerformed: string;
 };
 
+import { PAGE_PRICES } from "@/lib/pricing";
+import { PriceTable } from "@/components/implant/blocks";
+
 export function faq(q: string, plain: string, a?: ReactNode): Faq {
   return { q, plain, a: a ?? <p>{plain}</p> };
 }
@@ -263,6 +266,7 @@ export function ImplantPage({ cfg }: { cfg: ImplantPageConfig }) {
 
         <Section>
           <SectionHeading title="How Much Does This Treatment Cost?" intro={cfg.costIntro} />
+          {(() => { const ids = PAGE_PRICES[cfg.key]; return ids ? <PriceTable ids={ids} /> : null; })()}
           <a
             href={CLUSTER.cost.href}
             data-analytics="cost_enquiry_cta"

@@ -16,6 +16,7 @@ import {
   ImplantHero,
   LocationTrustBlock,
   PartsDiagram,
+  PriceTable,
   QuickAnswerBox,
   RelatedServices,
   Section,
@@ -398,6 +399,11 @@ function SingleToothPage() {
 
         <Section>
           <QuickAnswerBox question="Gotie danta paim bhala implant — What is a single tooth dental implant?" answer={QUICK_ANSWER} />
+        </Section>
+
+        <Section id="price-list">
+          <SectionHeading title="Single Tooth Dental Implant Cost" intro="Indicative price ranges for a single implant and its crown at CARE Hospital, Bhubaneswar." />
+          <PriceTable ids={["single", "pfm", "zirconia"]} />
         </Section>
 
         <Section tone="soft">
