@@ -1,3 +1,4 @@
+import { IMPLANT_PRICES, CROWN_PRICES } from "@/lib/pricing";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Layers,
@@ -20,6 +21,7 @@ import {
   ImplantCTA,
   ImplantHero,
   LocationTrustBlock,
+  PriceTable,
   QuickAnswerBox,
   RelatedServices,
   Section,
@@ -306,6 +308,16 @@ function CostPage() {
 
         <Section>
           <QuickAnswerBox question="How much does a dental implant cost in Odisha?" answer={QUICK_ANSWER} />
+        </Section>
+
+        <Section id="price-list" tone="soft">
+          <SectionHeading
+            title="Dental Implant & Crown Price List"
+            intro="Indicative price ranges for implant procedures and crowns at CARE Hospital, Bhubaneswar."
+          />
+          <PriceTable items={IMPLANT_PRICES} />
+          <h3 className="mt-10 text-lg font-bold text-foreground">Crowns (price per tooth)</h3>
+          <PriceTable items={CROWN_PRICES} />
         </Section>
 
         <Section>

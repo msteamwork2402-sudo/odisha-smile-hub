@@ -16,6 +16,7 @@ import {
   ImplantHero,
   LocationTrustBlock,
   PartsDiagram,
+  PriceTable,
   QuickAnswerBox,
   RelatedServices,
   Section,
